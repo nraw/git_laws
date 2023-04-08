@@ -3,6 +3,7 @@
 
 
 Data structure, need to recheck how I got it
+```
 data
 ├── osnovni.csv
 ├── vplivana.csv
@@ -11,7 +12,7 @@ data
 │       ├── vsebina.bson
 │       └── vsebina.metadata.json
 └── vsebina.tar.gz
-
+```
 
 ## Notes:
 
