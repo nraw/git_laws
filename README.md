@@ -1,4 +1,23 @@
-# Ugh...
+# Format laws as git repos
+
+
+[Zakone lahko predlagajo](https://www.dz-rs.si/wps/portal/Home/zakonodaja/zakonodajniPostopek):
+– Vlada,
+– vsak poslanec,
+– Državni svet,
+– najmanj pet tisoč volivcev.
+
+Predlogi so [tukaj](https://e-uprava.gov.si/si/drzava-in-druzba/e-demokracija/predlogi-predpisov.html)
+
+## Podatki:
+
+Predpisi: https://podatki.gov.si/dataset/osnovni-podatki-o-predpisih-rs
+Predlogi: https://podatki.gov.si/dataset/dzpredlogi-zakonov
+
+Drzavni Zbor: https://www.dz-rs.si/wps/portal/Home/ostalo/OpenData
+- Sprejeti predlogi: https://fotogalerija.dz-rs.si/datoteke/opendata/SZ.XML
+Vlada: https://podatki.gov.si/dataset/vladna-gradiva-2
+
 
 ## IDs:
 SOP:
