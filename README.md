@@ -1,5 +1,20 @@
 # Ugh...
 
+## IDs:
+SOP:
+podatke o objavi predpisa v Uradnem listu Republike Slovenije s slovensko oznako predpisa (v nadaljnjem besedilu: SOP),
+
+
+EVA:
+EVA je enotna identifikacijska oznaka, ki jo je potrebno določiti vsakemu 
+predlogu predpisa, ki ga sprejme minister, vlada ali drug nosilec javnih pooblastil 
+ali ki se vlaga v zakonodajni postopek v državni zbor, in vsakemu predlogu 
+drugega predpisa ali akta iz 8. člena te priloge (v nadaljnjem besedilu: predpis), 
+ki se po sprejemu objavi v Uradnem listu Republike Slovenije.
+     EVA omogoča povezovanje podatkov v različnih uradnih evidencah in 
+dokumentnih bazah podatkov, ki jih z namenom spremljanja zakonodajnega 
+postopka vodijo državni organi.
+https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2003-01-1438?sop=2003-01-1438
 
 
 Data structure, need to recheck how I got it
