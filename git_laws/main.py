@@ -1,3 +1,4 @@
+import argparse
 import os
 import re
 from pathlib import Path
@@ -11,7 +12,7 @@ from markdownify import markdownify
 from tqdm import tqdm
 
 
-def main():
+def main(law_id=None, output_dir=None):
     # https://podatki.gov.si/dataset/osnovni-podatki-o-predpisih-rs
     vpliva_na = pd.read_csv("data/vplivana.csv")
     osnovni_raw = pd.read_csv("data/osnovni.csv")
@@ -24,7 +25,8 @@ def main():
     laws_list = [law["idPredpisa"] for law in laws]
     laws_changes = [law["idPredpisaChng"] for law in laws]
 
-    law_id = "ZAKO4697"
+    if law_id is None:
+        law_id = "ZAKO4697"
     law_code = get_law_code(law_id, osnovni)
     affected_ids = vpliva_na[vpliva_na.VPLIVA_NA == law_id]
     affected = osnovni[
@@ -35,8 +37,11 @@ def main():
         "date_accepted"
     )
 
-    data_location = "/tmp/slovenian_laws/"
-    os.mkdir(data_location)
+    if output_dir is None:
+        data_location = "/tmp/slovenian_laws/"
+    else:
+        data_location = output_dir
+    Path(data_location).mkdir(parents=True, exist_ok=True)
     repo = Repo.init(data_location)
     for _, affected_law_row in tqdm(affected_laws.iterrows()):
         #  affected_law_id = affected_laws["ID"].iloc[0]
@@ -91,5 +96,32 @@ def get_markdown(vsebina):
     return vsebina_md
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Convert Slovenian legal documents into git repositories",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  %(prog)s --law-id ZAKO4697 --output-dir ./repos/tax-law
+  %(prog)s --law-id ZAKO1234 --output-dir /tmp/my-law-repo
+  %(prog)s  # Uses defaults (ZAKO4697, /tmp/slovenian_laws/)
+        """
+    )
+    parser.add_argument(
+        "--law-id",
+        type=str,
+        default="ZAKO4697",
+        help="ID of the law to process (default: ZAKO4697)"
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default="/tmp/slovenian_laws/",
+        help="Output directory for the git repository (default: /tmp/slovenian_laws/)"
+    )
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    main()
+    args = parse_args()
+    main(law_id=args.law_id, output_dir=args.output_dir)
