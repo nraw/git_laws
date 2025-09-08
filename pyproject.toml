@@ -1,0 +1,25 @@
+[project]
+name = "git-laws"
+version = "0.1.0"
+description = "Convert Slovenian legal documents into git repositories for version control tracking"
+readme = "README.md"
+authors = [
+    { name = "Andrej-Marsic", email = "andrej_marsic@mckinsey.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "pymongo",
+    "beautifulsoup4", 
+    "gitpython",
+    "loguru",
+    "markdownify",
+    "tqdm",
+]
+
+[project.scripts]
+git-laws = "git_laws.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
