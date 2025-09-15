@@ -91,3 +91,10 @@ uradno prečiščeno besedilo, ki se objavi v Uradnem listu Republike Slovenije 
 ### Komentar o neuradnih preciscenih besedilih
 neuradna prečiščena besedila, ki so dostopna v pravno-informacijskem sistemu, le informativnega značaja, pravno veljavni pa so le podatki in besedila pravnih aktov, ki so objavljeni v Uradnem listu Republike Slovenije. Neuradna prečiščena besedila predstavljajo le informativni delovni pripomoček, ki sicer pomembno prispeva k preglednosti in uporabnosti predpisov, vendar nima pravne veljavnosti.
 
+### API
+
+```
+curl -X 'GET' \
+  'https://pisrs.si/extapi/predpis/register-predpisov/seznam' \
+  -H 'accept: */*' -H 'X-API-Key: $PISRS_API_KEY'
+```

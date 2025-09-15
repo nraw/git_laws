@@ -1,0 +1,2654 @@
+{
+  "security": [
+    {
+      "X-API-Key": []
+    }
+  ],
+  "components": {
+    "schemas": {
+      "ZetonZahtevekDTO": {
+        "type": "object",
+        "required": [
+          "email",
+          "organizacija"
+        ],
+        "properties": {
+          "organizacija": {
+            "description": "Organizacija katera bo uporabljala ta API",
+            "type": "string"
+          },
+          "email": {
+            "description": "E-mail za katerega želite zaprositi za pravice dostopa",
+            "type": "string"
+          }
+        }
+      },
+      "DataContainerDTOListPredpisDTO": {
+        "type": "object",
+        "properties": {
+          "realPageSize": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PredpisDTO"
+            }
+          },
+          "page": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "totalCount": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "error": {
+            "type": "string"
+          },
+          "requestedPageSize": {
+            "format": "int32",
+            "type": "integer"
+          }
+        }
+      },
+      "DataContainerDTOListZbirkaSifrantElementDTO": {
+        "type": "object",
+        "properties": {
+          "realPageSize": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaSifrantElementDTO"
+            }
+          },
+          "page": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "totalCount": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "error": {
+            "type": "string"
+          },
+          "requestedPageSize": {
+            "format": "int32",
+            "type": "integer"
+          }
+        }
+      },
+      "ZbirkaSifrantElementDTO": {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "idNadrejeni": {
+            "format": "int64",
+            "type": "integer"
+          }
+        }
+      },
+      "PredpisEuDTO": {
+        "type": "object",
+        "properties": {
+          "podrocjeEu": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaSifrantElementDTO"
+            }
+          },
+          "notifikacijskeIzjaveURL": {
+            "type": "string"
+          },
+          "datumPrenehanjaVeljavnosti": {
+            "format": "date",
+            "type": "string"
+          },
+          "datumZacetkaVeljavnosti": {
+            "format": "date",
+            "type": "string"
+          },
+          "naziv": {
+            "type": "string"
+          },
+          "organOdgovorenZaPrenosOzIzvajanje": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaSifrantElementDTO"
+            }
+          },
+          "datumObjave": {
+            "format": "date",
+            "type": "string"
+          },
+          "datumRokaZaPrenos": {
+            "format": "date",
+            "type": "string"
+          },
+          "vrstaAktaEu": {
+            "$ref": "#/components/schemas/ZbirkaSifrantElementDTO"
+          },
+          "citatUL": {
+            "type": "string"
+          },
+          "zveza": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaPovezavaElemnetDTO"
+            }
+          },
+          "celex": {
+            "type": "string"
+          }
+        }
+      },
+      "DataContainerDTOListNpbDTO": {
+        "type": "object",
+        "properties": {
+          "realPageSize": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NpbDTO"
+            }
+          },
+          "page": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "totalCount": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "error": {
+            "type": "string"
+          },
+          "requestedPageSize": {
+            "format": "int32",
+            "type": "integer"
+          }
+        }
+      },
+      "PredpisDTO": {
+        "type": "object",
+        "properties": {
+          "podlaga": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaPovezavaElemnetDTO"
+            }
+          },
+          "datumZacetkaVeljavnosti": {
+            "format": "date",
+            "type": "string"
+          },
+          "datumObjave": {
+            "format": "date",
+            "type": "string"
+          },
+          "posegiVPredpis": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaPovezavaElemnetDTO"
+            }
+          },
+          "datumKoncaUporabe": {
+            "format": "date",
+            "type": "string"
+          },
+          "eva": {
+            "type": "string"
+          },
+          "datumZacetkaUporabe": {
+            "format": "date",
+            "type": "string"
+          },
+          "vplivaNaPredpise": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaPovezavaElemnetDTO"
+            }
+          },
+          "sop": {
+            "type": "string"
+          },
+          "epa": {
+            "type": "string"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "kategorizacijaAkta": {
+            "type": "string"
+          },
+          "vpliviNaPredpis": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaPovezavaElemnetDTO"
+            }
+          },
+          "mopedId": {
+            "type": "string"
+          },
+          "organKiJeSprejelOzIzdalAkt": {
+            "$ref": "#/components/schemas/ZbirkaSifrantElementDTO"
+          },
+          "citat": {
+            "type": "string"
+          },
+          "organOdgovorenZaPripravo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaSifrantElementDTO"
+            }
+          },
+          "naziv": {
+            "type": "string"
+          },
+          "podrejeniPredpisi": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaPovezavaElemnetDTO"
+            }
+          },
+          "podrocje": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaSifrantElementDTO"
+            }
+          },
+          "posegaVPredpise": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaPovezavaElemnetDTO"
+            }
+          },
+          "datumPrenehanjaVeljavnosti": {
+            "format": "date",
+            "type": "string"
+          },
+          "datumSprejetja": {
+            "format": "date",
+            "type": "string"
+          },
+          "kratica": {
+            "type": "string"
+          },
+          "kazaloPravnihAktov": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaSifrantElementDTO"
+            }
+          },
+          "vrstaAkta": {
+            "$ref": "#/components/schemas/ZbirkaSifrantElementDTO"
+          },
+          "zveza": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZbirkaPovezavaPredpisEuElemnetDTO"
+            }
+          },
+          "osnovni": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ZbirkaPovezavaPredpisEuElemnetDTO": {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "celex": {
+            "type": "string"
+          }
+        }
+      },
+      "ZbirkaPovezavaElemnetDTO": {
+        "type": "object",
+        "properties": {
+          "mopedID": {
+            "type": "string"
+          },
+          "naziv": {
+            "type": "string"
+          }
+        }
+      },
+      "PredpisSeznamDTO": {
+        "type": "object",
+        "properties": {
+          "eva": {
+            "type": "string"
+          },
+          "mopedId": {
+            "type": "string"
+          },
+          "sop": {
+            "type": "string"
+          },
+          "epa": {
+            "type": "string"
+          },
+          "naziv": {
+            "type": "string"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          }
+        }
+      },
+      "DataContainerDTOListPredpisEuDTO": {
+        "type": "object",
+        "properties": {
+          "realPageSize": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PredpisEuDTO"
+            }
+          },
+          "page": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "totalCount": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "error": {
+            "type": "string"
+          },
+          "requestedPageSize": {
+            "format": "int32",
+            "type": "integer"
+          }
+        }
+      },
+      "NpbDTO": {
+        "type": "object",
+        "properties": {
+          "naziv": {
+            "type": "string"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "datumDokumenta": {
+            "format": "date",
+            "type": "string"
+          },
+          "stevilkaDokumenta": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "X-API-Key": {
+        "in": "header",
+        "name": "X-API-Key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "servers": [
+    {
+      "description": "Generated server url",
+      "url": "https://pisrs.si/extapi"
+    }
+  ],
+  "openapi": "3.0.1",
+  "paths": {
+    "/api-access/request-access": {
+      "post": {
+        "security": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/ZetonZahtevekDTO"
+              }
+            }
+          }
+        },
+        "operationId": "getZeton",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "ApiAccessRequestController"
+        ]
+      }
+    },
+    "/predpis/drugi-splosni-in-posamicni-akti": {
+      "get": {
+        "operationId": "getDrugiSplosniInPosamicniAkti",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListPredpisDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "mopedID",
+            "description": "Identifikator predpisa. Primer vnosa: 'ZAKO4687'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "eva",
+            "description": "EVA oznaka. Primer vnosa: '2006-1611-0004'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sop",
+            "description": "SOP oznaka. Primer vnosa: '2006-01-5014'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "epa",
+            "description": "EPA oznaka. Primer vnosa: '1067-IV'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "vrstaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Vrsta akta RS](./sifrant?naziv=%C5%A0ifrant%20Vrsta%20akta%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "kategorizacijaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Kazalo Pravnih Aktov](./sifrant?naziv=%C5%A0ifrant%20Kazalo%20pravnih%20aktov)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaPripravo",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaSprejetje",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo), [Vlada](./sifrant?naziv=Vlada%20Republike%20Slovenije), [Državni zbor](./sifrant?naziv=Dr%C5%BEavni%20zbor%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "podrocje",
+            "description": "Izbor identifikatorja iz šifranta [Področje](./sifrant?naziv=%C5%A0ifrant%20podro%C4%8Dje)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query",
+            "name": "osnovni",
+            "description": "Ali je osnovni predpis?",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaOd",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaDo",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveOd",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveDo",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiOd",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiDo",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeOd",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeDo",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiOd",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiDo",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeOd",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeDo",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 10,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "pageSize",
+            "description": "(Maksimalno 1000)",
+            "required": false
+          }
+        ],
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/drugi-splosni-in-posamicni-akti/seznam": {
+      "get": {
+        "operationId": "getDrugiSplosniInPosamicniAkti_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PredpisSeznamDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/evidenca-normodajalcev": {
+      "get": {
+        "operationId": "getEvidencaNormodajalcev",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListPredpisDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaPripravo",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaSprejetje",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo), [Vlada](./sifrant?naziv=Vlada%20Republike%20Slovenije), [Državni zbor](./sifrant?naziv=Dr%C5%BEavni%20zbor%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 10,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "pageSize",
+            "description": "(Maksimalno 1000)",
+            "required": false
+          }
+        ],
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/evidenca-normodajalcev/seznam": {
+      "get": {
+        "operationId": "getEvidencaNormodajalcev_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PredpisSeznamDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/neveljavni-predpisi": {
+      "get": {
+        "operationId": "getNeveljavniPredpisi",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListPredpisDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "mopedID",
+            "description": "Identifikator predpisa. Primer vnosa: 'ZAKO4687'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "eva",
+            "description": "EVA oznaka. Primer vnosa: '2006-1611-0004'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sop",
+            "description": "SOP oznaka. Primer vnosa: '2006-01-5014'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "epa",
+            "description": "EPA oznaka. Primer vnosa: '1067-IV'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "vrstaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Vrsta akta RS](./sifrant?naziv=%C5%A0ifrant%20Vrsta%20akta%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "kategorizacijaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Kazalo Pravnih Aktov](./sifrant?naziv=%C5%A0ifrant%20Kazalo%20pravnih%20aktov)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaPripravo",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaSprejetje",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo), [Vlada](./sifrant?naziv=Vlada%20Republike%20Slovenije), [Državni zbor](./sifrant?naziv=Dr%C5%BEavni%20zbor%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "podrocje",
+            "description": "Izbor identifikatorja iz šifranta [Področje](./sifrant?naziv=%C5%A0ifrant%20podro%C4%8Dje)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query",
+            "name": "osnovni",
+            "description": "Ali je osnovni predpis?",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaOd",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaDo",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveOd",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveDo",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiOd",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiDo",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeOd",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeDo",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiOd",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiDo",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeOd",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeDo",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 10,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "pageSize",
+            "description": "(Maksimalno 1000)",
+            "required": false
+          }
+        ],
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/neveljavni-predpisi/seznam": {
+      "get": {
+        "operationId": "getNeveljavniPredpisi_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PredpisSeznamDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/obsoletni-in-konzumirani-predpisi": {
+      "get": {
+        "operationId": "getObsoletniInKonzumiraniPredpisi",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListPredpisDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "mopedID",
+            "description": "Identifikator predpisa. Primer vnosa: 'ZAKO4687'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "eva",
+            "description": "EVA oznaka. Primer vnosa: '2006-1611-0004'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sop",
+            "description": "SOP oznaka. Primer vnosa: '2006-01-5014'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "epa",
+            "description": "EPA oznaka. Primer vnosa: '1067-IV'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "vrstaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Vrsta akta RS](./sifrant?naziv=%C5%A0ifrant%20Vrsta%20akta%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "kategorizacijaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Kazalo Pravnih Aktov](./sifrant?naziv=%C5%A0ifrant%20Kazalo%20pravnih%20aktov)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaPripravo",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaSprejetje",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo), [Vlada](./sifrant?naziv=Vlada%20Republike%20Slovenije), [Državni zbor](./sifrant?naziv=Dr%C5%BEavni%20zbor%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "podrocje",
+            "description": "Izbor identifikatorja iz šifranta [Področje](./sifrant?naziv=%C5%A0ifrant%20podro%C4%8Dje)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query",
+            "name": "osnovni",
+            "description": "Ali je osnovni predpis?",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaOd",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaDo",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveOd",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveDo",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiOd",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiDo",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeOd",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeDo",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiOd",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiDo",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeOd",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeDo",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 10,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "pageSize",
+            "description": "(Maksimalno 1000)",
+            "required": false
+          }
+        ],
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/obsoletni-in-konzumirani-predpisi/seznam": {
+      "get": {
+        "operationId": "getObsoletniInKonzumiraniPredpisi_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PredpisSeznamDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/predpisi-v-pripravi": {
+      "get": {
+        "operationId": "getPredpisiKiSeNeVeljajoInPredpisiVPripravi",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListPredpisDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "mopedID",
+            "description": "Identifikator predpisa. Primer vnosa: 'ZAKO4687'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "eva",
+            "description": "EVA oznaka. Primer vnosa: '2006-1611-0004'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sop",
+            "description": "SOP oznaka. Primer vnosa: '2006-01-5014'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "epa",
+            "description": "EPA oznaka. Primer vnosa: '1067-IV'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "vrstaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Vrsta akta RS](./sifrant?naziv=%C5%A0ifrant%20Vrsta%20akta%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "kategorizacijaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Kazalo Pravnih Aktov](./sifrant?naziv=%C5%A0ifrant%20Kazalo%20pravnih%20aktov)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaPripravo",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaSprejetje",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo), [Vlada](./sifrant?naziv=Vlada%20Republike%20Slovenije), [Državni zbor](./sifrant?naziv=Dr%C5%BEavni%20zbor%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "podrocje",
+            "description": "Izbor identifikatorja iz šifranta [Področje](./sifrant?naziv=%C5%A0ifrant%20podro%C4%8Dje)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query",
+            "name": "osnovni",
+            "description": "Ali je osnovni predpis?",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaOd",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaDo",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveOd",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveDo",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiOd",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiDo",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeOd",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeDo",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 10,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "pageSize",
+            "description": "(Maksimalno 1000)",
+            "required": false
+          }
+        ],
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/predpisi-v-pripravi/seznam": {
+      "get": {
+        "operationId": "getPredpisiKiSeNeVeljajoInPredpisiVPripravi_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PredpisSeznamDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/register-predpisov": {
+      "get": {
+        "operationId": "getRegisterPredpisov",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListPredpisDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "mopedID",
+            "description": "Identifikator predpisa. Primer vnosa: 'ZAKO4687'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "eva",
+            "description": "EVA oznaka. Primer vnosa: '2006-1611-0004'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sop",
+            "description": "SOP oznaka. Primer vnosa: '2006-01-5014'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "epa",
+            "description": "EPA oznaka. Primer vnosa: '1067-IV'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "vrstaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Vrsta akta RS](./sifrant?naziv=%C5%A0ifrant%20Vrsta%20akta%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "kategorizacijaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Kazalo Pravnih Aktov](./sifrant?naziv=%C5%A0ifrant%20Kazalo%20pravnih%20aktov)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaPripravo",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaSprejetje",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo), [Vlada](./sifrant?naziv=Vlada%20Republike%20Slovenije), [Državni zbor](./sifrant?naziv=Dr%C5%BEavni%20zbor%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "podrocje",
+            "description": "Izbor identifikatorja iz šifranta [Področje](./sifrant?naziv=%C5%A0ifrant%20podro%C4%8Dje)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query",
+            "name": "osnovni",
+            "description": "Ali je osnovni predpis?",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaOd",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaDo",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveOd",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveDo",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiOd",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiDo",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeOd",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeDo",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiOd",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiDo",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeOd",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeDo",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 10,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "pageSize",
+            "description": "(Maksimalno 1000)",
+            "required": false
+          }
+        ],
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/register-predpisov/seznam": {
+      "get": {
+        "operationId": "getRegisterPredpisov_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PredpisSeznamDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/splosni-akti-za-izvrsevanje-javnih-pooblastil": {
+      "get": {
+        "operationId": "getSplosniAktiZaIzvajanjeJavnihPooblastil",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListPredpisDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "mopedID",
+            "description": "Identifikator predpisa. Primer vnosa: 'ZAKO4687'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "eva",
+            "description": "EVA oznaka. Primer vnosa: '2006-1611-0004'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sop",
+            "description": "SOP oznaka. Primer vnosa: '2006-01-5014'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "epa",
+            "description": "EPA oznaka. Primer vnosa: '1067-IV'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "vrstaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Vrsta akta RS](./sifrant?naziv=%C5%A0ifrant%20Vrsta%20akta%20RS)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "kategorizacijaAkta",
+            "description": "Izbor identifikatorja iz šifranta [Kazalo Pravnih Aktov](./sifrant?naziv=%C5%A0ifrant%20Kazalo%20pravnih%20aktov)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaPripravo",
+            "description": "Izbor identifikatorja iz šifranta [Drugi organi](./sifrant?naziv=Drugo)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaSprejetje",
+            "description": "Izbor identifikatorja iz šifranta [Drugi organi](./sifrant?naziv=Drugo)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "podrocje",
+            "description": "Izbor identifikatorja iz šifranta [Področje](./sifrant?naziv=%C5%A0ifrant%20podro%C4%8Dje)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query",
+            "name": "osnovni",
+            "description": "Ali je osnovni predpis?",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaOd",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumSprejetjaDo",
+            "description": "Filter po datumu sprejetja predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveOd",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveDo",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiOd",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiDo",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeOd",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaUporabeDo",
+            "description": "Filter po datumu začetka uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiOd",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiDo",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeOd",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumKoncaUporabeDo",
+            "description": "Filter po datumu konca uporabe predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 10,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "pageSize",
+            "description": "(Maksimalno 1000)",
+            "required": false
+          }
+        ],
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis/splosni-akti-za-izvrsevanje-javnih-pooblastil/seznam": {
+      "get": {
+        "operationId": "getSplosniAktiZaIzvajanjeJavnihPooblastil_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PredpisSeznamDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "PredpisController"
+        ]
+      }
+    },
+    "/predpis-eu": {
+      "get": {
+        "operationId": "getRegisterPredpisov_2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListPredpisEuDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "celex",
+            "description": "CELEX oznaka. Primer vnosa: '31996D0078'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "vrstaAktaEu",
+            "description": "Izbor identifikatorja iz šifranta [Vrsta Akta Eu](./sifrant?naziv=%C5%A0ifrant%20Vrsta%20akta%20EU)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "organOdgovorenZaPrenosOzIzvajanje",
+            "description": "Izbor identifikatorja iz šifrantov [Ministrstva](./sifrant?naziv=Ministrstvo), [Drugi organi](./sifrant?naziv=Drugo)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              }
+            },
+            "in": "query",
+            "name": "euroVoc",
+            "description": "Izbor identifikatorja iz šifranta [Tezaver (EuroVoc)](./sifrant?naziv=%C5%A0ifrant%20Tezaver%20%28EuroVoc%29)",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "zvezaSop",
+            "description": "SOP oznaka. Primer vnosa: '2006-01-5014'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveOd",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumObjaveDo",
+            "description": "Filter po datumu objave predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiOd",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumZacetkaVeljavnostiDo",
+            "description": "Filter po datumu začetka veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiOd",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumPrenehanjaVeljavnostiDo",
+            "description": "Filter po datumu prenehanja veljavnosti predpisa. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumRokaZaPrenosOd",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumRokaZaPrenosDo",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 10,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "pageSize",
+            "description": "(Maksimalno 1000)",
+            "required": false
+          }
+        ],
+        "tags": [
+          "PredpisEuController"
+        ]
+      }
+    },
+    "/npb": {
+      "get": {
+        "operationId": "getRegisterPredpisov_3",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListNpbDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "eva",
+            "description": "EVA oznaka. Primer vnosa: '2006-1611-0004'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sop",
+            "description": "SOP oznaka. Primer vnosa: '2006-01-5014'",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "epa",
+            "description": "EPA oznaka. Primer vnosa: '1067-IV'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumDokumentaOd",
+            "description": "Filtriraj po datum nastanka dokumenta. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "format": "date",
+              "type": "string"
+            },
+            "in": "query",
+            "name": "datumDokumentaDo",
+            "description": "Filtriraj po datum nastanka dokumenta. Primer vnosa: '2022-01-23'",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 10,
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "pageSize",
+            "description": "(Maksimalno 1000)",
+            "required": false
+          }
+        ],
+        "tags": [
+          "NPBController"
+        ]
+      }
+    },
+    "/besedilo/{idZbirkaElement}": {
+      "get": {
+        "operationId": "getBesedilo",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "path",
+            "name": "idZbirkaElement",
+            "description": "ID predpisa (idZbirkaElement): Za podani ID predpisa (ali NPB-ja) vrača njegovo besedilo. V primeru, da je podani ID ID osnovnega predpisa, potem vrne metoda osnovno besedilo tega predpisa. V primeru, da je podani ID ID Neuradnega prečiščenega besedila, potem vrne metoda besedilo tega Neuradnega prečiščenega besedila",
+            "required": true
+          }
+        ],
+        "tags": [
+          "BesediloController"
+        ]
+      }
+    },
+    "/sifranti": {
+      "get": {
+        "operationId": "getSifranti",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListZbirkaSifrantElementDTO"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "SifrantController"
+        ]
+      }
+    },
+    "/sifranti/{id}": {
+      "get": {
+        "operationId": "getSifranti_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataContainerDTOListZbirkaSifrantElementDTO"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "id",
+            "description": "ID šifranta, pridobljenega s klicem API-ja '/sifranti', za katerega želite pridobiti seznam šifrantov",
+            "required": true
+          }
+        ],
+        "tags": [
+          "SifrantController"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "PISRS API",
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "ApiAccessRequestController",
+      "description": "Pridobivanje pravic za dostop do API-ja"
+    },
+    {
+      "name": "PredpisController",
+      "description": "API za podatke o predpisih RS."
+    },
+    {
+      "name": "PredpisEuController",
+      "description": "API za podatke o predpisih EU."
+    },
+    {
+      "name": "NPBController",
+      "description": "API za seznam neuradnih prečiščenih besedil (NPB) predpisov RS."
+    },
+    {
+      "name": "BesediloController",
+      "description": "API za neuradna prečiščena besedila predpisov (NPB) RS."
+    },
+    {
+      "name": "SifrantController",
+      "description": "API za šifrante z opisi, ki so potrebni za uporabo API."
+    }
+  ]
+}
