@@ -77,24 +77,30 @@ const MinistryTimeline = styled(Box, {
   backgroundColor: theme.palette.background.paper,
 }));
 
-const MinisterBar = styled(Box)(({ theme }) => ({
+const MinisterBar = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'isPersonHighlighted',
+})<{ isPersonHighlighted?: boolean }>(({ theme, isPersonHighlighted }) => ({
   position: 'absolute',
   height: '20px',
   margin: '0',
-  border: `1px solid ${theme.palette.divider}`,
+  border: isPersonHighlighted
+    ? `2px solid ${theme.palette.primary.main}`
+    : `1px solid ${theme.palette.divider}`,
   cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',
   fontSize: '0.75rem',
-  fontWeight: 500,
+  fontWeight: isPersonHighlighted ? 600 : 500,
   overflow: 'hidden',
   whiteSpace: 'nowrap',
+  boxShadow: isPersonHighlighted ? theme.shadows[3] : 'none',
+  zIndex: isPersonHighlighted ? 11 : 'auto',
   '&:hover': {
     transform: 'translateY(-1px)',
     boxShadow: theme.shadows[2],
     zIndex: 10,
   },
-  transition: theme.transitions.create(['transform', 'box-shadow']),
+  transition: theme.transitions.create(['transform', 'box-shadow', 'border', 'font-weight']),
 }));
 
 const GovernmentRow = styled(Box)(({ theme }) => ({
@@ -247,6 +253,17 @@ interface Government {
     };
   };
   ministers: Minister[];
+  political_composition?: {
+    coalition: {
+      en: string;
+      sl: string;
+    };
+    parties: string[];
+    ideology: {
+      en: string;
+      sl: string;
+    };
+  };
 }
 
 // Color scheme based on how many government roles a person has held
@@ -335,6 +352,7 @@ export default function TimelineVisualization() {
   const [language, setLanguage] = useState<'en' | 'sl'>('en');
   const [sortMode, setSortMode] = useState<'first-appearance' | 'frequency'>('first-appearance');
   const [hoveredMinistry, setHoveredMinistry] = useState<string | null>(null);
+  const [hoveredPerson, setHoveredPerson] = useState<string | null>(null);
 
   // Initialize zoom after hydration to prevent SSR mismatch
   useEffect(() => {
@@ -589,6 +607,7 @@ export default function TimelineVisualization() {
     setMouseDate(null);
     setMousePosition(null);
     setHoveredMinistry(null);
+    setHoveredPerson(null);
   }, []);
 
   // Generate year markers
@@ -881,6 +900,22 @@ export default function TimelineVisualization() {
                         <Typography variant="caption" display="block">
                           {government.startDate} {language === 'en' ? 'to' : 'do'} {government.endDate}
                         </Typography>
+                        {(() => {
+                          const govData = (ministersData.governments as Government[]).find(g => g.number === government.number);
+                          if (govData?.political_composition) {
+                            return (
+                              <>
+                                <Typography variant="caption" display="block" sx={{ mt: 0.5, fontWeight: 600 }}>
+                                  {language === 'en' ? 'Coalition:' : 'Koalicija:'} {language === 'en' ? govData.political_composition.coalition.en : govData.political_composition.coalition.sl}
+                                </Typography>
+                                <Typography variant="caption" display="block">
+                                  {language === 'en' ? 'Parties:' : 'Stranke:'} {govData.political_composition.parties.join(', ')}
+                                </Typography>
+                              </>
+                            );
+                          }
+                          return null;
+                        })()}
                       </Box>
                     }
                     arrow
@@ -991,6 +1026,7 @@ export default function TimelineVisualization() {
                     disableInteractive={true}
                   >
                     <MinisterBar
+                      isPersonHighlighted={hoveredPerson === government.primeMinister}
                       style={{
                         left: `${startPos}px`,
                         width: `${width}px`,
@@ -998,6 +1034,8 @@ export default function TimelineVisualization() {
                         paddingLeft: '8px',
                         paddingRight: '4px',
                       }}
+                      onMouseEnter={() => setHoveredPerson(government.primeMinister)}
+                      onMouseLeave={() => setHoveredPerson(null)}
                       onClick={(e) => {
                         if (isMobileDevice()) {
                           handleBarClick(e, government.startDate, government.endDate);
@@ -1092,6 +1130,7 @@ export default function TimelineVisualization() {
                       disableInteractive={true}
                     >
                       <MinisterBar
+                        isPersonHighlighted={hoveredPerson === minister.name}
                         style={{
                           left: `${startPos}px`,
                           width: `${width}px`,
@@ -1099,6 +1138,8 @@ export default function TimelineVisualization() {
                           paddingLeft: '8px',
                           paddingRight: '4px',
                         }}
+                        onMouseEnter={() => setHoveredPerson(minister.name)}
+                        onMouseLeave={() => setHoveredPerson(null)}
                         onClick={(e) => {
                           if (isMobileDevice()) {
                             handleBarClick(e, minister.start_date, minister.end_date);
