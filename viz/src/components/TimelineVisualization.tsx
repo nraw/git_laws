@@ -29,15 +29,11 @@ const TimelineContent = styled(Box)({
   flexDirection: 'column',
 });
 
-const MinistryRow = styled(Box)(({ theme }) => ({
+const MinistryRow = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
-  minHeight: '60px',
-  borderBottom: `1px solid ${theme.palette.divider}`,
+  minHeight: '20px',
   position: 'relative',
-  '&:last-child': {
-    borderBottom: 'none',
-  },
 }));
 
 const MinistryLabel = styled(Box)(({ theme }) => ({
@@ -70,7 +66,7 @@ const MinistryTimeline = styled(Box, {
 })<{ timelineWidth: number }>(({ timelineWidth, theme }) => ({
   flex: 1,
   position: 'relative',
-  height: '60px',
+  height: '20px',
   width: `${timelineWidth}px`,
   minWidth: `${timelineWidth}px`, // Dynamic width based on zoom
   backgroundColor: theme.palette.background.paper,
@@ -79,7 +75,7 @@ const MinistryTimeline = styled(Box, {
 const MinisterBar = styled(Box)(({ theme }) => ({
   position: 'absolute',
   height: '20px',
-  margin: '20px 0',
+  margin: '0',
   border: `1px solid ${theme.palette.divider}`,
   cursor: 'pointer',
   display: 'flex',
@@ -99,8 +95,7 @@ const MinisterBar = styled(Box)(({ theme }) => ({
 const GovernmentRow = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  minHeight: '60px',
-  borderBottom: `1px solid ${theme.palette.divider}`,
+  minHeight: '20px',
   position: 'sticky',
   top: '30px', // Account for year timeline row height
   backgroundColor: theme.palette.background.paper,
@@ -109,26 +104,19 @@ const GovernmentRow = styled(Box)(({ theme }) => ({
   '& > *': {
     backgroundColor: 'inherit',
   },
-  '&:last-child': {
-    borderBottom: 'none',
-  },
 }));
 
 const PrimeMinisterRow = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  minHeight: '60px',
-  borderBottom: `1px solid ${theme.palette.divider}`,
+  minHeight: '20px',
   position: 'sticky',
-  top: '90px', // Account for year timeline + government row height
+  top: '50px', // Account for year timeline + government row height (30px + 20px)
   backgroundColor: theme.palette.background.paper,
   zIndex: 3,
   width: '100%',
   '& > *': {
     backgroundColor: 'inherit',
-  },
-  '&:last-child': {
-    borderBottom: 'none',
   },
 }));
 
@@ -136,11 +124,11 @@ const GovernmentBar = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'isSelected',
 })<{ isSelected?: boolean }>(({ theme, isSelected }) => ({
   position: 'absolute',
-  height: '40px',
-  margin: '10px 0',
+  height: '20px',
+  margin: '0',
   border: isSelected
-    ? `3px solid ${theme.palette.primary.main}`
-    : `2px solid ${theme.palette.divider}`,
+    ? `2px solid ${theme.palette.primary.main}`
+    : `1px solid ${theme.palette.divider}`,
   cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',
@@ -148,8 +136,8 @@ const GovernmentBar = styled(Box, {
   fontWeight: 600,
   overflow: 'hidden',
   whiteSpace: 'nowrap',
-  borderRadius: '4px',
-  boxShadow: isSelected ? theme.shadows[4] : 'none',
+  borderRadius: '2px',
+  boxShadow: isSelected ? theme.shadows[2] : 'none',
   '&:hover': {
     transform: 'translateY(-1px)',
     boxShadow: theme.shadows[3],
@@ -176,7 +164,6 @@ const YearTimelineRow = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   height: '30px',
-  borderBottom: `1px solid ${theme.palette.divider}`,
   backgroundColor: theme.palette.grey[50],
   position: 'sticky',
   top: 0,
