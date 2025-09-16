@@ -45,43 +45,28 @@ def main(law_id=None, output_dir=None):
     logger.info(f"Fetching law {law_id} and related laws from PISRS API...")
     
     try:
-        # Get all laws affecting the target law (including the law itself)
-        affected_laws_data = pisrs_client.get_laws_affecting_law(law_id)
+        # Get all historical NPB (consolidated text) versions of the target law
+        logger.info(f"Fetching historical NPB versions for {law_id}...")
+        npb_versions_data = pisrs_client.get_historical_npb_versions(law_id)
         
-        if not affected_laws_data:
-            logger.error(f"Law ID '{law_id}' not found or no related laws found")
-            logger.error("Please check that the law ID is correct")
+        if not npb_versions_data:
+            logger.error(f"No NPB versions found for law ID '{law_id}'")
+            logger.error("Please check that the law ID is correct and has consolidated versions")
             sys.exit(1)
         
-        # Filter for laws that start with "ZAKO" and have dates
-        affected_laws_data = [
-            law for law in affected_laws_data 
-            if law['ID'].startswith("ZAKO") and law['D_SPREJEMA']
-        ]
-        
-        if not affected_laws_data:
-            logger.warning(f"No processable laws found for {law_id}")
-            logger.info("This may indicate the law ID is not a ZAKO-type law or has no date")
-            return
-        
         # Convert to DataFrame for compatibility with existing code
-        affected_laws = pd.DataFrame(affected_laws_data)
+        affected_laws = pd.DataFrame(npb_versions_data)
         affected_laws["date_accepted"] = pd.to_datetime(affected_laws["D_SPREJEMA"], format="%d.%m.%y")
         affected_laws = affected_laws.sort_values("date_accepted")
         
-        logger.info(f"Found {len(affected_laws)} laws to process")
+        logger.info(f"Found {len(affected_laws)} historical NPB versions to process")
         
-        # Get law code for the target law
-        target_law = affected_laws[affected_laws.ID == law_id]
-        if len(target_law) == 0:
-            logger.error(f"Target law {law_id} not found in affected laws")
-            sys.exit(1)
-        
-        law_code = target_law.iloc[0].KRATICA
-        logger.info(f"Processing law {law_id} ({law_code})")
+        # Get law code from the first version
+        law_code = affected_laws.iloc[0].KRATICA
+        logger.info(f"Processing law {law_id} ({law_code}) - {len(affected_laws)} consolidated versions")
         
     except Exception as e:
-        logger.error(f"Error fetching law data for {law_id}: {e}")
+        logger.error(f"Error fetching NPB versions for {law_id}: {e}")
         sys.exit(1)
 
     # Set up output directory
@@ -117,25 +102,46 @@ def main(law_id=None, output_dir=None):
             affected_law_id = affected_law_row["ID"]
             affected_law_title = affected_law_row["NASLOV"]
             affected_law_code = affected_law_row["KRATICA"]
-            commit_msg = (
-                affected_law_code + " - " + affected_law_id + " - " + affected_law_title
-            )
             affected_law_date = affected_law_row["date_accepted"]
             
-            # Get law content from API
-            logger.info(f"Fetching content for law {affected_law_id}...")
-            vsebina = pisrs_client.get_law_content(affected_law_id)
+            # Create enhanced commit message with actual amendment name
+            amendment_name = affected_law_row.get('_amendment_name', affected_law_code)
+            commit_msg_parts = [f"{amendment_name} - {affected_law_id} - {affected_law_title}"]
+            
+            # Add government metadata if available
+            government_metadata = affected_law_row.get('_government_metadata', {})
+            if government_metadata and government_metadata.get('government_info'):
+                commit_msg_parts.append(government_metadata['government_info'])
+            
+            commit_msg = '\n'.join(commit_msg_parts)
+            
+            # Check if this is an NPB version or individual law
+            is_npb = affected_law_row.get('_is_npb', False)
+            
+            if is_npb:
+                # Get NPB consolidated content
+                logger.info(f"Fetching NPB consolidated content for version {affected_law_id} ({affected_law_code})...")
+                vsebina = pisrs_client.get_law_content(affected_law_id, is_npb=True)
+            else:
+                # Get individual law content (fallback)
+                logger.info(f"Fetching individual law content for {affected_law_id} ({affected_law_code})...")
+                vsebina = pisrs_client.get_law_content(affected_law_id, is_npb=False)
             
             if not vsebina or not vsebina.strip():
                 logger.warning(f"Empty or no content for law {affected_law_id}, skipping")
                 skipped_count += 1
                 continue
+            
+            # Log content info for debugging
+            content_length = len(vsebina)
+            content_hash = hash(vsebina) % 10000  # Simple hash for comparison
+            logger.info(f"Got content for {affected_law_id}: {content_length} chars, hash={content_hash}")
                 
             # Clean up the content
             vsebina_clean = re.sub(r"( |\n|\r)+", " ", vsebina)
 
             try:
-                soup = bs(vsebina_clean)
+                soup = bs(vsebina_clean, features="html.parser")
                 prettyHTML = soup.prettify()
             except Exception as e:
                 logger.warning(f"Failed to parse HTML for {affected_law_id}: {e}")
@@ -195,7 +201,7 @@ data for the specified law, making it much faster than previous bulk approaches.
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="/tmp/slovenian_laws/",
+        default=None,
         help="Output directory for the git repository (default: /tmp/slovenian_laws/)"
     )
     return parser.parse_args()
