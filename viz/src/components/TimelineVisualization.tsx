@@ -17,7 +17,7 @@ import ministersData from '../data/ministers_combined.json';
 const TimelineContainer = styled(Box)(({ theme }) => ({
   position: 'relative',
   width: '100%',
-  height: '80vh',
+  height: '85vh',
   overflow: 'auto',
   border: `1px solid ${theme.palette.divider}`,
   borderRadius: theme.shape.borderRadius,
@@ -546,7 +546,7 @@ export default function TimelineVisualization() {
     const start = new Date(startDate);
     const end = new Date(endDate);
     const daysDiff = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
-    return Math.max(daysDiff * pixelsPerDay, 50); // Minimum width of 50px
+    return daysDiff * pixelsPerDay; // No minimum width constraint
   }, [pixelsPerDay]);
 
   const getDateFromPosition = useCallback((pixelPosition: number) => {
@@ -635,7 +635,7 @@ export default function TimelineVisualization() {
 
 
   return (
-    <Paper elevation={2} sx={{ m: 2, p: 2 }}>
+    <Paper elevation={2} sx={{ m: 2, p: 2, pb: 0 }}>
       <Box display="flex" justifyContent="space-between" alignItems="flex-start" mb={2}>
         <Box flex={1}>
           <Typography variant="h4" gutterBottom>
@@ -885,6 +885,9 @@ export default function TimelineVisualization() {
                     }
                     arrow
                     placement="top"
+                    leaveDelay={0}
+                    enterDelay={100}
+                    disableInteractive={true}
                   >
                     <GovernmentBar
                       isSelected={selectedGovernment === government.number}
@@ -983,6 +986,9 @@ export default function TimelineVisualization() {
                     }
                     arrow
                     placement="top"
+                    leaveDelay={0}
+                    enterDelay={100}
+                    disableInteractive={true}
                   >
                     <MinisterBar
                       style={{
@@ -1001,7 +1007,6 @@ export default function TimelineVisualization() {
                       <Box sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: 0.5,
                         width: '100%',
                         overflow: 'hidden'
                       }}>
@@ -1013,27 +1018,11 @@ export default function TimelineVisualization() {
                             whiteSpace: 'nowrap',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
-                            flexGrow: 1,
-                            minWidth: 0
+                            width: '100%'
                           }}
                         >
                           {government.primeMinister}
                         </Typography>
-                        <Chip
-                          label={`G${government.number}`}
-                          size="small"
-                          sx={{
-                            height: '14px',
-                            fontSize: '0.6rem',
-                            minWidth: '24px',
-                            '& .MuiChip-label': {
-                              px: 0.3,
-                              py: 0
-                            },
-                            backgroundColor: 'rgba(0,0,0,0.1)',
-                            color: 'inherit'
-                          }}
-                        />
                       </Box>
                     </MinisterBar>
                   </Tooltip>
@@ -1098,6 +1087,9 @@ export default function TimelineVisualization() {
                       }
                       arrow
                       placement="top"
+                      leaveDelay={0}
+                      enterDelay={100}
+                      disableInteractive={true}
                     >
                       <MinisterBar
                         style={{
@@ -1116,7 +1108,6 @@ export default function TimelineVisualization() {
                         <Box sx={{
                           display: 'flex',
                           alignItems: 'center',
-                          gap: 0.5,
                           width: '100%',
                           overflow: 'hidden'
                         }}>
@@ -1128,27 +1119,11 @@ export default function TimelineVisualization() {
                               whiteSpace: 'nowrap',
                               overflow: 'hidden',
                               textOverflow: 'ellipsis',
-                              flexGrow: 1,
-                              minWidth: 0
+                              width: '100%'
                             }}
                           >
                             {minister.name}
                           </Typography>
-                          <Chip
-                            label={`G${minister.governmentNumber}`}
-                            size="small"
-                            sx={{
-                              height: '14px',
-                              fontSize: '0.6rem',
-                              minWidth: '24px',
-                              '& .MuiChip-label': {
-                                px: 0.3,
-                                py: 0
-                              },
-                              backgroundColor: 'rgba(0,0,0,0.1)',
-                              color: 'inherit'
-                            }}
-                          />
                         </Box>
                       </MinisterBar>
                     </Tooltip>
