@@ -114,6 +114,24 @@ const GovernmentRow = styled(Box)(({ theme }) => ({
   },
 }));
 
+const PrimeMinisterRow = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  minHeight: '60px',
+  borderBottom: `1px solid ${theme.palette.divider}`,
+  position: 'sticky',
+  top: '90px', // Account for year timeline + government row height
+  backgroundColor: theme.palette.background.paper,
+  zIndex: 3,
+  width: '100%',
+  '& > *': {
+    backgroundColor: 'inherit',
+  },
+  '&:last-child': {
+    borderBottom: 'none',
+  },
+}));
+
 const GovernmentBar = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'isSelected',
 })<{ isSelected?: boolean }>(({ theme, isSelected }) => ({
@@ -239,11 +257,53 @@ interface Government {
   ministers: Minister[];
 }
 
-const GOVERNMENT_COLORS = [
-  '#e3f2fd', '#f3e5f5', '#e8f5e8', '#fff3e0', '#fce4ec',
-  '#f1f8e9', '#e0f2f1', '#e8eaf6', '#fff8e1', '#fde7f3',
-  '#e0f7fa', '#f9fbe7', '#efebe9', '#f3e5f5'
-];
+// Color scheme based on how many government roles a person has held
+const ROLE_FREQUENCY_COLORS = {
+  1: '#e8f5e8',     // Light green for 1 role
+  2: '#c8e6c9',     // Medium-light green for 2 roles
+  3: '#a5d6a7',     // Medium green for 3 roles
+  4: '#81c784',     // Medium-dark green for 4 roles
+  5: '#66bb6a',     // Dark green for 5 roles
+  6: '#4caf50',     // Darker green for 6 roles
+  7: '#43a047',     // Very dark green for 7+ roles
+  8: '#388e3c',     // Darkest green for 8+ roles
+  default: '#2e7d32' // Fallback for 9+ roles
+};
+
+// Function to count how many government roles each person has held (including prime minister positions)
+const countPersonRoles = (governments: Government[]) => {
+  const personRoleCount = new Map<string, number>();
+
+  governments.forEach(government => {
+    // Count prime minister role
+    const pmName = government.leadership.prime_minister.name;
+    const currentPMCount = personRoleCount.get(pmName) || 0;
+    personRoleCount.set(pmName, currentPMCount + 1);
+
+    // Count minister roles
+    government.ministers.forEach(minister => {
+      const currentCount = personRoleCount.get(minister.name) || 0;
+      personRoleCount.set(minister.name, currentCount + 1);
+    });
+  });
+
+  return personRoleCount;
+};
+
+// Function to get color based on role frequency
+const getPersonColor = (personName: string, roleCount: Map<string, number>) => {
+  const count = roleCount.get(personName) || 1;
+
+  if (count >= 9) return ROLE_FREQUENCY_COLORS.default;
+  if (count >= 8) return ROLE_FREQUENCY_COLORS[8];
+  if (count >= 7) return ROLE_FREQUENCY_COLORS[7];
+  if (count >= 6) return ROLE_FREQUENCY_COLORS[6];
+  if (count >= 5) return ROLE_FREQUENCY_COLORS[5];
+  if (count >= 4) return ROLE_FREQUENCY_COLORS[4];
+  if (count >= 3) return ROLE_FREQUENCY_COLORS[3];
+  if (count >= 2) return ROLE_FREQUENCY_COLORS[2];
+  return ROLE_FREQUENCY_COLORS[1];
+};
 
 const calculateFitToScreenZoom = () => {
   // Get the timeline span in days
@@ -307,6 +367,9 @@ export default function TimelineVisualization() {
   const { baseData, governmentData, timelineStart, timelineEnd, pixelsPerDay, totalTimelineWidth } = useMemo(() => {
     const governments = ministersData.governments as Government[];
 
+    // Count how many roles each person has held across all governments
+    const personRoleCount = countPersonRoles(governments);
+
     // Find overall timeline bounds
     const allDates = governments.flatMap(gov => [
       new Date(gov.period.start_date),
@@ -342,13 +405,21 @@ export default function TimelineVisualization() {
       .sort(([, dateA], [, dateB]) => dateA.getTime() - dateB.getTime())
       .map(([ministry]) => ministry);
 
-    // Process government data
+    // Process government data (still use government colors for government bar)
+    const GOVERNMENT_COLORS = [
+      '#e3f2fd', '#f3e5f5', '#e8f5e8', '#fff3e0', '#fce4ec',
+      '#f1f8e9', '#e0f2f1', '#e8eaf6', '#fff8e1', '#fde7f3',
+      '#e0f7fa', '#f9fbe7', '#efebe9', '#f3e5f5'
+    ];
+
     const processedGovernments = governments.map((gov, govIndex) => ({
       number: gov.number,
       name: language === 'en' ? gov.name.en : gov.name.sl,
       startDate: gov.period.start_date,
       endDate: gov.period.end_date,
       primeMinister: gov.leadership.prime_minister.name,
+      primeMinisterColor: getPersonColor(gov.leadership.prime_minister.name, personRoleCount), // Add PM color
+      primeMinisterRoleCount: personRoleCount.get(gov.leadership.prime_minister.name) || 1, // Add PM role count
       color: GOVERNMENT_COLORS[govIndex % GOVERNMENT_COLORS.length]
     }));
 
@@ -362,6 +433,8 @@ export default function TimelineVisualization() {
             governmentNumber: gov.number,
             governmentName: language === 'en' ? gov.name.en : gov.name.sl,
             governmentColor: GOVERNMENT_COLORS[govIndex % GOVERNMENT_COLORS.length],
+            personColor: getPersonColor(minister.name, personRoleCount), // New person-based color
+            roleCount: personRoleCount.get(minister.name) || 1, // Add role count for tooltip
             primeMinister: gov.leadership.prime_minister.name
           }));
       });
@@ -558,8 +631,8 @@ export default function TimelineVisualization() {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {language === 'en'
-              ? 'Horizontal timeline showing ministers across different governments. Click on governments to filter ministries.'
-              : 'Horizontalna časovnica, ki prikazuje ministre v različnih vladah. Kliknite na vlade za filtriranje ministrstev.'
+              ? 'Horizontal timeline showing ministers and prime ministers across different governments. Colors represent governments. Hover to see total government roles for each person (including PM positions). Click on governments to filter ministries.'
+              : 'Horizontalna časovnica, ki prikazuje ministre in predsednike vlad v različnih vladah. Barve predstavljajo vlade. Premaknite miško za ogled skupnega števila vladinih vlog za vsako osebo (vključno s predsedništvom vlad). Kliknite na vlade za filtriranje ministrstev.'
             }
           </Typography>
           {selectedGovernment && (
@@ -810,6 +883,115 @@ export default function TimelineVisualization() {
             </MinistryTimeline>
           </GovernmentRow>
 
+          {/* Prime Minister row as third row */}
+          <PrimeMinisterRow>
+            <MinistryLabel>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: '0.75rem',
+                  fontWeight: 600,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                  width: '100%',
+                  [`@media (max-width:768px)`]: {
+                    fontSize: '0.65rem',
+                  }
+                }}
+              >
+                {language === 'en' ? 'Prime Ministers' : 'Predsedniki vlad'}
+              </Typography>
+            </MinistryLabel>
+            <MinistryTimeline timelineWidth={totalTimelineWidth}>
+              {/* Prime Minister bars */}
+              {governmentData.map((government) => {
+                const startPos = getPositionFromDate(government.startDate);
+                const width = getWidthFromDates(government.startDate, government.endDate);
+
+                return (
+                  <Tooltip
+                    key={`pm-${government.number}`}
+                    title={
+                      <Box>
+                        <Typography variant="subtitle2">{government.primeMinister}</Typography>
+                        <Typography variant="body2">
+                          {language === 'en' ? 'Prime Minister' : 'Predsednik vlade'}
+                        </Typography>
+                        <Typography variant="caption">
+                          {government.startDate} {language === 'en' ? 'to' : 'do'} {government.endDate}
+                        </Typography>
+                        <Typography variant="caption" display="block">
+                          {language === 'en' ? 'Government' : 'Vlada'} {government.number}: {government.name}
+                        </Typography>
+                        <Typography variant="caption" display="block" sx={{ fontWeight: 600, mt: 0.5 }}>
+                          {language === 'en'
+                            ? `Total gov roles: ${government.primeMinisterRoleCount}`
+                            : `Skupaj vl. vlog: ${government.primeMinisterRoleCount}`}
+                        </Typography>
+                      </Box>
+                    }
+                    arrow
+                    placement="top"
+                  >
+                    <MinisterBar
+                      style={{
+                        left: `${startPos}px`,
+                        width: `${width}px`,
+                        backgroundColor: government.color,
+                        paddingLeft: '8px',
+                        paddingRight: '4px',
+                      }}
+                      onClick={(e) => {
+                        if (isMobileDevice()) {
+                          handleBarClick(e, government.startDate, government.endDate);
+                        }
+                      }}
+                    >
+                      <Box sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 0.5,
+                        width: '100%',
+                        overflow: 'hidden'
+                      }}>
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            fontSize: '0.7rem',
+                            fontWeight: 500,
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            flexGrow: 1,
+                            minWidth: 0
+                          }}
+                        >
+                          {government.primeMinister}
+                        </Typography>
+                        <Chip
+                          label={`G${government.number}`}
+                          size="small"
+                          sx={{
+                            height: '14px',
+                            fontSize: '0.6rem',
+                            minWidth: '24px',
+                            '& .MuiChip-label': {
+                              px: 0.3,
+                              py: 0
+                            },
+                            backgroundColor: 'rgba(0,0,0,0.1)',
+                            color: 'inherit'
+                          }}
+                        />
+                      </Box>
+                    </MinisterBar>
+                  </Tooltip>
+                );
+              })}
+            </MinistryTimeline>
+          </PrimeMinisterRow>
+
           {/* Ministry rows */}
           {processedData.map((ministry) => (
             <MinistryRow key={ministry.name}>
@@ -852,6 +1034,11 @@ export default function TimelineVisualization() {
                           </Typography>
                           <Typography variant="caption" display="block">
                             {language === 'en' ? 'PM:' : 'PV:'} {minister.primeMinister}
+                          </Typography>
+                          <Typography variant="caption" display="block" sx={{ fontWeight: 600, mt: 0.5 }}>
+                            {language === 'en'
+                              ? `Total gov roles: ${minister.roleCount}`
+                              : `Skupaj vl. vlog: ${minister.roleCount}`}
                           </Typography>
                         </Box>
                       }
