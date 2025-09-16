@@ -36,12 +36,14 @@ const MinistryRow = styled(Box)(() => ({
   position: 'relative',
 }));
 
-const MinistryLabel = styled(Box)(({ theme }) => ({
+const MinistryLabel = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'isHovered',
+})<{ isHovered?: boolean }>(({ theme, isHovered }) => ({
   width: '300px',
   minWidth: '300px',
   maxWidth: '300px',
   padding: theme.spacing(0.5),
-  backgroundColor: theme.palette.background.paper,
+  backgroundColor: isHovered ? theme.palette.action.hover : theme.palette.background.paper,
   borderRight: `1px solid ${theme.palette.divider}`,
   position: 'sticky',
   left: 0,
@@ -49,10 +51,11 @@ const MinistryLabel = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   fontSize: '0.875rem',
-  fontWeight: 500,
+  fontWeight: isHovered ? 600 : 500,
   boxSizing: 'border-box',
   overflow: 'hidden',
   height: '20px',
+  transition: theme.transitions.create(['background-color', 'font-weight']),
   [theme.breakpoints.down('md')]: {
     width: '150px',
     minWidth: '150px',
@@ -149,7 +152,7 @@ const GovernmentBar = styled(Box, {
 }));
 
 const DateHoverIndicator = styled(Box)(({ theme }) => ({
-  position: 'absolute',
+  position: 'fixed',
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.primary.contrastText,
   padding: theme.spacing(0.5, 1),
@@ -330,6 +333,8 @@ export default function TimelineVisualization() {
   const [zoomInput, setZoomInput] = useState('5.0'); // Start with default, will be updated after hydration
   const [isHydrated, setIsHydrated] = useState(false);
   const [language, setLanguage] = useState<'en' | 'sl'>('en');
+  const [sortMode, setSortMode] = useState<'first-appearance' | 'frequency'>('first-appearance');
+  const [hoveredMinistry, setHoveredMinistry] = useState<string | null>(null);
 
   // Initialize zoom after hydration to prevent SSR mismatch
   useEffect(() => {
@@ -375,24 +380,39 @@ export default function TimelineVisualization() {
     const totalDays = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
     const totalWidth = Math.max(totalDays * pxPerDay, 800); // Minimum 800px
 
-    // Get all unique ministries with their first appearance dates
+    // Get all unique ministries with their first appearance dates and frequencies
     const ministriesWithFirstDate = new Map<string, Date>();
+    const ministriesWithFrequency = new Map<string, number>();
+
     governments.forEach(gov => {
       gov.ministers.forEach(minister => {
         const ministryName = language === 'en' ? minister.ministry.en : minister.ministry.sl;
         const startDate = new Date(minister.start_date);
 
+        // Track first appearance
         if (!ministriesWithFirstDate.has(ministryName) ||
             startDate < ministriesWithFirstDate.get(ministryName)!) {
           ministriesWithFirstDate.set(ministryName, startDate);
         }
+
+        // Track frequency (count each minister appointment)
+        const currentCount = ministriesWithFrequency.get(ministryName) || 0;
+        ministriesWithFrequency.set(ministryName, currentCount + 1);
       });
     });
 
-    // Sort ministries by first appearance date
-    const ministriesArray = Array.from(ministriesWithFirstDate.entries())
-      .sort(([, dateA], [, dateB]) => dateA.getTime() - dateB.getTime())
-      .map(([ministry]) => ministry);
+    // Sort ministries based on selected mode
+    let ministriesArray: string[];
+    if (sortMode === 'frequency') {
+      ministriesArray = Array.from(ministriesWithFrequency.entries())
+        .sort(([, freqA], [, freqB]) => freqB - freqA) // Descending frequency
+        .map(([ministry]) => ministry);
+    } else {
+      // Default: sort by first appearance date
+      ministriesArray = Array.from(ministriesWithFirstDate.entries())
+        .sort(([, dateA], [, dateB]) => dateA.getTime() - dateB.getTime())
+        .map(([ministry]) => ministry);
+    }
 
     // Process government data (still use government colors for government bar)
     const GOVERNMENT_COLORS = [
@@ -442,7 +462,7 @@ export default function TimelineVisualization() {
       pixelsPerDay: pxPerDay,
       totalTimelineWidth: totalWidth
     };
-  }, [zoomLevel, language]);
+  }, [zoomLevel, language, sortMode]);
 
   // Reorder ministries based on selected government
   const processedData = useMemo(() => {
@@ -492,8 +512,6 @@ export default function TimelineVisualization() {
     if (!container) return;
 
     const rect = container.getBoundingClientRect();
-    const clickX = event.clientX - rect.left;
-    const clickY = event.clientY - rect.top;
 
     // Calculate the middle date of the clicked bar
     const startTime = new Date(startDate).getTime();
@@ -509,7 +527,7 @@ export default function TimelineVisualization() {
 
     setClickedBarDate({
       date: formattedDate,
-      position: { x: clickX, y: clickY + 20 }
+      position: { x: event.clientX, y: rect.top + 5 } // Fixed position like hover tooltip
     });
 
     // Clear the indicator after 3 seconds
@@ -556,7 +574,11 @@ export default function TimelineVisualization() {
     if (mouseX >= 0) {
       const date = getDateFromPosition(mouseX);
       setMouseDate(date);
-      setMousePosition({ x: event.clientX - rect.left, y: event.clientY - rect.top });
+      // Fixed position: x relative to viewport, y aligned with year timeline from container top
+      setMousePosition({
+        x: event.clientX,
+        y: rect.top + 5 // 5px from container top aligns better with year row
+      });
     } else {
       setMouseDate(null);
       setMousePosition(null);
@@ -566,6 +588,7 @@ export default function TimelineVisualization() {
   const handleMouseLeave = useCallback(() => {
     setMouseDate(null);
     setMousePosition(null);
+    setHoveredMinistry(null);
   }, []);
 
   // Generate year markers
@@ -620,8 +643,8 @@ export default function TimelineVisualization() {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {language === 'en'
-              ? 'Horizontal timeline showing ministers and prime ministers across different governments. Colors represent governments. Hover to see total government roles for each person (including PM positions). Click on governments to filter ministries.'
-              : 'Horizontalna časovnica, ki prikazuje ministre in predsednike vlad v različnih vladah. Barve predstavljajo vlade. Premaknite miško za ogled skupnega števila vladinih vlog za vsako osebo (vključno s predsedništvom vlad). Kliknite na vlade za filtriranje ministrstev.'
+              ? 'Horizontal timeline showing ministers and prime ministers across different governments. Colors represent governments. Sort by first appearance or frequency. Hover to see total government roles for each person (including PM positions). Click on governments to filter ministries.'
+              : 'Horizontalna časovnica, ki prikazuje ministre in predsednike vlad v različnih vladah. Barve predstavljajo vlade. Razvrsti po prvi pojavitvi ali pogostosti. Premaknite miško za ogled skupnega števila vladinih vlog za vsako osebo (vključno s predsedništvom vlad). Kliknite na vlade za filtriranje ministrstev.'
             }
           </Typography>
           {selectedGovernment && (
@@ -647,6 +670,44 @@ export default function TimelineVisualization() {
         </Box>
 
         <Box display="flex" alignItems="center" gap={2}>
+          <Box display="flex" flexDirection="column" alignItems="center" gap={1}>
+            <Typography variant="caption" sx={{ fontSize: '0.7rem' }}>
+              {language === 'en' ? 'Sort' : 'Razvrsti'}
+            </Typography>
+            <ToggleButtonGroup
+              value={sortMode}
+              exclusive
+              onChange={(_, newSortMode) => {
+                if (newSortMode) setSortMode(newSortMode);
+              }}
+              size="small"
+              sx={{ height: '28px' }}
+            >
+              <Tooltip
+                title={language === 'en'
+                  ? 'Sort by when each ministry first appeared'
+                  : 'Razvrsti po tem, kdaj se je vsako ministrstvo prvič pojavilo'
+                }
+                arrow
+              >
+                <ToggleButton value="first-appearance" sx={{ px: 1, fontSize: '0.6rem' }}>
+                  {language === 'en' ? 'First' : 'Prvi'}
+                </ToggleButton>
+              </Tooltip>
+              <Tooltip
+                title={language === 'en'
+                  ? 'Sort by how many times each ministry was filled'
+                  : 'Razvrsti po tem, kolikokrat je bilo vsako ministrstvo zasedeno'
+                }
+                arrow
+              >
+                <ToggleButton value="frequency" sx={{ px: 1, fontSize: '0.6rem' }}>
+                  {language === 'en' ? 'Freq' : 'Pog'}
+                </ToggleButton>
+              </Tooltip>
+            </ToggleButtonGroup>
+          </Box>
+
           <Box display="flex" flexDirection="column" alignItems="center" gap={1}>
             <Typography variant="caption" sx={{ fontSize: '0.7rem' }}>
               {language === 'en' ? 'Language' : 'Jezik'}
@@ -730,7 +791,7 @@ export default function TimelineVisualization() {
             <DateHoverIndicator
               style={{
                 left: mousePosition.x,
-                top: mousePosition.y + 20,
+                top: mousePosition.y,
               }}
             >
               {mouseDate}
@@ -984,7 +1045,7 @@ export default function TimelineVisualization() {
           {/* Ministry rows */}
           {processedData.map((ministry) => (
             <MinistryRow key={ministry.name}>
-              <MinistryLabel>
+              <MinistryLabel isHovered={hoveredMinistry === ministry.name}>
                 <Typography
                   variant="body2"
                   sx={{
@@ -1001,7 +1062,11 @@ export default function TimelineVisualization() {
                   {ministry.name}
                 </Typography>
               </MinistryLabel>
-              <MinistryTimeline timelineWidth={totalTimelineWidth}>
+              <MinistryTimeline
+                timelineWidth={totalTimelineWidth}
+                onMouseEnter={() => setHoveredMinistry(ministry.name)}
+                onMouseLeave={() => setHoveredMinistry(null)}
+              >
                 {ministry.ministers.map((minister, index) => {
                   const startPos = getPositionFromDate(minister.start_date);
                   const width = getWidthFromDates(minister.start_date, minister.end_date);
