@@ -1,0 +1,236 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/7-vlada-republike-slovenije-od-19-decembra-2002-do-3-decembra-2004/",
+  "government": {
+    "number": 7,
+    "name": {
+      "en": "7th Government of the Republic of Slovenia",
+      "sl": "7. vlada Republike Slovenije"
+    },
+    "period": {
+      "start_date": "2002-12-19",
+      "end_date": "2004-12-03",
+      "duration_days": 715
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Mag. Anton Rop",
+        "title": {
+          "en": "Prime Minister",
+          "sl": "Predsednik Vlade"
+        },
+        "elected_date": "2002-11-28",
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Dušan Mramor",
+        "ministry": {
+          "en": "Finance",
+          "sl": "Finance"
+        },
+        "ministry_code": "MF",
+        "title": {
+          "en": "Minister of Finance",
+          "sl": "Minister za finance"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Rado Bohinc",
+        "ministry": {
+          "en": "Interior",
+          "sl": "Notranje zadeve"
+        },
+        "ministry_code": "MNZ",
+        "title": {
+          "en": "Minister of Interior",
+          "sl": "Minister za notranje zadeve"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Dr. Dimitrij Rupel",
+        "ministry": {
+          "en": "Foreign Affairs",
+          "sl": "Zunanje zadeve"
+        },
+        "ministry_code": "MZZ",
+        "title": {
+          "en": "Minister of Foreign Affairs",
+          "sl": "Minister za zunanje zadeve"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Mag. Štefan Horvat",
+        "ministry": {
+          "en": "Justice",
+          "sl": "Pravosodje"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Minister of Justice",
+          "sl": "Minister za pravosodje"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Mag. Franci Demšar",
+        "ministry": {
+          "en": "Defense",
+          "sl": "Obramba"
+        },
+        "ministry_code": "MORS",
+        "title": {
+          "en": "Minister of Defense",
+          "sl": "Minister za obrambo"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Vlado Dimovski",
+        "ministry": {
+          "en": "Labor, Family and Social Affairs",
+          "sl": "Delo, družina in socialne zadeve"
+        },
+        "ministry_code": "MDDSZ",
+        "title": {
+          "en": "Minister of Labor, Family and Social Affairs",
+          "sl": "Minister za delo, družino in socialne zadeve"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Mag. Tea Petrin",
+        "ministry": {
+          "en": "Economy",
+          "sl": "Gospodarstvo"
+        },
+        "ministry_code": "MG",
+        "title": {
+          "en": "Minister of Economy",
+          "sl": "Ministrica za gospodarstvo"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Franc But",
+        "ministry": {
+          "en": "Agriculture, Forestry and Food",
+          "sl": "Kmetijstvo, gozdarstvo in prehrana"
+        },
+        "ministry_code": "MKGP",
+        "title": {
+          "en": "Minister of Agriculture, Forestry and Food",
+          "sl": "Minister za kmetijstvo, gozdarstvo in prehrano"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Mag. Andrja Rihter",
+        "ministry": {
+          "en": "Culture",
+          "sl": "Kultura"
+        },
+        "ministry_code": "MK",
+        "title": {
+          "en": "Minister of Culture",
+          "sl": "Ministrica za kulturo"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Janez Kopač",
+        "ministry": {
+          "en": "Environment, Spatial Planning and Energy",
+          "sl": "Okolje, prostor in energija"
+        },
+        "ministry_code": "MOPE",
+        "title": {
+          "en": "Minister of Environment, Spatial Planning and Energy",
+          "sl": "Minister za okolje, prostor in energijo"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Jakob Presečnik",
+        "ministry": {
+          "en": "Transport",
+          "sl": "Promet"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Minister of Transport",
+          "sl": "Minister za promet"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Dr. Slavko Gaber",
+        "ministry": {
+          "en": "Education, Science and Sport",
+          "sl": "Šolstvo, znanost in šport"
+        },
+        "ministry_code": "MIZŠ",
+        "title": {
+          "en": "Minister of Education, Science and Sport",
+          "sl": "Minister za šolstvo, znanost in šport"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Dr. Dušan Keber",
+        "ministry": {
+          "en": "Health",
+          "sl": "Zdravje"
+        },
+        "ministry_code": "MZ",
+        "title": {
+          "en": "Minister of Health",
+          "sl": "Minister za zdravje"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      },
+      {
+        "name": "Mag. Borut Rončević",
+        "ministry": {
+          "en": "Information Society",
+          "sl": "Informacijska družba"
+        },
+        "ministry_code": "MID",
+        "title": {
+          "en": "Minister of Information Society",
+          "sl": "Minister za informacijsko družbo"
+        },
+        "start_date": "2002-12-19",
+        "end_date": "2004-12-03"
+      }
+    ],
+    "political_composition": {
+      "coalition": {
+        "en": "LDS coalition",
+        "sl": "LDS koalicija"
+      },
+      "parties": ["LDS", "SLS", "ZLSD", "DeSUS"],
+      "ideology": {
+        "en": "center-left",
+        "sl": "levo-sredinska"
+      }
+    }
+  }
+}

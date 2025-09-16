@@ -1,0 +1,250 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/8-vlada-republike-slovenije-od-3-decembra-2004-do-21-novembra-2008/",
+  "government": {
+    "number": 8,
+    "name": {
+      "en": "8th Government of the Republic of Slovenia",
+      "sl": "8. vlada Republike Slovenije"
+    },
+    "period": {
+      "start_date": "2004-12-03",
+      "end_date": "2008-11-21",
+      "duration_days": 1449
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Janez Janša",
+        "title": {
+          "en": "Prime Minister",
+          "sl": "Predsednik Vlade"
+        },
+        "elected_date": "2004-10-03",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Andrej Bajuk",
+        "ministry": {
+          "en": "Finance",
+          "sl": "Finance"
+        },
+        "ministry_code": "MF",
+        "title": {
+          "en": "Minister of Finance",
+          "sl": "Minister za finance"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Dragutin Mate",
+        "ministry": {
+          "en": "Interior",
+          "sl": "Notranje zadeve"
+        },
+        "ministry_code": "MNZ",
+        "title": {
+          "en": "Minister of Interior",
+          "sl": "Minister za notranje zadeve"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Dr. Dimitrij Rupel",
+        "ministry": {
+          "en": "Foreign Affairs",
+          "sl": "Zunanje zadeve"
+        },
+        "ministry_code": "MZZ",
+        "title": {
+          "en": "Minister of Foreign Affairs",
+          "sl": "Minister za zunanje zadeve"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Lovro Šturm",
+        "ministry": {
+          "en": "Justice",
+          "sl": "Pravosodje"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Minister of Justice",
+          "sl": "Minister za pravosodje"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Karl Erjavec",
+        "ministry": {
+          "en": "Defense",
+          "sl": "Obramba"
+        },
+        "ministry_code": "MORS",
+        "title": {
+          "en": "Minister of Defense",
+          "sl": "Minister za obrambo"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Janez Drobnič",
+        "ministry": {
+          "en": "Labor, Family and Social Affairs",
+          "sl": "Delo, družina in socialne zadeve"
+        },
+        "ministry_code": "MDDSZ",
+        "title": {
+          "en": "Minister of Labor, Family and Social Affairs",
+          "sl": "Minister za delo, družino in socialne zadeve"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Andrej Vizjak",
+        "ministry": {
+          "en": "Economy",
+          "sl": "Gospodarstvo"
+        },
+        "ministry_code": "MG",
+        "title": {
+          "en": "Minister of Economy",
+          "sl": "Minister za gospodarstvo"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Mag. Iztok Jarc",
+        "ministry": {
+          "en": "Agriculture, Forestry and Food",
+          "sl": "Kmetijstvo, gozdarstvo in prehrana"
+        },
+        "ministry_code": "MKGP",
+        "title": {
+          "en": "Minister of Agriculture, Forestry and Food",
+          "sl": "Minister za kmetijstvo, gozdarstvo in prehrano"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Vasko Simoniti",
+        "ministry": {
+          "en": "Culture",
+          "sl": "Kultura"
+        },
+        "ministry_code": "MK",
+        "title": {
+          "en": "Minister of Culture",
+          "sl": "Minister za kulturo"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Janez Podobnik",
+        "ministry": {
+          "en": "Environment and Spatial Planning",
+          "sl": "Okolje in prostor"
+        },
+        "ministry_code": "MOP",
+        "title": {
+          "en": "Minister of Environment and Spatial Planning",
+          "sl": "Minister za okolje in prostor"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Mag. Patrick Vlačič",
+        "ministry": {
+          "en": "Transport",
+          "sl": "Promet"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Minister of Transport",
+          "sl": "Minister za promet"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Milan Zver",
+        "ministry": {
+          "en": "Education and Sport",
+          "sl": "Šolstvo in šport"
+        },
+        "ministry_code": "MIZŠ",
+        "title": {
+          "en": "Minister of Education and Sport",
+          "sl": "Minister za šolstvo in šport"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Andrej Bručan",
+        "ministry": {
+          "en": "Health",
+          "sl": "Zdravje"
+        },
+        "ministry_code": "MZ",
+        "title": {
+          "en": "Minister of Health",
+          "sl": "Minister za zdravje"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Gregor Virant",
+        "ministry": {
+          "en": "Public Administration",
+          "sl": "Javna uprava"
+        },
+        "ministry_code": "MJU",
+        "title": {
+          "en": "Minister of Public Administration",
+          "sl": "Minister za javno upravo"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Jure Zupan",
+        "ministry": {
+          "en": "Higher Education, Science and Technology",
+          "sl": "Visoko šolstvo, znanost in tehnologija"
+        },
+        "ministry_code": "MVZT",
+        "title": {
+          "en": "Minister of Higher Education, Science and Technology",
+          "sl": "Minister za visoko šolstvo, znanost in tehnologijo"
+        },
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      }
+    ],
+    "political_composition": {
+      "coalition": {
+        "en": "SDS coalition",
+        "sl": "SDS koalicija"
+      },
+      "parties": ["SDS", "NSi", "SLS", "DeSUS"],
+      "ideology": {
+        "en": "center-right",
+        "sl": "desno-sredinska"
+      }
+    }
+  }
+}

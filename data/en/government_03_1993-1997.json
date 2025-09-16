@@ -12,6 +12,7 @@
       "prime_minister": {
         "name": "Dr. Janez Drnovšek",
         "title": "Prime Minister",
+        "title_sl": "Predsednik Vlade",
         "elected_date": "1993-01-12",
         "start_date": "1993-01-25",
         "end_date": "1997-02-27"
@@ -29,25 +30,30 @@
       {
         "name": "Jožica Puhar",
         "ministry": "Labor, Family and Social Affairs",
+        "ministry_sl": "Delo, družina in socialne zadeve",
         "ministry_code": "MDDSZ",
         "title": "Minister of Labor, Family and Social Affairs",
         "start_date": "1993-01-25",
         "end_date": "1994-06-21",
-        "termination_reason": "dismissed"
+        "termination_reason": "dismissed",
+        "termination_reason_sl": "razrešen"
       },
       {
         "name": "Rina Klinar",
         "ministry": "Labor, Family and Social Affairs",
+        "ministry_sl": "Delo, družina in socialne zadeve",
         "ministry_code": "MDDSZ",
         "title": "Minister of Labor, Family and Social Affairs",
         "start_date": "1994-06-21",
         "end_date": "1996-01-31",
         "termination_reason": "dismissed",
+        "termination_reason_sl": "razrešen",
         "predecessor": "Jožica Puhar"
       },
       {
         "name": "Mag. Anton Rop",
         "ministry": "Labor, Family and Social Affairs",
+        "ministry_sl": "Delo, družina in socialne zadeve",
         "ministry_code": "MDDSZ",
         "title": "Minister of Labor, Family and Social Affairs",
         "start_date": "1996-02-07",
@@ -57,15 +63,18 @@
       {
         "name": "Dr. Davorin Kračun",
         "ministry": "Economic Relations and Development",
+        "ministry_sl": "Ekonomski odnosi in razvoj",
         "ministry_code": "MGRT",
         "title": "Minister of Economic Relations and Development",
         "start_date": "1993-01-25",
         "end_date": "1995-01-26",
-        "termination_reason": "dismissed"
+        "termination_reason": "dismissed",
+        "termination_reason_sl": "razrešen"
       },
       {
         "name": "Janko Deželak",
         "ministry": "Economic Relations and Development",
+        "ministry_sl": "Ekonomski odnosi in razvoj",
         "ministry_code": "MGRT",
         "title": "Minister of Economic Relations and Development",
         "start_date": "1995-01-26",
@@ -75,15 +84,18 @@
       {
         "name": "Janez Janša",
         "ministry": "Defense",
+        "ministry_sl": "Obramba",
         "ministry_code": "MORS",
         "title": "Minister of Defense",
         "start_date": "1993-01-25",
         "end_date": "1994-03-29",
-        "termination_reason": "dismissed"
+        "termination_reason": "dismissed",
+        "termination_reason_sl": "razrešen"
       },
       {
         "name": "Jelko Kacin",
         "ministry": "Defense",
+        "ministry_sl": "Obramba",
         "ministry_code": "MORS",
         "title": "Minister of Defense",
         "start_date": "1994-03-29",
@@ -97,7 +109,8 @@
         "title": "Minister of Foreign Affairs",
         "start_date": "1993-01-25",
         "end_date": "1994-10-31",
-        "termination_reason": "dismissed"
+        "termination_reason": "dismissed",
+        "termination_reason_sl": "razrešen"
       },
       {
         "name": "Zoran Thaler",
@@ -107,6 +120,7 @@
         "start_date": "1995-01-26",
         "end_date": "1996-05-16",
         "termination_reason": "dismissed",
+        "termination_reason_sl": "razrešen",
         "predecessor": "Alojz Peterle"
       },
       {

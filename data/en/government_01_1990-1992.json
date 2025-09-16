@@ -12,6 +12,7 @@
       "prime_minister": {
         "name": "Alojz Peterle",
         "title": "President of the Executive Council",
+        "title_sl": "Predsednik Izvršnega sveta",
         "start_date": "1990-05-16",
         "end_date": "1992-05-14"
       },
@@ -19,19 +20,23 @@
         {
           "name": "Mitja Malešič",
           "portfolio": "Social Affairs",
+          "portfolio_sl": "Socialne zadeve",
           "start_date": "1990-05-16",
           "end_date": "1992-05-14"
         },
         {
           "name": "Dr. Jože Mencinger",
           "portfolio": "Economy",
+          "portfolio_sl": "Gospodarstvo",
           "start_date": "1990-05-16",
           "end_date": "1991-05-08",
-          "termination_reason": "dismissed"
+          "termination_reason": "dismissed",
+          "termination_reason_sl": "razrešen"
         },
         {
           "name": "Dr. Andrej Ocvirk",
           "portfolio": "Economy",
+          "portfolio_sl": "Gospodarstvo",
           "start_date": "1991-05-08",
           "end_date": "1992-05-14",
           "predecessor": "Dr. Jože Mencinger"
@@ -39,6 +44,7 @@
         {
           "name": "Dr. Leopold Šešerko",
           "portfolio": "Environmental Protection and Regional Development",
+          "portfolio_sl": "Varstvo okolja in regionalni razvoj",
           "start_date": "1990-05-16",
           "end_date": "1992-05-14"
         }
@@ -48,8 +54,10 @@
       {
         "name": "Igor Bavčar",
         "ministry": "Internal Affairs",
+        "ministry_sl": "Notranje zadeve",
         "ministry_code": "MNZ",
         "title": "Republican Secretary for Internal Affairs",
+        "title_sl": "Republiški sekretar za notranje zadeve",
         "start_date": "1990-05-16",
         "end_date": "1992-05-14"
       },

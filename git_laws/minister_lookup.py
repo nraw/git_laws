@@ -1,266 +1,284 @@
 """
-Minister lookup functionality for historical Slovenian governments.
+Minister Lookup Utility
 
-This module provides functions to determine who was the actual minister
-responsible for a law based on the ministry and the law's date, using
-scraped data from the Slovenian government website.
+Simple interface for querying Slovenian government minister data.
 """
 
 import json
-import re
 from datetime import datetime
-from pathlib import Path
-from typing import Optional, Dict, List, Tuple
-
-from loguru import logger
-
+from typing import Dict, List, Optional
+from config import MINISTERS_COMBINED_FILE
 
 class MinisterLookup:
-    """Lookup historical ministers and government coalitions for Slovenian laws."""
+    """
+    Class for querying Slovenian government minister data.
+    """
 
-    def __init__(self, data_file: str = "data/slovenian_ministers.json"):
+    def __init__(self, data_file: str = MINISTERS_COMBINED_FILE):
+        """
+        Initialize the lookup with combined ministers data.
+
+        Args:
+            data_file: Path to the combined ministers JSON file
+        """
         self.data_file = data_file
-        self.governments = []
+        self.data = None
         self.load_data()
 
     def load_data(self):
-        """Load minister and government data from JSON file."""
-        data_path = Path(self.data_file)
-
-        if not data_path.exists():
-            logger.warning(f"Minister data file {self.data_file} not found. Run minister scraper first.")
-            return
-
+        """Load the combined ministers data."""
         try:
-            with open(data_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                self.governments = data.get('governments', [])
-                logger.info(f"Loaded {len(self.governments)} governments with minister data")
-        except Exception as e:
-            logger.error(f"Failed to load minister data: {e}")
-            self.governments = []
+            with open(self.data_file, 'r', encoding='utf-8') as f:
+                self.data = json.load(f)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"Data file not found: {self.data_file}. Please run combine_ministers.py first.")
 
-    def _parse_date(self, date_str: str) -> Optional[datetime]:
-        """Parse date string in various formats."""
-        if not date_str:
-            return None
-
-        # Handle DD.MM.YY format
-        if '.' in date_str and len(date_str.split('.')[-1]) == 2:
-            try:
-                return datetime.strptime(date_str, '%d.%m.%y')
-            except ValueError:
-                pass
-
-        # Handle YYYY-MM-DD format
-        if '-' in date_str:
-            try:
-                return datetime.strptime(date_str, '%Y-%m-%d')
-            except ValueError:
-                pass
-
-        # Handle DD.MM.YYYY format
-        if '.' in date_str and len(date_str.split('.')[-1]) == 4:
-            try:
-                return datetime.strptime(date_str, '%d.%m.%Y')
-            except ValueError:
-                pass
-
-        return None
-
-    def _normalize_ministry_name(self, ministry_name: str) -> str:
-        """Normalize ministry names for matching."""
-        if not ministry_name:
-            return ""
-
-        # Convert to lowercase and remove extra spaces
-        normalized = re.sub(r'\s+', ' ', ministry_name.lower().strip())
-
-        # Map common variations to standard forms
-        mappings = {
-            'financ': 'finance',
-            'pravosodje': 'justice',
-            'notranje': 'interior',
-            'zdravje': 'health',
-            'obramb': 'defense',
-            'zunan': 'foreign',
-            'gospodar': 'economy',
-            'kmetijstvo': 'agriculture',
-            'izobraževan': 'education',
-            'kultur': 'culture',
-            'okolje': 'environment',
-            'infrastruktur': 'infrastructure',
-            'delo': 'labor',
-            'družin': 'family'
-        }
-
-        for key, value in mappings.items():
-            if key in normalized:
-                return value
-
-        return normalized
-
-    def get_government_by_date(self, law_date: str) -> Optional[Dict]:
-        """Get government information for a given date."""
-        target_date = self._parse_date(law_date)
-        if not target_date:
-            return None
-
-        for gov in self.governments:
-            start_date_str = gov.get('start_date', '')
-            end_date_str = gov.get('end_date', '')
-
-            start_date = self._parse_date(start_date_str)
-            end_date = self._parse_date(end_date_str)
-
-            if start_date and end_date and start_date <= target_date <= end_date:
-                return gov
-
-        return None
-
-    def get_minister_by_ministry_and_date(self, ministry_name: str, law_date: str) -> Optional[str]:
+    def find_minister(self, ministry: str, date: str, language: str = "en") -> Optional[Dict]:
         """
-        Get the actual minister for a specific ministry and date.
+        Find the minister in charge of a ministry on a specific date.
 
         Args:
-            ministry_name: Name of the ministry (e.g., "Ministrstvo za finance")
-            law_date: Date when the law was accepted
+            ministry: Ministry name (English or Slovenian, partial matches work)
+            date: Date in YYYY-MM-DD format
+            language: Output language ("en" or "sl")
 
         Returns:
-            Minister name if found, None otherwise
+            Minister information or None if not found
+
+        Example:
+            >>> lookup = MinisterLookup()
+            >>> minister = lookup.find_minister("Finance", "2015-03-15")
+            >>> print(f"{minister['name']} was Finance Minister")
         """
-        government = self.get_government_by_date(law_date)
-        if not government:
-            return None
+        query_date = datetime.strptime(date, "%Y-%m-%d")
 
-        # Normalize the target ministry name
-        target_ministry = self._normalize_ministry_name(ministry_name)
+        for minister in self.data["ministers"]:
+            # Check ministry match
+            if self._ministry_matches(minister, ministry):
+                # Check date range
+                start_date = datetime.strptime(minister["start_date"], "%Y-%m-%d")
+                end_date = datetime.strptime(minister["end_date"], "%Y-%m-%d")
 
-        # Look through ministers in this government
-        ministers = government.get('ministers', [])
-
-        best_match = None
-        best_score = 0
-
-        for minister in ministers:
-            minister_ministry = minister.get('ministry', '')
-            normalized_minister_ministry = self._normalize_ministry_name(minister_ministry)
-
-            # Calculate similarity score
-            score = self._calculate_ministry_similarity(target_ministry, normalized_minister_ministry)
-
-            if score > best_score and score > 0.3:  # Minimum threshold
-                best_match = minister
-                best_score = score
-
-        if best_match:
-            return best_match.get('name', '')
+                if start_date <= query_date <= end_date:
+                    return self._format_minister(minister, language)
 
         return None
 
-    def _calculate_ministry_similarity(self, target: str, candidate: str) -> float:
-        """Calculate similarity between ministry names."""
-        if not target or not candidate:
-            return 0.0
-
-        # Exact match
-        if target == candidate:
-            return 1.0
-
-        # Check if key terms match
-        target_words = set(target.split())
-        candidate_words = set(candidate.split())
-
-        # Key ministry terms
-        key_terms = {'finance', 'justice', 'interior', 'health', 'defense',
-                    'foreign', 'economy', 'agriculture', 'education', 'culture',
-                    'environment', 'infrastructure', 'labor', 'family'}
-
-        target_key_terms = target_words & key_terms
-        candidate_key_terms = candidate_words & key_terms
-
-        if target_key_terms and candidate_key_terms:
-            # How many key terms match
-            matching_terms = target_key_terms & candidate_key_terms
-            return len(matching_terms) / max(len(target_key_terms), len(candidate_key_terms))
-
-        # Fallback to basic word matching
-        if target_words and candidate_words:
-            matching_words = target_words & candidate_words
-            return len(matching_words) / max(len(target_words), len(candidate_words))
-
-        return 0.0
-
-    def get_finance_minister_by_date(self, law_date: str) -> Optional[str]:
-        """Get the Minister of Finance for a given date."""
-        return self.get_minister_by_ministry_and_date("Ministrstvo za finance", law_date)
-
-    def enhance_government_metadata(self, government_metadata: Dict, law_date: str) -> Dict:
+    def get_ministry_timeline(self, ministry: str, language: str = "en") -> List[Dict]:
         """
-        Enhance the government metadata with actual minister names and government info.
+        Get chronological list of all ministers for a specific ministry.
 
         Args:
-            government_metadata: Original metadata from PISRS API
-            law_date: Date when the law was accepted
+            ministry: Ministry name
+            language: Output language ("en" or "sl")
 
         Returns:
-            Enhanced metadata with minister names and government coalition info
+            List of ministers sorted by start date
+
+        Example:
+            >>> lookup = MinisterLookup()
+            >>> timeline = lookup.get_ministry_timeline("Defense")
+            >>> for minister in timeline:
+            ...     print(f"{minister['name']} ({minister['start_date']} - {minister['end_date']})")
         """
-        enhanced = government_metadata.copy()
+        ministers = []
+        for minister in self.data["ministers"]:
+            if self._ministry_matches(minister, ministry):
+                ministers.append(self._format_minister(minister, language))
 
-        # Try to get actual minister name
-        responsible_ministry = government_metadata.get('responsible_ministry', '')
-        if responsible_ministry:
-            actual_minister = self.get_minister_by_ministry_and_date(responsible_ministry, law_date)
-            if actual_minister:
-                enhanced['actual_minister'] = actual_minister
-                enhanced['minister_attribution'] = f"Minister: {actual_minister}"
+        return sorted(ministers, key=lambda x: x["start_date"])
 
-        # Add government information
-        government = self.get_government_by_date(law_date)
-        if government:
-            enhanced['government_composition'] = {
-                'prime_minister': government.get('pm', ''),
-                'number': government.get('number', 0),
-                'period': government.get('date_range', '')
-            }
-            enhanced['prime_minister'] = government.get('pm', '')
+    def list_ministries(self, language: str = "en") -> List[str]:
+        """
+        Get list of all unique ministries.
 
-            # Update government info string
-            gov_parts = []
-            if enhanced.get('minister_attribution'):
-                gov_parts.append(enhanced['minister_attribution'])
-            elif responsible_ministry:
-                gov_parts.append(f"Prepared by: {responsible_ministry}")
+        Args:
+            language: Language for ministry names ("en" or "sl")
 
-            if enhanced.get('adopting_body'):
-                gov_parts.append(f"Adopted by: {enhanced['adopting_body']}")
+        Returns:
+            Sorted list of ministry names
+        """
+        ministries = set()
+        for minister in self.data["ministers"]:
+            ministry_name = self._get_ministry_name(minister, language)
+            if ministry_name:
+                ministries.add(ministry_name)
 
-            gov_parts.append(f"PM: {government.get('pm', '')}")
-            gov_parts.append(f"Gov: {government.get('number', '')} ({government.get('date_range', '')})")
+        return sorted(list(ministries))
 
-            enhanced['government_info'] = ' | '.join(gov_parts)
+    def search_ministers(self, name: str, language: str = "en") -> List[Dict]:
+        """
+        Search for ministers by name (partial match).
 
-        return enhanced
+        Args:
+            name: Minister name or partial name
+            language: Output language ("en" or "sl")
 
-    def get_statistics(self) -> Dict:
-        """Get statistics about the loaded minister data."""
-        total_ministers = 0
-        governments_with_ministers = 0
+        Returns:
+            List of matching ministers
 
-        for gov in self.governments:
-            ministers = gov.get('ministers', [])
-            total_ministers += len(ministers)
-            if ministers:
-                governments_with_ministers += 1
+        Example:
+            >>> lookup = MinisterLookup()
+            >>> results = lookup.search_ministers("Janša")
+            >>> for minister in results:
+            ...     print(f"{minister['name']} - {minister['ministry']} ({minister['start_date']})")
+        """
+        results = []
+        for minister in self.data["ministers"]:
+            if name.lower() in minister["name"].lower():
+                results.append(self._format_minister(minister, language))
 
-        return {
-            'total_governments': len(self.governments),
-            'governments_with_ministers': governments_with_ministers,
-            'total_ministers': total_ministers,
-            'average_ministers_per_government': total_ministers / max(len(self.governments), 1)
+        return sorted(results, key=lambda x: x["start_date"])
+
+    def get_government_ministers(self, government_number: int, language: str = "en") -> List[Dict]:
+        """
+        Get all ministers from a specific government.
+
+        Args:
+            government_number: Government number (1-14)
+            language: Output language ("en" or "sl")
+
+        Returns:
+            List of ministers from that government
+        """
+        ministers = []
+        for minister in self.data["ministers"]:
+            if minister["government_number"] == government_number:
+                ministers.append(self._format_minister(minister, language))
+
+        return sorted(ministers, key=lambda x: x["start_date"])
+
+    def who_was_minister_on(self, date: str, language: str = "en") -> List[Dict]:
+        """
+        Get all ministers who were in office on a specific date.
+
+        Args:
+            date: Date in YYYY-MM-DD format
+            language: Output language ("en" or "sl")
+
+        Returns:
+            List of all ministers in office on that date
+        """
+        query_date = datetime.strptime(date, "%Y-%m-%d")
+        ministers = []
+
+        for minister in self.data["ministers"]:
+            start_date = datetime.strptime(minister["start_date"], "%Y-%m-%d")
+            end_date = datetime.strptime(minister["end_date"], "%Y-%m-%d")
+
+            if start_date <= query_date <= end_date:
+                ministers.append(self._format_minister(minister, language))
+
+        return sorted(ministers, key=lambda x: self._get_ministry_name(x, language))
+
+    def _ministry_matches(self, minister: Dict, ministry_query: str) -> bool:
+        """Check if minister's ministry matches the query."""
+        if isinstance(minister.get("ministry"), dict):
+            ministry_en = minister["ministry"].get("en", "").lower()
+            ministry_sl = minister["ministry"].get("sl", "").lower()
+            query = ministry_query.lower()
+            return (query in ministry_en or query in ministry_sl or
+                   ministry_en in query or ministry_sl in query)
+        else:
+            return ministry_query.lower() in minister.get("ministry", "").lower()
+
+    def _get_ministry_name(self, minister: Dict, language: str) -> str:
+        """Get ministry name in specified language."""
+        if isinstance(minister.get("ministry"), dict):
+            return minister["ministry"].get(language, minister["ministry"]["en"])
+        else:
+            return minister.get("ministry", "")
+
+    def _format_minister(self, minister: Dict, language: str) -> Dict:
+        """Format minister data for output."""
+        result = {
+            "name": minister["name"],
+            "start_date": minister["start_date"],
+            "end_date": minister["end_date"],
+            "government_number": minister["government_number"],
+            "ministry_code": minister.get("ministry_code", "")
         }
 
+        # Add language-specific fields
+        result["ministry"] = self._get_ministry_name(minister, language)
 
-# Global instance
-minister_lookup = MinisterLookup()
+        if isinstance(minister.get("title"), dict):
+            result["title"] = minister["title"].get(language, minister["title"]["en"])
+        else:
+            result["title"] = minister.get("title", "")
+
+        # Optional fields
+        if "termination_reason" in minister:
+            if isinstance(minister["termination_reason"], dict):
+                result["termination_reason"] = minister["termination_reason"].get(language, minister["termination_reason"]["en"])
+            else:
+                result["termination_reason"] = minister["termination_reason"]
+
+        if "predecessor" in minister:
+            result["predecessor"] = minister["predecessor"]
+
+        return result
+
+
+# Convenience functions for quick usage
+def find_minister(ministry: str, date: str, language: str = "en") -> Optional[Dict]:
+    """Quick function to find minister by ministry and date."""
+    lookup = MinisterLookup()
+    return lookup.find_minister(ministry, date, language)
+
+def get_timeline(ministry: str, language: str = "en") -> List[Dict]:
+    """Quick function to get ministry timeline."""
+    lookup = MinisterLookup()
+    return lookup.get_ministry_timeline(ministry, language)
+
+def list_ministries(language: str = "en") -> List[str]:
+    """Quick function to list all ministries."""
+    lookup = MinisterLookup()
+    return lookup.list_ministries(language)
+
+
+if __name__ == "__main__":
+    # Example usage
+    lookup = MinisterLookup()
+
+    print("=== Minister Lookup Examples ===\n")
+
+    # Example 1: Find specific minister
+    minister = lookup.find_minister("Finance", "2015-06-15")
+    if minister:
+        print(f"Finance Minister on 2015-06-15:")
+        print(f"  {minister['name']} ({minister['title']})")
+        print(f"  Term: {minister['start_date']} to {minister['end_date']}")
+        print()
+
+    # Example 2: Get ministry timeline
+    print("Defense Ministers timeline:")
+    defense_ministers = lookup.get_ministry_timeline("Defense")
+    for i, minister in enumerate(defense_ministers[:5]):  # Show first 5
+        print(f"  {i+1}. {minister['name']} ({minister['start_date']} - {minister['end_date']})")
+    if len(defense_ministers) > 5:
+        print(f"  ... and {len(defense_ministers) - 5} more")
+    print()
+
+    # Example 3: Search by name
+    print("All positions held by 'Janež Janša':")
+    jansa_positions = lookup.search_ministers("Janez Janša")
+    for position in jansa_positions:
+        print(f"  {position['ministry']} ({position['start_date']} - {position['end_date']})")
+    print()
+
+    # Example 4: Who was in government on specific date
+    print("Ministers in office on 2010-01-01:")
+    ministers_2010 = lookup.who_was_minister_on("2010-01-01")
+    for minister in ministers_2010[:10]:  # Show first 10
+        print(f"  {minister['name']} - {minister['ministry']}")
+    print(f"  ... total of {len(ministers_2010)} ministers")
+    print()
+
+    # Example 5: Bilingual example
+    minister_en = lookup.find_minister("Health", "2020-06-01", "en")
+    minister_sl = lookup.find_minister("Health", "2020-06-01", "sl")
+    if minister_en and minister_sl:
+        print("Bilingual example (Health Minister on 2020-06-01):")
+        print(f"  English: {minister_en['name']} - {minister_en['title']}")
+        print(f"  Slovenian: {minister_sl['name']} - {minister_sl['title']}")

@@ -1,0 +1,201 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/izvrsni-svet-skupscine-republike-slovenije-od-16-maja-1990-do-14-maja-1992/",
+  "government": {
+    "number": 1,
+    "name": {
+      "en": "Executive Council of the Assembly of the Republic of Slovenia",
+      "sl": "Izvršni svet Skupščine Republike Slovenije"
+    },
+    "period": {
+      "start_date": "1990-05-16",
+      "end_date": "1992-05-14",
+      "duration_days": 728
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Alojz Peterle",
+        "title": {
+          "en": "President of the Executive Council",
+          "sl": "Predsednik Izvršnega sveta"
+        },
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      "deputy_prime_ministers": [
+        {
+          "name": "Mitja Malešič",
+          "portfolio": {
+            "en": "Social Affairs",
+            "sl": "Socialne zadeve"
+          },
+          "start_date": "1990-05-16",
+          "end_date": "1992-05-14"
+        },
+        {
+          "name": "Dr. Jože Mencinger",
+          "portfolio": {
+            "en": "Economy",
+            "sl": "Gospodarstvo"
+          },
+          "start_date": "1990-05-16",
+          "end_date": "1991-05-08",
+          "termination_reason": {
+            "en": "dismissed",
+            "sl": "razrešen"
+          }
+        },
+        {
+          "name": "Dr. Andrej Ocvirk",
+          "portfolio": {
+            "en": "Economy",
+            "sl": "Gospodarstvo"
+          },
+          "start_date": "1991-05-08",
+          "end_date": "1992-05-14",
+          "predecessor": "Dr. Jože Mencinger"
+        },
+        {
+          "name": "Dr. Leopold Šešerko",
+          "portfolio": {
+            "en": "Environmental Protection and Regional Development",
+            "sl": "Varstvo okolja in regionalni razvoj"
+          },
+          "start_date": "1990-05-16",
+          "end_date": "1992-05-14"
+        }
+      ]
+    },
+    "ministers": [
+      {
+        "name": "Igor Bavčar",
+        "ministry": {
+          "en": "Internal Affairs",
+          "sl": "Notranje zadeve"
+        },
+        "ministry_code": "MNZ",
+        "title": {
+          "en": "Republican Secretary for Internal Affairs",
+          "sl": "Republiški sekretar za notranje zadeve"
+        },
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      {
+        "name": "Janez Janša",
+        "ministry": {
+          "en": "Defense",
+          "sl": "Obramba"
+        },
+        "ministry_code": "MORS",
+        "title": {
+          "en": "Republican Secretary for People's Defense",
+          "sl": "Republiški sekretar za ljudsko obrambo"
+        },
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      {
+        "name": "Dr. Dimitrij Rupel",
+        "ministry": {
+          "en": "Foreign Affairs",
+          "sl": "Zunanje zadeve"
+        },
+        "ministry_code": "MZZ",
+        "title": {
+          "en": "Head of Republican Committee for International Cooperation",
+          "sl": "Predsednik republiškega komiteja za mednarodno sodelovanje"
+        },
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      {
+        "name": "Dr. Rajko Pirnat",
+        "ministry": {
+          "en": "Justice and Administration",
+          "sl": "Pravosodje in uprava"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Republican Secretary for Justice and Administration",
+          "sl": "Republiški sekretar za pravosodje in upravo"
+        },
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      {
+        "name": "Dr. Marko Kranjec",
+        "ministry": {
+          "en": "Finance",
+          "sl": "Finance"
+        },
+        "ministry_code": "MF",
+        "title": {
+          "en": "Republican Secretary for Finance",
+          "sl": "Republiški sekretar za finance"
+        },
+        "start_date": "1990-05-16",
+        "end_date": "1991-05-08",
+        "termination_reason": {
+          "en": "dismissed",
+          "sl": "razrešen"
+        }
+      },
+      {
+        "name": "Dušan Šešok",
+        "ministry": {
+          "en": "Finance",
+          "sl": "Finance"
+        },
+        "ministry_code": "MF",
+        "title": {
+          "en": "Republican Secretary for Finance",
+          "sl": "Republiški sekretar za finance"
+        },
+        "start_date": "1991-05-09",
+        "end_date": "1992-05-14",
+        "predecessor": "Dr. Marko Kranjec"
+      },
+      {
+        "name": "Jelko Kacin",
+        "ministry": {
+          "en": "Information",
+          "sl": "Informiranje"
+        },
+        "ministry_code": "MI",
+        "title": {
+          "en": "Republican Secretary for Information",
+          "sl": "Republiški sekretar za informiranje"
+        },
+        "start_date": "1991-04-24",
+        "end_date": "1992-05-14"
+      }
+    ],
+    "government_transitions": [
+      {
+        "date": "1990-06-01",
+        "change": {
+          "en": "Republican Committees initially abolished and replaced by Republican Secretariats",
+          "sl": "Republiški komiteji prvotno ukinjeni in nadomeščeni z republiškim sekretariatom"
+        }
+      },
+      {
+        "date": "1991-06-28",
+        "change": {
+          "en": "Law established that existing Republican Secretaries would continue as Ministers",
+          "sl": "Zakon je določil, da bodo obstoječi republiški sekretarji postali ministri"
+        }
+      }
+    ],
+    "political_composition": {
+      "coalition": {
+        "en": "DEMOS",
+        "sl": "DEMOS"
+      },
+      "parties": ["SKD", "SDZS", "SDZ", "SLS", "ZS"],
+      "ideology": {
+        "en": "center-right",
+        "sl": "desno-sredinska"
+      }
+    }
+  }
+}

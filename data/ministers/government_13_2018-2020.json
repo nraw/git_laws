@@ -1,0 +1,236 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/13-vlada-republike-slovenije-od-13-septembra-2018-do-13-marca-2020/",
+  "government": {
+    "number": 13,
+    "name": {
+      "en": "13th Government of the Republic of Slovenia",
+      "sl": "13. vlada Republike Slovenije"
+    },
+    "period": {
+      "start_date": "2018-09-13",
+      "end_date": "2020-03-13",
+      "duration_days": 547
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Marjan Šarec",
+        "title": {
+          "en": "Prime Minister",
+          "sl": "Predsednik Vlade"
+        },
+        "elected_date": "2018-06-03",
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Andrej Bertoncelj",
+        "ministry": {
+          "en": "Finance",
+          "sl": "Finance"
+        },
+        "ministry_code": "MF",
+        "title": {
+          "en": "Minister of Finance",
+          "sl": "Minister za finance"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Boštjan Poklukar",
+        "ministry": {
+          "en": "Interior",
+          "sl": "Notranje zadeve"
+        },
+        "ministry_code": "MNZ",
+        "title": {
+          "en": "Minister of Interior",
+          "sl": "Minister za notranje zadeve"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Miro Cerar",
+        "ministry": {
+          "en": "Foreign Affairs",
+          "sl": "Zunanje zadeve"
+        },
+        "ministry_code": "MZZ",
+        "title": {
+          "en": "Minister of Foreign Affairs",
+          "sl": "Minister za zunanje zadeve"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Marjan Dikaučič",
+        "ministry": {
+          "en": "Justice",
+          "sl": "Pravosodje"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Minister of Justice",
+          "sl": "Minister za pravosodje"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Karl Erjavec",
+        "ministry": {
+          "en": "Defense",
+          "sl": "Obramba"
+        },
+        "ministry_code": "MORS",
+        "title": {
+          "en": "Minister of Defense",
+          "sl": "Minister za obrambo"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Ksenija Klampfer",
+        "ministry": {
+          "en": "Labor, Family, Social Affairs and Equal Opportunities",
+          "sl": "Delo, družina, socialne zadeve in enake možnosti"
+        },
+        "ministry_code": "MDDSZ",
+        "title": {
+          "en": "Minister of Labor, Family, Social Affairs and Equal Opportunities",
+          "sl": "Ministrica za delo, družino, socialne zadeve in enake možnosti"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Zdravko Počivalšek",
+        "ministry": {
+          "en": "Economic Development and Technology",
+          "sl": "Gospodarski razvoj in tehnologija"
+        },
+        "ministry_code": "MGRT",
+        "title": {
+          "en": "Minister of Economic Development and Technology",
+          "sl": "Minister za gospodarski razvoj in tehnologijo"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Aleksandra Pivec",
+        "ministry": {
+          "en": "Agriculture, Forestry and Food",
+          "sl": "Kmetijstvo, gozdarstvo in prehrana"
+        },
+        "ministry_code": "MKGP",
+        "title": {
+          "en": "Minister of Agriculture, Forestry and Food",
+          "sl": "Ministrica za kmetijstvo, gozdarstvo in prehrano"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Simon Zajc",
+        "ministry": {
+          "en": "Environment and Spatial Planning",
+          "sl": "Okolje in prostor"
+        },
+        "ministry_code": "MOP",
+        "title": {
+          "en": "Minister of Environment and Spatial Planning",
+          "sl": "Minister za okolje in prostor"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Alenka Bratušek",
+        "ministry": {
+          "en": "Infrastructure",
+          "sl": "Infrastruktura"
+        },
+        "ministry_code": "MzI",
+        "title": {
+          "en": "Minister of Infrastructure",
+          "sl": "Ministrica za infrastrukturo"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Jernej Pikalo",
+        "ministry": {
+          "en": "Education, Science and Sport",
+          "sl": "Izobraževanje, znanost in šport"
+        },
+        "ministry_code": "MIZŠ",
+        "title": {
+          "en": "Minister of Education, Science and Sport",
+          "sl": "Minister za izobraževanje, znanost in šport"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Aleš Šabeder",
+        "ministry": {
+          "en": "Health",
+          "sl": "Zdravje"
+        },
+        "ministry_code": "MZ",
+        "title": {
+          "en": "Minister of Health",
+          "sl": "Minister za zdravje"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Dejan Prešiček",
+        "ministry": {
+          "en": "Culture",
+          "sl": "Kultura"
+        },
+        "ministry_code": "MK",
+        "title": {
+          "en": "Minister of Culture",
+          "sl": "Minister za kulturo"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      },
+      {
+        "name": "Rudi Medved",
+        "ministry": {
+          "en": "Public Administration",
+          "sl": "Javna uprava"
+        },
+        "ministry_code": "MJU",
+        "title": {
+          "en": "Minister of Public Administration",
+          "sl": "Minister za javno upravo"
+        },
+        "start_date": "2018-09-13",
+        "end_date": "2020-03-13"
+      }
+    ],
+    "political_composition": {
+      "coalition": {
+        "en": "LMŠ coalition",
+        "sl": "LMŠ koalicija"
+      },
+      "parties": ["LMŠ", "SD", "SMC", "DeSUS", "SAB"],
+      "ideology": {
+        "en": "center-left",
+        "sl": "levo-sredinska"
+      }
+    }
+  }
+}

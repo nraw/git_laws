@@ -1,0 +1,250 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/9-vlada-republike-slovenije-od-21-novembra-2008-do-10-februarja-2012/",
+  "government": {
+    "number": 9,
+    "name": {
+      "en": "9th Government of the Republic of Slovenia",
+      "sl": "9. vlada Republike Slovenije"
+    },
+    "period": {
+      "start_date": "2008-11-21",
+      "end_date": "2012-02-10",
+      "duration_days": 1177
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Borut Pahor",
+        "title": {
+          "en": "Prime Minister",
+          "sl": "Predsednik Vlade"
+        },
+        "elected_date": "2008-09-21",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Franc Križanič",
+        "ministry": {
+          "en": "Finance",
+          "sl": "Finance"
+        },
+        "ministry_code": "MF",
+        "title": {
+          "en": "Minister of Finance",
+          "sl": "Minister za finance"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Katarina Kresal",
+        "ministry": {
+          "en": "Interior",
+          "sl": "Notranje zadeve"
+        },
+        "ministry_code": "MNZ",
+        "title": {
+          "en": "Minister of Interior",
+          "sl": "Ministrica za notranje zadeve"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Samuel Žbogar",
+        "ministry": {
+          "en": "Foreign Affairs",
+          "sl": "Zunanje zadeve"
+        },
+        "ministry_code": "MZZ",
+        "title": {
+          "en": "Minister of Foreign Affairs",
+          "sl": "Minister za zunanje zadeve"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Aleš Zalar",
+        "ministry": {
+          "en": "Justice",
+          "sl": "Pravosodje"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Minister of Justice",
+          "sl": "Minister za pravosodje"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Ljubica Jelušič",
+        "ministry": {
+          "en": "Defense",
+          "sl": "Obramba"
+        },
+        "ministry_code": "MORS",
+        "title": {
+          "en": "Minister of Defense",
+          "sl": "Ministrica za obrambo"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Ivan Svetlik",
+        "ministry": {
+          "en": "Labor, Family and Social Affairs",
+          "sl": "Delo, družina in socialne zadeve"
+        },
+        "ministry_code": "MDDSZ",
+        "title": {
+          "en": "Minister of Labor, Family and Social Affairs",
+          "sl": "Minister za delo, družino in socialne zadeve"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Matej Lahovnik",
+        "ministry": {
+          "en": "Economy",
+          "sl": "Gospodarstvo"
+        },
+        "ministry_code": "MG",
+        "title": {
+          "en": "Minister of Economy",
+          "sl": "Minister za gospodarstvo"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Milan Pogačnik",
+        "ministry": {
+          "en": "Agriculture, Forestry and Food",
+          "sl": "Kmetijstvo, gozdarstvo in prehrana"
+        },
+        "ministry_code": "MKGP",
+        "title": {
+          "en": "Minister of Agriculture, Forestry and Food",
+          "sl": "Minister za kmetijstvo, gozdarstvo in prehrano"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Majda Širca",
+        "ministry": {
+          "en": "Culture",
+          "sl": "Kultura"
+        },
+        "ministry_code": "MK",
+        "title": {
+          "en": "Minister of Culture",
+          "sl": "Ministrica za kulturo"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Roko Žarnić",
+        "ministry": {
+          "en": "Environment and Spatial Planning",
+          "sl": "Okolje in prostor"
+        },
+        "ministry_code": "MOP",
+        "title": {
+          "en": "Minister of Environment and Spatial Planning",
+          "sl": "Minister za okolje in prostor"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Patrick Vlačič",
+        "ministry": {
+          "en": "Transport",
+          "sl": "Promet"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Minister of Transport",
+          "sl": "Minister za promet"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Igor Lukšič",
+        "ministry": {
+          "en": "Education and Sport",
+          "sl": "Šolstvo in šport"
+        },
+        "ministry_code": "MIZŠ",
+        "title": {
+          "en": "Minister of Education and Sport",
+          "sl": "Minister za šolstvo in šport"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Borut Miklavčič",
+        "ministry": {
+          "en": "Health",
+          "sl": "Zdravje"
+        },
+        "ministry_code": "MZ",
+        "title": {
+          "en": "Minister of Health",
+          "sl": "Minister za zdravje"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Irma Pavlinič Krebs",
+        "ministry": {
+          "en": "Public Administration",
+          "sl": "Javna uprava"
+        },
+        "ministry_code": "MJU",
+        "title": {
+          "en": "Minister of Public Administration",
+          "sl": "Ministrica za javno upravo"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Gregor Golobič",
+        "ministry": {
+          "en": "Higher Education, Science and Technology",
+          "sl": "Visoko šolstvo, znanost in tehnologija"
+        },
+        "ministry_code": "MVZT",
+        "title": {
+          "en": "Minister of Higher Education, Science and Technology",
+          "sl": "Minister za visoko šolstvo, znanost in tehnologijo"
+        },
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      }
+    ],
+    "political_composition": {
+      "coalition": {
+        "en": "SD coalition",
+        "sl": "SD koalicija"
+      },
+      "parties": ["SD", "Zares", "LDS", "DeSUS"],
+      "ideology": {
+        "en": "center-left",
+        "sl": "levo-sredinska"
+      }
+    }
+  }
+}

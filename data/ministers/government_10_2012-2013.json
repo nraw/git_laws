@@ -1,0 +1,194 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/10-vlada-republike-slovenije-od-10-februarja-2012-do-20-marca-2013/",
+  "government": {
+    "number": 10,
+    "name": {
+      "en": "10th Government of the Republic of Slovenia",
+      "sl": "10. vlada Republike Slovenije"
+    },
+    "period": {
+      "start_date": "2012-02-10",
+      "end_date": "2013-03-20",
+      "duration_days": 403
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Janez Janša",
+        "title": {
+          "en": "Prime Minister",
+          "sl": "Predsednik Vlade"
+        },
+        "elected_date": "2011-12-04",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Janez Šušteršič",
+        "ministry": {
+          "en": "Finance",
+          "sl": "Finance"
+        },
+        "ministry_code": "MF",
+        "title": {
+          "en": "Minister of Finance",
+          "sl": "Minister za finance"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Vinko Gorenak",
+        "ministry": {
+          "en": "Interior",
+          "sl": "Notranje zadeve"
+        },
+        "ministry_code": "MNZ",
+        "title": {
+          "en": "Minister of Interior",
+          "sl": "Minister za notranje zadeve"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Karl Erjavec",
+        "ministry": {
+          "en": "Foreign Affairs",
+          "sl": "Zunanje zadeve"
+        },
+        "ministry_code": "MZZ",
+        "title": {
+          "en": "Minister of Foreign Affairs",
+          "sl": "Minister za zunanje zadeve"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Goran Klemenčič",
+        "ministry": {
+          "en": "Justice and Public Administration",
+          "sl": "Pravosodje in javna uprava"
+        },
+        "ministry_code": "MPJU",
+        "title": {
+          "en": "Minister of Justice and Public Administration",
+          "sl": "Minister za pravosodje in javno upravo"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Roman Jakič",
+        "ministry": {
+          "en": "Defense",
+          "sl": "Obramba"
+        },
+        "ministry_code": "MORS",
+        "title": {
+          "en": "Minister of Defense",
+          "sl": "Minister za obrambo"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Andrej Vizjak",
+        "ministry": {
+          "en": "Labor, Family and Social Affairs",
+          "sl": "Delo, družina in socialne zadeve"
+        },
+        "ministry_code": "MDDSZ",
+        "title": {
+          "en": "Minister of Labor, Family and Social Affairs",
+          "sl": "Minister za delo, družino in socialne zadeve"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Radovan Žerjav",
+        "ministry": {
+          "en": "Economic Development and Technology",
+          "sl": "Gospodarski razvoj in tehnologija"
+        },
+        "ministry_code": "MGRT",
+        "title": {
+          "en": "Minister of Economic Development and Technology",
+          "sl": "Minister za gospodarski razvoj in tehnologijo"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Franc Bogovič",
+        "ministry": {
+          "en": "Agriculture and Environment",
+          "sl": "Kmetijstvo in okolje"
+        },
+        "ministry_code": "MKO",
+        "title": {
+          "en": "Minister of Agriculture and Environment",
+          "sl": "Minister za kmetijstvo in okolje"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Zvone Černač",
+        "ministry": {
+          "en": "Infrastructure and Spatial Planning",
+          "sl": "Infrastruktura in prostor"
+        },
+        "ministry_code": "MIP",
+        "title": {
+          "en": "Minister of Infrastructure and Spatial Planning",
+          "sl": "Minister za infrastrukturo in prostor"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Žiga Turk",
+        "ministry": {
+          "en": "Education, Science, Culture and Sport",
+          "sl": "Izobraževanje, znanost, kultura in šport"
+        },
+        "ministry_code": "MIZKS",
+        "title": {
+          "en": "Minister of Education, Science, Culture and Sport",
+          "sl": "Minister za izobraževanje, znanost, kulturo in šport"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Tomaž Gantar",
+        "ministry": {
+          "en": "Health",
+          "sl": "Zdravje"
+        },
+        "ministry_code": "MZ",
+        "title": {
+          "en": "Minister of Health",
+          "sl": "Minister za zdravje"
+        },
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      }
+    ],
+    "political_composition": {
+      "coalition": {
+        "en": "SDS coalition",
+        "sl": "SDS koalicija"
+      },
+      "parties": ["SDS", "SLS", "DeSUS", "NSi", "DLGV"],
+      "ideology": {
+        "en": "center-right",
+        "sl": "desno-sredinska"
+      }
+    }
+  }
+}

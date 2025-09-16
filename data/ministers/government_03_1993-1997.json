@@ -1,0 +1,323 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/3-vlada-republike-slovenije-od-25-januarja-1993-do-27-februarja-1997/",
+  "government": {
+    "number": 3,
+    "name": {
+      "en": "3rd Government of the Republic of Slovenia",
+      "sl": "3. vlada Republike Slovenije"
+    },
+    "period": {
+      "start_date": "1993-01-25",
+      "end_date": "1997-02-27",
+      "duration_days": 1494
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Dr. Janez Drnovšek",
+        "title": {
+          "en": "Prime Minister",
+          "sl": "Predsednik Vlade"
+        },
+        "elected_date": "1993-01-12",
+        "start_date": "1993-01-25",
+        "end_date": "1997-02-27"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Mitja Gaspari",
+        "ministry": {
+          "en": "Finance",
+          "sl": "Finance"
+        },
+        "ministry_code": "MF",
+        "title": {
+          "en": "Minister of Finance",
+          "sl": "Minister za finance"
+        },
+        "start_date": "1993-01-25",
+        "end_date": "1997-02-27"
+      },
+      {
+        "name": "Jožica Puhar",
+        "ministry": {
+          "en": "Labor, Family and Social Affairs",
+          "sl": "Delo, družina in socialne zadeve"
+        },
+        "ministry_code": "MDDSZ",
+        "title": {
+          "en": "Minister of Labor, Family and Social Affairs",
+          "sl": "Minister za delo, družino in socialne zadeve"
+        },
+        "start_date": "1993-01-25",
+        "end_date": "1994-06-21",
+        "termination_reason": {
+          "en": "dismissed",
+          "sl": "razrešen"
+        }
+      },
+      {
+        "name": "Rina Klinar",
+        "ministry": {
+          "en": "Labor, Family and Social Affairs",
+          "sl": "Delo, družina in socialne zadeve"
+        },
+        "ministry_code": "MDDSZ",
+        "title": {
+          "en": "Minister of Labor, Family and Social Affairs",
+          "sl": "Minister za delo, družino in socialne zadeve"
+        },
+        "start_date": "1994-06-21",
+        "end_date": "1996-01-31",
+        "termination_reason": {
+          "en": "dismissed",
+          "sl": "razrešena"
+        },
+        "predecessor": "Jožica Puhar"
+      },
+      {
+        "name": "Mag. Anton Rop",
+        "ministry": {
+          "en": "Labor, Family and Social Affairs",
+          "sl": "Delo, družina in socialne zadeve"
+        },
+        "ministry_code": "MDDSZ",
+        "title": {
+          "en": "Minister of Labor, Family and Social Affairs",
+          "sl": "Minister za delo, družino in socialne zadeve"
+        },
+        "start_date": "1996-02-07",
+        "end_date": "1997-02-27",
+        "predecessor": "Rina Klinar"
+      },
+      {
+        "name": "Dr. Davorin Kračun",
+        "ministry": {
+          "en": "Economic Relations and Development",
+          "sl": "Ekonomski odnosi in razvoj"
+        },
+        "ministry_code": "MGRT",
+        "title": {
+          "en": "Minister of Economic Relations and Development",
+          "sl": "Minister za ekonomske odnose in razvoj"
+        },
+        "start_date": "1993-01-25",
+        "end_date": "1995-01-26",
+        "termination_reason": {
+          "en": "dismissed",
+          "sl": "razrešen"
+        }
+      },
+      {
+        "name": "Janko Deželak",
+        "ministry": {
+          "en": "Economic Relations and Development",
+          "sl": "Ekonomski odnosi in razvoj"
+        },
+        "ministry_code": "MGRT",
+        "title": {
+          "en": "Minister of Economic Relations and Development",
+          "sl": "Minister za ekonomske odnose in razvoj"
+        },
+        "start_date": "1995-01-26",
+        "end_date": "1997-02-27",
+        "predecessor": "Dr. Davorin Kračun"
+      },
+      {
+        "name": "Janez Janša",
+        "ministry": {
+          "en": "Defense",
+          "sl": "Obramba"
+        },
+        "ministry_code": "MORS",
+        "title": {
+          "en": "Minister of Defense",
+          "sl": "Minister za obrambo"
+        },
+        "start_date": "1993-01-25",
+        "end_date": "1994-03-29",
+        "termination_reason": {
+          "en": "dismissed",
+          "sl": "razrešen"
+        }
+      },
+      {
+        "name": "Jelko Kacin",
+        "ministry": {
+          "en": "Defense",
+          "sl": "Obramba"
+        },
+        "ministry_code": "MORS",
+        "title": {
+          "en": "Minister of Defense",
+          "sl": "Minister za obrambo"
+        },
+        "start_date": "1994-03-29",
+        "end_date": "1997-02-27",
+        "predecessor": "Janez Janša"
+      },
+      {
+        "name": "Alojz Peterle",
+        "ministry": {
+          "en": "Foreign Affairs",
+          "sl": "Zunanje zadeve"
+        },
+        "ministry_code": "MZZ",
+        "title": {
+          "en": "Minister of Foreign Affairs",
+          "sl": "Minister za zunanje zadeve"
+        },
+        "start_date": "1993-01-25",
+        "end_date": "1994-10-31",
+        "termination_reason": {
+          "en": "dismissed",
+          "sl": "razrešen"
+        }
+      },
+      {
+        "name": "Zoran Thaler",
+        "ministry": {
+          "en": "Foreign Affairs",
+          "sl": "Zunanje zadeve"
+        },
+        "ministry_code": "MZZ",
+        "title": {
+          "en": "Minister of Foreign Affairs",
+          "sl": "Minister za zunanje zadeve"
+        },
+        "start_date": "1995-01-26",
+        "end_date": "1996-05-16",
+        "termination_reason": {
+          "en": "dismissed",
+          "sl": "razrešen"
+        },
+        "predecessor": "Alojz Peterle"
+      },
+      {
+        "name": "Davorin Kračun",
+        "ministry": {
+          "en": "Foreign Affairs",
+          "sl": "Zunanje zadeve"
+        },
+        "ministry_code": "MZZ",
+        "title": {
+          "en": "Minister of Foreign Affairs",
+          "sl": "Minister za zunanje zadeve"
+        },
+        "start_date": "1996-07-19",
+        "end_date": "1997-02-27",
+        "predecessor": "Zoran Thaler"
+      },
+      {
+        "name": "Ivan Bizjak",
+        "ministry": {
+          "en": "Interior",
+          "sl": "Notranje zadeve"
+        },
+        "ministry_code": "MNZ",
+        "title": {
+          "en": "Minister of Interior",
+          "sl": "Minister za notranje zadeve"
+        },
+        "start_date": "1993-01-25",
+        "end_date": "1994-06-08",
+        "termination_reason": {
+          "en": "replaced",
+          "sl": "zamenjan"
+        }
+      },
+      {
+        "name": "Andrej Šter",
+        "ministry": {
+          "en": "Interior",
+          "sl": "Notranje zadeve"
+        },
+        "ministry_code": "MNZ",
+        "title": {
+          "en": "Minister of Interior",
+          "sl": "Minister za notranje zadeve"
+        },
+        "start_date": "1994-06-08",
+        "end_date": "1997-02-27",
+        "predecessor": "Ivan Bizjak"
+      },
+      {
+        "name": "Miha Kozinc",
+        "ministry": {
+          "en": "Justice",
+          "sl": "Pravosodje"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Minister of Justice",
+          "sl": "Minister za pravosodje"
+        },
+        "start_date": "1993-01-25",
+        "end_date": "1994-07-19",
+        "termination_reason": {
+          "en": "replaced",
+          "sl": "zamenjan"
+        }
+      },
+      {
+        "name": "Metka Zupančič",
+        "ministry": {
+          "en": "Justice",
+          "sl": "Pravosodje"
+        },
+        "ministry_code": "MP",
+        "title": {
+          "en": "Minister of Justice",
+          "sl": "Minister za pravosodje"
+        },
+        "start_date": "1994-07-19",
+        "end_date": "1997-02-27",
+        "predecessor": "Miha Kozinc"
+      },
+      {
+        "name": "Miha Jazbinšek",
+        "ministry": {
+          "en": "Environmental Protection and Spatial Planning",
+          "sl": "Varstvo okolja in urejanje prostora"
+        },
+        "ministry_code": "MOP",
+        "title": {
+          "en": "Minister of Environmental Protection and Spatial Planning",
+          "sl": "Minister za varstvo okolja in urejanje prostora"
+        },
+        "start_date": "1993-01-25",
+        "end_date": "1994-02-01",
+        "termination_reason": {
+          "en": "resigned",
+          "sl": "odstopil"
+        }
+      },
+      {
+        "name": "Dr. Pavel Gantar",
+        "ministry": {
+          "en": "Environmental Protection and Spatial Planning",
+          "sl": "Varstvo okolja in urejanje prostora"
+        },
+        "ministry_code": "MOP",
+        "title": {
+          "en": "Minister of Environmental Protection and Spatial Planning",
+          "sl": "Minister za varstvo okolja in urejanje prostora"
+        },
+        "start_date": "1994-02-28",
+        "end_date": "1997-02-27",
+        "predecessor": "Miha Jazbinšek"
+      }
+    ],
+    "political_composition": {
+      "coalition": {
+        "en": "LDS coalition",
+        "sl": "LDS koalicija"
+      },
+      "parties": ["LDS", "SKD", "ZLSD"],
+      "ideology": {
+        "en": "center-left",
+        "sl": "levo-sredinska"
+      }
+    }
+  }
+}
