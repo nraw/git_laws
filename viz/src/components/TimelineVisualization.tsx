@@ -32,7 +32,7 @@ const TimelineContent = styled(Box)({
 const MinistryRow = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
-  minHeight: '20px',
+  height: '20px',
   position: 'relative',
 }));
 
@@ -40,7 +40,7 @@ const MinistryLabel = styled(Box)(({ theme }) => ({
   width: '300px',
   minWidth: '300px',
   maxWidth: '300px',
-  padding: theme.spacing(1),
+  padding: theme.spacing(0.5),
   backgroundColor: theme.palette.background.paper,
   borderRight: `1px solid ${theme.palette.divider}`,
   position: 'sticky',
@@ -52,12 +52,14 @@ const MinistryLabel = styled(Box)(({ theme }) => ({
   fontWeight: 500,
   boxSizing: 'border-box',
   overflow: 'hidden',
+  height: '20px',
   [theme.breakpoints.down('md')]: {
     width: '150px',
     minWidth: '150px',
     maxWidth: '150px',
-    padding: theme.spacing(0.5),
+    padding: theme.spacing(0.25),
     fontSize: '0.75rem',
+    height: '20px',
   },
 }));
 
@@ -95,7 +97,7 @@ const MinisterBar = styled(Box)(({ theme }) => ({
 const GovernmentRow = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  minHeight: '20px',
+  height: '20px',
   position: 'sticky',
   top: '30px', // Account for year timeline row height
   backgroundColor: theme.palette.background.paper,
@@ -109,7 +111,7 @@ const GovernmentRow = styled(Box)(({ theme }) => ({
 const PrimeMinisterRow = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  minHeight: '20px',
+  height: '20px',
   position: 'sticky',
   top: '50px', // Account for year timeline + government row height (30px + 20px)
   backgroundColor: theme.palette.background.paper,
