@@ -1,0 +1,182 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/3-vlada-republike-slovenije-od-25-januarja-1993-do-27-februarja-1997/",
+  "government": {
+    "number": 3,
+    "name": "3. vlada Republike Slovenije",
+    "period": {
+      "start_date": "1993-01-25",
+      "end_date": "1997-02-27",
+      "duration_days": 1494
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Dr. Janez Drnovšek",
+        "title": "Prime Minister",
+        "elected_date": "1993-01-12",
+        "start_date": "1993-01-25",
+        "end_date": "1997-02-27"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Mitja Gaspari",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "1993-01-25",
+        "end_date": "1997-02-27"
+      },
+      {
+        "name": "Jožica Puhar",
+        "ministry": "Labor, Family and Social Affairs",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family and Social Affairs",
+        "start_date": "1993-01-25",
+        "end_date": "1994-06-21",
+        "termination_reason": "dismissed"
+      },
+      {
+        "name": "Rina Klinar",
+        "ministry": "Labor, Family and Social Affairs",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family and Social Affairs",
+        "start_date": "1994-06-21",
+        "end_date": "1996-01-31",
+        "termination_reason": "dismissed",
+        "predecessor": "Jožica Puhar"
+      },
+      {
+        "name": "Mag. Anton Rop",
+        "ministry": "Labor, Family and Social Affairs",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family and Social Affairs",
+        "start_date": "1996-02-07",
+        "end_date": "1997-02-27",
+        "predecessor": "Rina Klinar"
+      },
+      {
+        "name": "Dr. Davorin Kračun",
+        "ministry": "Economic Relations and Development",
+        "ministry_code": "MGRT",
+        "title": "Minister of Economic Relations and Development",
+        "start_date": "1993-01-25",
+        "end_date": "1995-01-26",
+        "termination_reason": "dismissed"
+      },
+      {
+        "name": "Janko Deželak",
+        "ministry": "Economic Relations and Development",
+        "ministry_code": "MGRT",
+        "title": "Minister of Economic Relations and Development",
+        "start_date": "1995-01-26",
+        "end_date": "1997-02-27",
+        "predecessor": "Dr. Davorin Kračun"
+      },
+      {
+        "name": "Janez Janša",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "1993-01-25",
+        "end_date": "1994-03-29",
+        "termination_reason": "dismissed"
+      },
+      {
+        "name": "Jelko Kacin",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "1994-03-29",
+        "end_date": "1997-02-27",
+        "predecessor": "Janez Janša"
+      },
+      {
+        "name": "Alojz Peterle",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "1993-01-25",
+        "end_date": "1994-10-31",
+        "termination_reason": "dismissed"
+      },
+      {
+        "name": "Zoran Thaler",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "1995-01-26",
+        "end_date": "1996-05-16",
+        "termination_reason": "dismissed",
+        "predecessor": "Alojz Peterle"
+      },
+      {
+        "name": "Davorin Kračun",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "1996-07-19",
+        "end_date": "1997-02-27",
+        "predecessor": "Zoran Thaler"
+      },
+      {
+        "name": "Ivan Bizjak",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "1993-01-25",
+        "end_date": "1994-06-08",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Andrej Šter",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "1994-06-08",
+        "end_date": "1997-02-27",
+        "predecessor": "Ivan Bizjak"
+      },
+      {
+        "name": "Miha Kozinc",
+        "ministry": "Justice",
+        "ministry_code": "MP",
+        "title": "Minister of Justice",
+        "start_date": "1993-01-25",
+        "end_date": "1994-07-19",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Metka Zupančič",
+        "ministry": "Justice",
+        "ministry_code": "MP",
+        "title": "Minister of Justice",
+        "start_date": "1994-07-19",
+        "end_date": "1997-02-27",
+        "predecessor": "Miha Kozinc"
+      },
+      {
+        "name": "Miha Jazbinšek",
+        "ministry": "Environmental Protection and Spatial Planning",
+        "ministry_code": "MOP",
+        "title": "Minister of Environmental Protection and Spatial Planning",
+        "start_date": "1993-01-25",
+        "end_date": "1994-02-01",
+        "termination_reason": "resigned"
+      },
+      {
+        "name": "Dr. Pavel Gantar",
+        "ministry": "Environmental Protection and Spatial Planning",
+        "ministry_code": "MOP",
+        "title": "Minister of Environmental Protection and Spatial Planning",
+        "start_date": "1994-02-28",
+        "end_date": "1997-02-27",
+        "predecessor": "Miha Jazbinšek"
+      }
+    ],
+    "political_composition": {
+      "coalition": "LDS coalition",
+      "parties": ["LDS", "SKD", "ZLSD"],
+      "ideology": "center-left"
+    }
+  }
+}

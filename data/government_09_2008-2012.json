@@ -1,0 +1,209 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/9-vlada-republike-slovenije-od-21-novembra-2008-do-10-februarja-2012/",
+  "government": {
+    "number": 9,
+    "name": "9. vlada Republike Slovenije",
+    "period": {
+      "start_date": "2008-11-21",
+      "end_date": "2012-02-10",
+      "duration_days": 1177
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Borut Pahor",
+        "title": "Prime Minister",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Dr. Franc Križanič",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Katarina Kresal",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "2008-11-21",
+        "end_date": "2011-09-02",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Aleš Zalar",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "2011-09-02",
+        "end_date": "2012-02-10",
+        "predecessor": "Katarina Kresal"
+      },
+      {
+        "name": "Samuel Žbogar",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Aleš Zalar",
+        "ministry": "Justice",
+        "ministry_code": "MP",
+        "title": "Minister of Justice",
+        "start_date": "2008-11-21",
+        "end_date": "2011-09-02",
+        "note": "Also served as Interior Minister from 2011"
+      },
+      {
+        "name": "Dr. Ljubica Jelušič",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Dr. Ivan Svetlik",
+        "ministry": "Labor, Family and Social Affairs",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family and Social Affairs",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Dr. Matej Lahovnik",
+        "ministry": "Economy",
+        "ministry_code": "MG",
+        "title": "Minister of Economy",
+        "start_date": "2008-11-21",
+        "end_date": "2010-07-09",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Mag. Darja Radić",
+        "ministry": "Economy",
+        "ministry_code": "MG",
+        "title": "Minister of Economy",
+        "start_date": "2010-07-16",
+        "end_date": "2011-07-11",
+        "termination_reason": "replaced",
+        "predecessor": "Dr. Matej Lahovnik"
+      },
+      {
+        "name": "Mag. Mitja Gaspari",
+        "ministry": "Economy",
+        "ministry_code": "MG",
+        "title": "Minister of Economy",
+        "start_date": "2011-07-11",
+        "end_date": "2012-02-10",
+        "predecessor": "Mag. Darja Radić"
+      },
+      {
+        "name": "Dr. Milan Pogačnik",
+        "ministry": "Agriculture, Forestry and Food",
+        "ministry_code": "MKGP",
+        "title": "Minister of Agriculture, Forestry and Food",
+        "start_date": "2008-11-21",
+        "end_date": "2010-03-18",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Mag. Dejan Židan",
+        "ministry": "Agriculture, Forestry and Food",
+        "ministry_code": "MKGP",
+        "title": "Minister of Agriculture, Forestry and Food",
+        "start_date": "2010-05-05",
+        "end_date": "2012-02-10",
+        "predecessor": "Dr. Milan Pogačnik"
+      },
+      {
+        "name": "Majda Širca Ravnikar",
+        "ministry": "Culture",
+        "ministry_code": "MK",
+        "title": "Minister of Culture",
+        "start_date": "2008-11-21",
+        "end_date": "2011-07-11",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Dr. Boštjan Žekš",
+        "ministry": "Culture",
+        "ministry_code": "MK",
+        "title": "Minister of Culture",
+        "start_date": "2011-07-11",
+        "end_date": "2012-02-10",
+        "predecessor": "Majda Širca Ravnikar"
+      },
+      {
+        "name": "Karl Viktor Erjavec",
+        "ministry": "Environment and Spatial Planning",
+        "ministry_code": "MOP",
+        "title": "Minister of Environment and Spatial Planning",
+        "start_date": "2008-11-21",
+        "end_date": "2010-02-02",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Dr. Roko Žarnić",
+        "ministry": "Environment and Spatial Planning",
+        "ministry_code": "MOP",
+        "title": "Minister of Environment and Spatial Planning",
+        "start_date": "2010-02-02",
+        "end_date": "2012-02-10",
+        "predecessor": "Karl Viktor Erjavec"
+      },
+      {
+        "name": "Dr. Igor Lukšič",
+        "ministry": "Education and Sport",
+        "ministry_code": "MIZS",
+        "title": "Minister of Education and Sport",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Dr. Borut Miklavčič",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Patrick Vlačič",
+        "ministry": "Transport",
+        "ministry_code": "MzI",
+        "title": "Minister of Transport",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Dr. Gregor Golobič",
+        "ministry": "Higher Education, Science and Technology",
+        "ministry_code": "MVZT",
+        "title": "Minister of Higher Education, Science and Technology",
+        "start_date": "2008-11-21",
+        "end_date": "2012-02-10"
+      },
+      {
+        "name": "Irma Pavlinič Krebs",
+        "ministry": "Public Administration",
+        "ministry_code": "MJU",
+        "title": "Minister of Public Administration",
+        "start_date": "2008-11-21",
+        "end_date": "2011-07-11",
+        "termination_reason": "replaced"
+      }
+    ],
+    "political_composition": {
+      "coalition": "Center-left coalition",
+      "parties": ["SD", "LDS", "Zares", "DeSUS"],
+      "ideology": "center-left"
+    }
+  }
+}

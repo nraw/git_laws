@@ -1,0 +1,206 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/8-vlada-republike-slovenije-od-3-decembra-2004-do-21-novembra-2008/",
+  "government": {
+    "number": 8,
+    "name": "8. vlada Republike Slovenije",
+    "period": {
+      "start_date": "2004-12-03",
+      "end_date": "2008-11-21",
+      "duration_days": 1449
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Janez Janša",
+        "title": "Prime Minister",
+        "elected_date": "2004-11-09",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Andrej Bajuk",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Dragutin Mate",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Dr. Dimitrij Rupel",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Dr. Lovro Šturm",
+        "ministry": "Justice",
+        "ministry_code": "MP",
+        "title": "Minister of Justice",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Karl Erjavec",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Mag. Andrej Vizjak",
+        "ministry": "Economy",
+        "ministry_code": "MG",
+        "title": "Minister of Economy",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Dr. Vasko Simoniti",
+        "ministry": "Culture",
+        "ministry_code": "MK",
+        "title": "Minister of Culture",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Janez Podobnik",
+        "ministry": "Environment and Spatial Planning",
+        "ministry_code": "MOP",
+        "title": "Minister of Environment and Spatial Planning",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Dr. Milan Zver",
+        "ministry": "Education and Sport",
+        "ministry_code": "MIZS",
+        "title": "Minister of Education and Sport",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Mag. Gregor Virant",
+        "ministry": "Public Administration",
+        "ministry_code": "MJU",
+        "title": "Minister of Public Administration",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Ivan Žagar",
+        "ministry": "Local Self-Government and Regional Policy",
+        "ministry_code": "MLSP",
+        "title": "Minister of Local Self-Government and Regional Policy",
+        "start_date": "2004-12-03",
+        "end_date": "2008-11-21"
+      },
+      {
+        "name": "Janez Drobnič",
+        "ministry": "Labor, Family and Social Affairs",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family and Social Affairs",
+        "start_date": "2004-12-03",
+        "end_date": "2006-12-01",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Marjeta Cotman",
+        "ministry": "Labor, Family and Social Affairs",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family and Social Affairs",
+        "start_date": "2006-12-18",
+        "end_date": "2008-11-21",
+        "predecessor": "Janez Drobnič"
+      },
+      {
+        "name": "Marija Lukačič",
+        "ministry": "Agriculture, Forestry and Food",
+        "ministry_code": "MKGP",
+        "title": "Minister of Agriculture, Forestry and Food",
+        "start_date": "2004-12-03",
+        "end_date": "2007-01-29",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Iztok Jarc",
+        "ministry": "Agriculture, Forestry and Food",
+        "ministry_code": "MKGP",
+        "title": "Minister of Agriculture, Forestry and Food",
+        "start_date": "2007-03-06",
+        "end_date": "2008-11-21",
+        "predecessor": "Marija Lukačič"
+      },
+      {
+        "name": "Janez Božič",
+        "ministry": "Transport",
+        "ministry_code": "MzI",
+        "title": "Minister of Transport",
+        "start_date": "2004-12-03",
+        "end_date": "2007-09-06",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Mag. Radovan Žerjav",
+        "ministry": "Transport",
+        "ministry_code": "MzI",
+        "title": "Minister of Transport",
+        "start_date": "2007-09-11",
+        "end_date": "2008-11-21",
+        "predecessor": "Janez Božič"
+      },
+      {
+        "name": "Dr. Andrej Bručan",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health",
+        "start_date": "2004-12-03",
+        "end_date": "2007-09-06",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Zofija Mazej Kukovič",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health",
+        "start_date": "2007-09-11",
+        "end_date": "2008-11-21",
+        "predecessor": "Dr. Andrej Bručan"
+      },
+      {
+        "name": "Dr. Jure Zupan",
+        "ministry": "Higher Education, Science and Technology",
+        "ministry_code": "MVZT",
+        "title": "Minister of Higher Education, Science and Technology",
+        "start_date": "2004-12-03",
+        "end_date": "2007-09-06",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Mojca Kucler Dolinar",
+        "ministry": "Higher Education, Science and Technology",
+        "ministry_code": "MVZT",
+        "title": "Minister of Higher Education, Science and Technology",
+        "start_date": "2007-09-11",
+        "end_date": "2008-11-21",
+        "predecessor": "Dr. Jure Zupan"
+      }
+    ],
+    "political_composition": {
+      "coalition": "Spring parties",
+      "parties": ["SDS", "NSi", "SLS", "DeSUS"],
+      "ideology": "center-right"
+    }
+  }
+}

@@ -35,21 +35,30 @@ class SlowenianMinisterScraper:
             soup = BeautifulSoup(response.content, 'html.parser')
             governments = []
 
-            # Look for government links
-            # The page structure shows links to individual government pages
-            for link in soup.find_all('a', href=True):
-                href = link.get('href', '')
+            # Look for list items containing government information
+            # Pattern: <li>[Number. Government Name](/path/) (dates) predsednik vlade Name</li>
+            list_items = soup.find_all('li')
 
-                # Look for government page links
-                if '/pretekle-vlade/' in href and href.count('/') > 4:
-                    # Extract government number and details
-                    gov_text = link.get_text(strip=True)
+            for li in list_items:
+                # Get all the text content from this list item
+                li_text = li.get_text(strip=True)
 
-                    # Parse government info from link text
-                    gov_info = self._parse_government_link_text(gov_text, href)
-                    if gov_info:
-                        governments.append(gov_info)
-                        logger.info(f"Found government: {gov_info['number']} - {gov_info['pm']}")
+                # Look for government links within this list item
+                links = li.find_all('a', href=True)
+
+                for link in links:
+                    href = link.get('href', '')
+                    link_text = link.get_text(strip=True)
+
+                    # Check if this looks like a government page link
+                    if ('/pretekle-vlade/' in href and
+                        ('vlada' in link_text.lower() or re.match(r'\d+\.', link_text))):
+
+                        # Parse the full list item text for complete info
+                        gov_info = self._parse_government_list_item(li_text, href, link_text)
+                        if gov_info:
+                            governments.append(gov_info)
+                            logger.info(f"Found government: {gov_info['number']} - {gov_info['pm']}")
 
             return governments
 
@@ -57,8 +66,38 @@ class SlowenianMinisterScraper:
             logger.error(f"Error scraping historical governments: {e}")
             return []
 
+    def _parse_government_list_item(self, li_text: str, href: str, link_text: str) -> Optional[Dict]:
+        """Parse government information from complete list item text."""
+        # Pattern: "1. Vlada Republike Slovenije (16. 5. 1990 - 14. 5. 1992) predsednik vlade Lojze Peterle"
+
+        # Extract government number from link text
+        number_match = re.match(r'(\d+)\.', link_text)
+        if not number_match:
+            return None
+
+        gov_number = int(number_match.group(1))
+
+        # Extract date range - look for (date - date) pattern
+        date_pattern = r'\(([^)]+)\)'
+        date_match = re.search(date_pattern, li_text)
+        date_range = date_match.group(1).strip() if date_match else ""
+
+        # Extract PM name - look for "predsednik vlade" pattern
+        pm_pattern = r'predsednik\s+vlade\s+([^(\n]+?)(?:\s*\(|$)'
+        pm_match = re.search(pm_pattern, li_text, re.IGNORECASE)
+        pm_name = pm_match.group(1).strip() if pm_match else ""
+
+        return {
+            'number': gov_number,
+            'date_range': date_range,
+            'pm': pm_name,
+            'url': self.base_url + href if href.startswith('/') else href,
+            'link_text': link_text,
+            'raw_text': li_text
+        }
+
     def _parse_government_link_text(self, text: str, href: str) -> Optional[Dict]:
-        """Parse government information from link text."""
+        """Parse government information from link text. (Legacy method)"""
         # Look for patterns like "1. vlada (16. 5. 1990 - 14. 5. 1992)"
         pattern = r'(\d+)\.\s*vlada.*?\((.+?)\)'
         match = re.search(pattern, text, re.IGNORECASE)
@@ -121,22 +160,37 @@ class SlowenianMinisterScraper:
         """Extract minister information from a government page."""
         ministers = []
 
-        # Look for various patterns where ministers might be listed
+        # Pattern 1: Look for bold text followed by minister details
+        # Structure: **Name Surname** minister for [ministry] – elected date – function ceased date
+        bold_elements = soup.find_all(['strong', 'b'])
 
-        # Pattern 1: Table with ministers
+        for bold in bold_elements:
+            bold_text = bold.get_text(strip=True)
+
+            # Check if this looks like a minister name (at least 2 words, proper capitalization)
+            if self._looks_like_minister_name(bold_text):
+                # Look for the text that follows this bold element
+                following_text = self._get_following_text(bold)
+
+                if following_text:
+                    minister_info = self._parse_minister_entry(bold_text, following_text)
+                    if minister_info:
+                        ministers.append(minister_info)
+
+        # Pattern 2: Look for structured text patterns mentioning ministers
+        all_text = soup.get_text()
+        minister_entries = self._extract_ministers_from_full_text(all_text)
+        ministers.extend(minister_entries)
+
+        # Pattern 3: Table with ministers
         tables = soup.find_all('table')
         for table in tables:
             ministers.extend(self._extract_ministers_from_table(table))
 
-        # Pattern 2: List items containing minister info
+        # Pattern 4: List items containing minister info
         lists = soup.find_all(['ul', 'ol'])
         for list_elem in lists:
             ministers.extend(self._extract_ministers_from_list(list_elem))
-
-        # Pattern 3: Paragraphs mentioning ministries
-        paragraphs = soup.find_all('p')
-        for p in paragraphs:
-            ministers.extend(self._extract_ministers_from_text(p.get_text()))
 
         # Remove duplicates
         unique_ministers = []
@@ -148,6 +202,165 @@ class SlowenianMinisterScraper:
                 unique_ministers.append(minister)
 
         return unique_ministers
+
+    def _looks_like_minister_name(self, text: str) -> bool:
+        """Check if text looks like a minister name."""
+        if not text:
+            return False
+
+        words = text.split()
+        if len(words) < 2:
+            return False
+
+        # Check for proper capitalization
+        for word in words:
+            if not word[0].isupper():
+                return False
+
+        # Exclude common non-name patterns
+        exclude_patterns = ['VLADA', 'MINISTRSTVO', 'MINISTRI', 'PREDSEDNIK', 'KOALICIJA']
+        if any(pattern in text.upper() for pattern in exclude_patterns):
+            return False
+
+        return True
+
+    def _get_following_text(self, element) -> str:
+        """Get text that follows a specific element."""
+        following_text = ""
+
+        # Get the parent and look for text after this element
+        parent = element.parent
+        if parent:
+            # Get all text from parent
+            parent_text = parent.get_text()
+
+            # Find where our element text appears and get what follows
+            element_text = element.get_text()
+            element_pos = parent_text.find(element_text)
+
+            if element_pos >= 0:
+                following_text = parent_text[element_pos + len(element_text):].strip()
+
+        return following_text
+
+    def _parse_minister_entry(self, name: str, following_text: str) -> Optional[Dict]:
+        """Parse minister entry from name and following text."""
+        # Pattern: "minister for [ministry] – elected date – function ceased date"
+
+        # Look for ministry information
+        ministry_patterns = [
+            r'ministr[a-z]*\s+za\s+([^–\n]+)',  # "minister za finance"
+            r'minister\s+for\s+([^–\n]+)',      # "minister for finance"
+            r'([^–\n]*ministr[a-z]*[^–\n]*)',   # any text containing "ministr"
+        ]
+
+        ministry = ""
+        for pattern in ministry_patterns:
+            match = re.search(pattern, following_text, re.IGNORECASE)
+            if match:
+                ministry = match.group(1).strip()
+                break
+
+        # Look for date information
+        start_date = ""
+        end_date = ""
+
+        # Pattern for dates: "elected 3. 12. 2004" or "izvoljen 3. 12. 2004"
+        start_patterns = [
+            r'(?:izvoljen|elected)\s+(\d+\.\s*\d+\.\s*\d{4})',
+            r'nastopil\s+funkcijo\s+(\d+\.\s*\d+\.\s*\d{4})',
+        ]
+
+        for pattern in start_patterns:
+            match = re.search(pattern, following_text, re.IGNORECASE)
+            if match:
+                start_date = match.group(1).strip()
+                break
+
+        # Pattern for end dates: "function ceased 21. 11. 2008" or "prenehala funkcija 21. 11. 2008"
+        end_patterns = [
+            r'(?:prenehala?\s+funkcij[ao]|function\s+ceased)\s+(\d+\.\s*\d+\.\s*\d{4})',
+            r'končal\s+(?:mandat|funkcijo)\s+(\d+\.\s*\d+\.\s*\d{4})',
+        ]
+
+        for pattern in end_patterns:
+            match = re.search(pattern, following_text, re.IGNORECASE)
+            if match:
+                end_date = match.group(1).strip()
+                break
+
+        if ministry or start_date:  # At least one piece of useful info
+            return {
+                'name': name,
+                'ministry': ministry,
+                'start_date': start_date,
+                'end_date': end_date,
+                'source': 'bold_pattern'
+            }
+
+        return None
+
+    def _extract_ministers_from_full_text(self, text: str) -> List[Dict]:
+        """Extract ministers from full page text using patterns."""
+        ministers = []
+
+        # Split text into lines for easier processing
+        lines = text.split('\n')
+
+        # Look for patterns like "Name Surname minister za ..." across multiple lines
+        current_minister = None
+        current_text = ""
+
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+
+            # Check if line contains a person name (at least 2 capitalized words)
+            words = line.split()
+            if (len(words) >= 2 and
+                all(word[0].isupper() for word in words[:2]) and
+                not any(exclude in line.upper() for exclude in ['VLADA', 'MINISTRI', 'PREDSEDNIK'])):
+
+                # This might be a minister name, check if next lines contain ministry info
+                potential_minister = ' '.join(words[:3])  # Take first 3 words as potential name
+
+                # Look ahead in the next few lines for ministry information
+                lookahead_text = line
+                for next_line_idx in range(1, min(3, len(lines))):
+                    if line != lines[-1]:  # Not last line
+                        lookahead_text += " " + lines[lines.index(line) + next_line_idx].strip()
+
+                if 'ministr' in lookahead_text.lower():
+                    minister_info = self._parse_minister_text_entry(potential_minister, lookahead_text)
+                    if minister_info:
+                        ministers.append(minister_info)
+
+        return ministers
+
+    def _parse_minister_text_entry(self, name: str, text: str) -> Optional[Dict]:
+        """Parse minister from text entry."""
+        # Look for ministry
+        ministry_patterns = [
+            r'ministr[a-z]*\s+za\s+([^,\n\-–]+)',
+            r'([^,\n\-–]*ministr[a-z]*[^,\n\-–]*)',
+        ]
+
+        ministry = ""
+        for pattern in ministry_patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                ministry = match.group(1).strip()
+                break
+
+        if ministry:
+            return {
+                'name': name,
+                'ministry': ministry,
+                'source': 'text_pattern'
+            }
+
+        return None
 
     def _extract_ministers_from_table(self, table) -> List[Dict]:
         """Extract ministers from table structure."""
@@ -344,9 +557,12 @@ def main():
     scraper = SlowenianMinisterScraper()
     result = scraper.scrape_all_governments("data/slovenian_ministers.json")
 
-    print(f"Scraped {result['total_governments']} governments")
-    for gov in result['governments']:
-        print(f"Government {gov['number']}: {len(gov.get('ministers', []))} ministers")
+    if result and 'total_governments' in result:
+        print(f"Scraped {result['total_governments']} governments")
+        for gov in result.get('governments', []):
+            print(f"Government {gov['number']}: {len(gov.get('ministers', []))} ministers")
+    else:
+        print("Failed to scrape governments")
 
 
 if __name__ == "__main__":

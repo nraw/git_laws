@@ -1,0 +1,149 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/10-vlada-republike-slovenije-od-10-februarja-2012-do-20-marca-2013/",
+  "government": {
+    "number": 10,
+    "name": "10. vlada Republike Slovenije",
+    "period": {
+      "start_date": "2012-02-10",
+      "end_date": "2013-03-20",
+      "duration_days": 403
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Janez Janša",
+        "title": "Prime Minister",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Dr. Janez Šušteršič",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "2012-02-10",
+        "end_date": "2013-01-31",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Janez Janša",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance (interim)",
+        "start_date": "2013-02-01",
+        "end_date": "2013-03-20",
+        "predecessor": "Dr. Janez Šušteršič",
+        "note": "PM serving as interim Finance Minister"
+      },
+      {
+        "name": "Dr. Vinko Gorenak",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Karl Erjavec",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Senko Pličanič",
+        "ministry": "Justice and Public Administration",
+        "ministry_code": "MP",
+        "title": "Minister of Justice and Public Administration",
+        "start_date": "2012-02-10",
+        "end_date": "2013-01-31",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Zvonko Černač",
+        "ministry": "Justice and Public Administration",
+        "ministry_code": "MP",
+        "title": "Minister of Justice and Public Administration",
+        "start_date": "2013-02-01",
+        "end_date": "2013-03-20",
+        "predecessor": "Senko Pličanič"
+      },
+      {
+        "name": "Aleš Hojs",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Mag. Andrej Vizjak",
+        "ministry": "Labor, Family and Social Affairs",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family and Social Affairs",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Mag. Radovan Žerjav",
+        "ministry": "Economic Development and Technology",
+        "ministry_code": "MGRT",
+        "title": "Minister of Economic Development and Technology",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Franc Bogovič",
+        "ministry": "Agriculture and Environment",
+        "ministry_code": "MKGP",
+        "title": "Minister of Agriculture and Environment",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Zvonko Černač",
+        "ministry": "Infrastructure and Spatial Planning",
+        "ministry_code": "MzI",
+        "title": "Minister of Infrastructure and Spatial Planning",
+        "start_date": "2012-02-10",
+        "end_date": "2013-01-31",
+        "note": "Later became Justice Minister"
+      },
+      {
+        "name": "Dr. Žiga Turk",
+        "ministry": "Education, Science, Culture and Sports",
+        "ministry_code": "MIZS",
+        "title": "Minister of Education, Science, Culture and Sports",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Dr. Tomaž Gantar",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      },
+      {
+        "name": "Ljudmila Novak",
+        "ministry": "Slovenes Abroad",
+        "ministry_code": "MSA",
+        "title": "Minister without Portfolio for Slovenes Abroad",
+        "start_date": "2012-02-10",
+        "end_date": "2013-03-20"
+      }
+    ],
+    "political_composition": {
+      "coalition": "Center-right coalition",
+      "parties": ["SDS", "SLS", "DeSUS", "DLGV"],
+      "ideology": "center-right"
+    },
+    "government_context": {
+      "formation_context": "Second Janša government",
+      "termination_reason": "No confidence vote due to corruption allegations"
+    }
+  }
+}

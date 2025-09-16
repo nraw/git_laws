@@ -1,0 +1,160 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/4-vlada-republike-slovenije-od-27-februarja-1997-do-7-junija-2000/",
+  "government": {
+    "number": 4,
+    "name": "4. vlada Republike Slovenije",
+    "period": {
+      "start_date": "1997-02-27",
+      "end_date": "2000-06-07",
+      "duration_days": 1196
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Dr. Janez Drnovšek",
+        "title": "Prime Minister",
+        "elected_date": "1997-01-09",
+        "start_date": "1997-02-27",
+        "end_date": "2000-06-07"
+      },
+      "deputy_prime_ministers": [
+        {
+          "name": "Marjan Podobnik",
+          "title": "Minister without portfolio, substituting Prime Minister",
+          "start_date": "1997-02-27",
+          "end_date": "2000-06-07"
+        }
+      ]
+    },
+    "ministers": [
+      {
+        "name": "Mitja Gaspari",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "1997-02-27",
+        "end_date": "2000-06-07"
+      },
+      {
+        "name": "Mag. Anton Rop",
+        "ministry": "Labor, Family and Social Affairs",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family and Social Affairs",
+        "start_date": "1997-02-27",
+        "end_date": "2000-06-07"
+      },
+      {
+        "name": "Dr. Marjan Senjur",
+        "ministry": "Economic Relations and Development",
+        "ministry_code": "MGRT",
+        "title": "Minister of Economic Relations and Development",
+        "start_date": "1997-02-27",
+        "end_date": "2000-06-07"
+      },
+      {
+        "name": "Metod Dragonja",
+        "ministry": "Economic Activities",
+        "ministry_code": "MGD",
+        "title": "Minister of Economic Activities",
+        "start_date": "1997-02-27",
+        "end_date": "1999-04-20",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Dr. Tea Terezija Petrin",
+        "ministry": "Economic Activities",
+        "ministry_code": "MGD",
+        "title": "Minister of Economic Activities",
+        "start_date": "1999-04-20",
+        "end_date": "2000-06-07",
+        "predecessor": "Metod Dragonja"
+      },
+      {
+        "name": "Tit Turnšek",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "1997-02-27",
+        "end_date": "1998-03-13",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Mag. Alojz Krapež",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "1998-03-13",
+        "end_date": "1998-11-24",
+        "termination_reason": "replaced",
+        "predecessor": "Tit Turnšek"
+      },
+      {
+        "name": "Dr. Franci Demšar",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "1999-02-04",
+        "end_date": "2000-06-07",
+        "predecessor": "Mag. Alojz Krapež"
+      },
+      {
+        "name": "Zoran Thaler",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "1997-02-27",
+        "end_date": "1997-09-25",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Dr. Boris Frlec",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "1997-09-25",
+        "end_date": "2000-02-02",
+        "termination_reason": "replaced",
+        "predecessor": "Zoran Thaler"
+      },
+      {
+        "name": "Dr. Dimitrij Rupel",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "2000-02-02",
+        "end_date": "2000-06-07",
+        "predecessor": "Dr. Boris Frlec"
+      },
+      {
+        "name": "Mirko Bandelj",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "1997-02-27",
+        "end_date": "1999-02-16",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Borut Šuklje",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "1999-03-24",
+        "end_date": "2000-06-07",
+        "predecessor": "Mirko Bandelj"
+      },
+      {
+        "name": "Janko Razgoršek",
+        "ministry": "Small Economy and Tourism",
+        "ministry_code": "MMGT",
+        "title": "Minister of Small Economy and Tourism",
+        "start_date": "1997-10-29",
+        "end_date": "2000-06-07"
+      }
+    ],
+    "political_composition": {
+      "coalition": "LDS coalition",
+      "parties": ["LDS", "SLS", "DeSUS"],
+      "ideology": "center-left"
+    }
+  }
+}

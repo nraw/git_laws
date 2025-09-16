@@ -1,0 +1,123 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/izvrsni-svet-skupscine-republike-slovenije-od-16-maja-1990-do-14-maja-1992/",
+  "government": {
+    "number": 1,
+    "name": "Izvršni svet Skupščine Republike Slovenije",
+    "period": {
+      "start_date": "1990-05-16",
+      "end_date": "1992-05-14",
+      "duration_days": 728
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Alojz Peterle",
+        "title": "President of the Executive Council",
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      "deputy_prime_ministers": [
+        {
+          "name": "Mitja Malešič",
+          "portfolio": "Social Affairs",
+          "start_date": "1990-05-16",
+          "end_date": "1992-05-14"
+        },
+        {
+          "name": "Dr. Jože Mencinger",
+          "portfolio": "Economy",
+          "start_date": "1990-05-16",
+          "end_date": "1991-05-08",
+          "termination_reason": "dismissed"
+        },
+        {
+          "name": "Dr. Andrej Ocvirk",
+          "portfolio": "Economy",
+          "start_date": "1991-05-08",
+          "end_date": "1992-05-14",
+          "predecessor": "Dr. Jože Mencinger"
+        },
+        {
+          "name": "Dr. Leopold Šešerko",
+          "portfolio": "Environmental Protection and Regional Development",
+          "start_date": "1990-05-16",
+          "end_date": "1992-05-14"
+        }
+      ]
+    },
+    "ministers": [
+      {
+        "name": "Igor Bavčar",
+        "ministry": "Internal Affairs",
+        "ministry_code": "MNZ",
+        "title": "Republican Secretary for Internal Affairs",
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      {
+        "name": "Janez Janša",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Republican Secretary for People's Defense",
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      {
+        "name": "Dr. Dimitrij Rupel",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Head of Republican Committee for International Cooperation",
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      {
+        "name": "Dr. Rajko Pirnat",
+        "ministry": "Justice and Administration",
+        "ministry_code": "MP",
+        "title": "Republican Secretary for Justice and Administration",
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14"
+      },
+      {
+        "name": "Dr. Marko Kranjec",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Republican Secretary for Finance",
+        "start_date": "1990-05-16",
+        "end_date": "1991-05-08",
+        "termination_reason": "dismissed"
+      },
+      {
+        "name": "Dušan Šešok",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Republican Secretary for Finance",
+        "start_date": "1991-05-09",
+        "end_date": "1992-05-14",
+        "predecessor": "Dr. Marko Kranjec"
+      },
+      {
+        "name": "Jelko Kacin",
+        "ministry": "Information",
+        "ministry_code": "MI",
+        "title": "Republican Secretary for Information",
+        "start_date": "1991-04-24",
+        "end_date": "1992-05-14"
+      }
+    ],
+    "government_transitions": [
+      {
+        "date": "1990-06-01",
+        "change": "Republican Committees initially abolished and replaced by Republican Secretariats"
+      },
+      {
+        "date": "1991-06-28",
+        "change": "Law established that existing Republican Secretaries would continue as Ministers"
+      }
+    ],
+    "political_composition": {
+      "coalition": "DEMOS",
+      "parties": ["SKD", "SDZS", "SDZ", "SLS", "ZS"],
+      "ideology": "center-right"
+    }
+  }
+}

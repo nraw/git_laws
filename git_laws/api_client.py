@@ -15,6 +15,20 @@ from loguru import logger
 # Load environment variables
 load_dotenv()
 
+# Import minister lookup - prefer manual over automated
+try:
+    from .minister_lookup_manual import manual_minister_lookup as minister_lookup
+    MINISTER_LOOKUP_AVAILABLE = True
+    logger.info("Using manual minister lookup data")
+except ImportError:
+    try:
+        from .minister_lookup import minister_lookup
+        MINISTER_LOOKUP_AVAILABLE = True
+        logger.info("Using automated minister lookup data")
+    except ImportError:
+        MINISTER_LOOKUP_AVAILABLE = False
+        logger.warning("Minister lookup not available - run minister scraper first")
+
 
 class PISRSClient:
     """Client for PISRS API with targeted data retrieval."""
@@ -147,7 +161,18 @@ class PISRSClient:
                 
                 # Try to determine the actual amendment name
                 amendment_name = self._determine_amendment_name(npb, version_number, amendments, target_law['KRATICA'])
-                
+
+                # Enhance government metadata with actual minister names if available
+                enhanced_government_metadata = government_metadata.copy()
+                if MINISTER_LOOKUP_AVAILABLE:
+                    law_date = self._convert_date(npb.get('datumDokumenta'))
+                    try:
+                        enhanced_government_metadata = minister_lookup.enhance_government_metadata(
+                            government_metadata, law_date
+                        )
+                    except Exception as e:
+                        logger.warning(f"Failed to enhance government metadata with ministers: {e}")
+
                 # Convert NPB data to format compatible with main script
                 npb_entry = {
                     'ID': str(npb.get('id')),  # Use NPB ID as the law ID
@@ -160,7 +185,7 @@ class PISRSClient:
                     'CITAT': '',
                     '_raw': npb,
                     '_is_npb': True,  # Flag to indicate this is an NPB version
-                    '_government_metadata': government_metadata,  # Add government metadata
+                    '_government_metadata': enhanced_government_metadata,  # Add enhanced government metadata
                     '_amendment_name': amendment_name,  # Store for commit messages
                     '_version_number': version_number
                 }

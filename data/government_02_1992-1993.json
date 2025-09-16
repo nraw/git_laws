@@ -1,0 +1,233 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/2-vlada-republike-slovenije-od-14-maja-1992-do-25-januarja-1993/",
+  "government": {
+    "number": 2,
+    "name": "2. vlada Republike Slovenije",
+    "period": {
+      "start_date": "1992-05-14",
+      "end_date": "1993-01-25",
+      "duration_days": 256
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Dr. Janez Drnovšek",
+        "title": "President of the Government",
+        "elected_date": "1992-04-22",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      "deputy_prime_ministers": [
+        {
+          "name": "Dr. Jože Pučnik",
+          "start_date": "1992-05-14",
+          "end_date": "1993-01-25"
+        },
+        {
+          "name": "Mag. Herman Rigelnik",
+          "start_date": "1992-05-14",
+          "end_date": "1993-01-25"
+        },
+        {
+          "name": "Mag. Viktor Žakelj",
+          "start_date": "1992-05-14",
+          "end_date": "1993-01-25"
+        }
+      ]
+    },
+    "ministers": [
+      {
+        "name": "Janez Kopač",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "1992-05-14",
+        "end_date": "1992-06-10",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Mitja Gaspari",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "1992-06-10",
+        "end_date": "1993-01-25",
+        "predecessor": "Janez Kopač"
+      },
+      {
+        "name": "Igor Bavčar",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Dr. Dimitrij Rupel",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Janez Janša",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Miha Kozinc",
+        "ministry": "Justice and Administration",
+        "ministry_code": "MP",
+        "title": "Minister of Justice and Administration",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Dr. Davorin Kračun",
+        "ministry": "Planning",
+        "ministry_code": "MPL",
+        "title": "Minister of Planning",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Mag. Franc Avberšek",
+        "ministry": "Energy",
+        "ministry_code": "ME",
+        "title": "Minister of Energy",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Dr. Maks Tajnikar",
+        "ministry": "Small Economy",
+        "ministry_code": "MMG",
+        "title": "Minister of Small Economy",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Dušan Šešok",
+        "ministry": "Industry and Construction",
+        "ministry_code": "MIG",
+        "title": "Minister of Industry and Construction",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Jožef Jeraj",
+        "ministry": "Trade",
+        "ministry_code": "MT",
+        "title": "Minister of Trade",
+        "start_date": "1992-05-14",
+        "end_date": "1992-09-23",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Davorin Valentinčič",
+        "ministry": "Trade",
+        "ministry_code": "MT",
+        "title": "Minister of Trade",
+        "start_date": "1992-09-23",
+        "end_date": "1993-01-25",
+        "predecessor": "Jožef Jeraj"
+      },
+      {
+        "name": "Mag. Janez Sirše",
+        "ministry": "Tourism and Hospitality",
+        "ministry_code": "MTG",
+        "title": "Minister of Tourism and Hospitality",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Mag. Jože Protner",
+        "ministry": "Agriculture, Forestry and Food",
+        "ministry_code": "MKGP",
+        "title": "Minister of Agriculture, Forestry and Food",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Marjan Krajnc",
+        "ministry": "Transport and Communications",
+        "ministry_code": "MTC",
+        "title": "Minister of Transport and Communications",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Miha Jazbinšek",
+        "ministry": "Environmental Protection and Spatial Planning",
+        "ministry_code": "MOP",
+        "title": "Minister of Environmental Protection and Spatial Planning",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Jožefa Puhar",
+        "ministry": "Labor",
+        "ministry_code": "MD",
+        "title": "Minister of Labor",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Dr. Božidar Voljč",
+        "ministry": "Health, Family and Social Security",
+        "ministry_code": "MZ",
+        "title": "Minister of Health, Family and Social Security",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Ana Osterman",
+        "ministry": "Veterans and Military Invalids",
+        "ministry_code": "MVVI",
+        "title": "Minister of Veterans and Military Invalids",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Dr. Slavko Gaber",
+        "ministry": "Education and Sports",
+        "ministry_code": "MIZS",
+        "title": "Minister of Education and Sports",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Dr. Peter Tancig",
+        "ministry": "Science and Technology",
+        "ministry_code": "MZT",
+        "title": "Minister of Science and Technology",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Borut Šuklje",
+        "ministry": "Culture",
+        "ministry_code": "MK",
+        "title": "Minister of Culture",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      },
+      {
+        "name": "Alojz Janko",
+        "ministry": "Legislation",
+        "ministry_code": "MZ",
+        "title": "Minister of Legislation",
+        "start_date": "1992-05-14",
+        "end_date": "1993-01-25"
+      }
+    ],
+    "political_composition": {
+      "coalition": "LDS coalition",
+      "parties": ["LDS", "SDSS", "SKD", "ZLSD"],
+      "ideology": "center-left"
+    }
+  }
+}

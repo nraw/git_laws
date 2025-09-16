@@ -1,0 +1,550 @@
+{
+  "scrape_date": "2025-09-16T11:54:43.469812",
+  "source": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/",
+  "governments": [
+    {
+      "number": 1,
+      "date_range": "16. 5. 1990 - 14. 5. 1992",
+      "pm": "Lojze Peterle",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/izvrsni-svet-skupscine-republike-slovenije-od-16-maja-1990-do-14-maja-1992/",
+      "link_text": "1. Vlada Republike Slovenije",
+      "raw_text": "1. Vlada Republike Slovenije(16. 5. 1990 - 14. 5. 1992)predsednik vlade Lojze Peterle",
+      "ministers": [
+        {
+          "name": "Alojz Peterle",
+          "ministry": "",
+          "start_date": "16. 5. 1990",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Mitja Malešič",
+          "ministry": "",
+          "start_date": "16. 5. 1990",
+          "end_date": "",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "1990-05-16",
+      "end_date": "1992-05-14"
+    },
+    {
+      "number": 2,
+      "date_range": "14. 5. 1992 - 25. 1. 1993",
+      "pm": "dr. Janez Drnovšek",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/2-vlada-republike-slovenije-od-14-maja-1992-do-25-januarja-1993/",
+      "link_text": "2. Vlada Republike Slovenije",
+      "raw_text": "2. Vlada Republike Slovenije(14. 5. 1992 - 25. 1. 1993)predsednik vlade dr. Janez Drnovšek",
+      "ministers": [
+        {
+          "name": "Jožefa Puhar",
+          "ministry": "delo - imenovan 14. 5. 1992",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Ana Osterman",
+          "ministry": "borce in vojaške invalide - imenovana 14. 5. 1992",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "1992-05-14",
+      "end_date": "1993-01-25"
+    },
+    {
+      "number": 3,
+      "date_range": "25. 1. 1993 - 27. 2. 1997",
+      "pm": "dr. Janez Drnovšek",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/3-vlada-republike-slovenije-od-25-januarja-1993-do-27-februarja-1997/",
+      "link_text": "3. Vlada Republike Slovenije",
+      "raw_text": "3. Vlada Republike Slovenije(25. 1. 1993 - 27. 2. 1997)predsednik vlade dr. Janez Drnovšek",
+      "ministers": [
+        {
+          "name": "Jožica Puhar",
+          "ministry": "delo, družino in socialne zadeve - imenovana 25. 1. 1993, razrešena 21. 6. 1994",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Rina Klinar",
+          "ministry": "delo, družino in socialne zadeve - imenovana 21. 6. 1994, razrešena 31. 1. 1996",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Metka Zupančič",
+          "ministry": "pravosodje - imenovana 19. 7. 1994",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "1993-01-25",
+      "end_date": "1997-02-27"
+    },
+    {
+      "number": 4,
+      "date_range": "27. 2. 1997 - 7. 6. 2000",
+      "pm": "dr. Janez Drnovšek",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/4-vlada-republike-slovenije-od-27-februarja-1997-do-7-junija-2000/",
+      "link_text": "4. Vlada Republike Slovenije",
+      "raw_text": "4. Vlada Republike Slovenije(27. 2. 1997 - 7. 6. 2000)predsednik vlade dr. Janez Drnovšek",
+      "ministers": [
+        {
+          "name": "Marjan Podobnik",
+          "ministry": "minister brez resorja, ki nadomešča predsednika Vlade RS in koordinira državotvorna ministrstva - imenovan 27. 2. 1997 - prenehala funkcija 7. 6. 2000",
+          "start_date": "",
+          "end_date": "7. 6. 2000",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "1997-02-27",
+      "end_date": "2000-06-07"
+    },
+    {
+      "number": 5,
+      "date_range": "7. 6. 2000 - 30. 11. 2000",
+      "pm": "dr. Andrej Bajuk",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/5-vlada-republike-slovenije-od-7-junija-2000-do-30-novembra-2000/",
+      "link_text": "5. Vlada Republike Slovenije",
+      "raw_text": "5. Vlada Republike Slovenije(7. 6. 2000 - 30. 11. 2000)predsednik vlade dr. Andrej Bajuk",
+      "ministers": [
+        {
+          "name": "Barbara Brezigar",
+          "ministry": "pravosodje - imenovana 7. 6. 2000 - prenehala funkcija 30. 11. 2000",
+          "start_date": "",
+          "end_date": "30. 11. 2000",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2000-06-07",
+      "end_date": "2000-11-30"
+    },
+    {
+      "number": 6,
+      "date_range": "30. 11. 2000 - 19. 12. 2002",
+      "pm": "dr. Janez Drnovšek",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/6-vlada-republike-slovenije-od-30-novembra-2000-do-19-decembra-2002/",
+      "link_text": "6. Vlada Republike Slovenije",
+      "raw_text": "6. Vlada Republike Slovenije(30. 11. 2000 - 19. 12. 2002)predsednik vlade dr. Janez Drnovšek",
+      "ministers": [
+        {
+          "name": "Andreja Rihter",
+          "ministry": "kulturo - imenovana 30. 11. 2000 - prenehala funkcija 19. 12. 2002",
+          "start_date": "",
+          "end_date": "19. 12. 2002",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2000-11-30",
+      "end_date": "2002-12-19"
+    },
+    {
+      "number": 7,
+      "date_range": "19. 12. 2002 - 3. 12. 2004",
+      "pm": "mag. Anton Rop",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/7-vlada-republike-slovenije-od-19-decembra-2002-do-3-decembra-2004/",
+      "link_text": "7. Vlada Republike Slovenije",
+      "raw_text": "7. Vlada Republike Slovenije(19. 12. 2002 - 3. 12. 2004)predsednik vlade mag. Anton Rop",
+      "ministers": [
+        {
+          "name": "Ivo Vajgl",
+          "ministry": "",
+          "start_date": "6. 7. 2004",
+          "end_date": "3. 12. 2004",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Zdenka Cerar",
+          "ministry": "pravosodje",
+          "start_date": "",
+          "end_date": "3. 12. 2004",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Andreja Rihter",
+          "ministry": "kulturo",
+          "start_date": "",
+          "end_date": "3. 12. 2004",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Jakob Presečnik",
+          "ministry": "",
+          "start_date": "19. 12. 2002",
+          "end_date": "20. 4. 2004",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2002-12-19",
+      "end_date": "2004-12-03"
+    },
+    {
+      "number": 8,
+      "date_range": "3. 12. 2004 - 21. 11. 2008",
+      "pm": "Janez Janša",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/8-vlada-republike-slovenije-od-3-decembra-2004-do-21-novembra-2008/",
+      "link_text": "8. Vlada Republike Slovenije",
+      "raw_text": "8. Vlada Republike Slovenije(3. 12. 2004 - 21. 11. 2008)predsednik vlade Janez Janša",
+      "ministers": [
+        {
+          "name": "Janez Janša",
+          "ministry": "",
+          "start_date": "9. 11. 2004",
+          "end_date": "21. 11. 2008",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Dragutin Mate",
+          "ministry": "",
+          "start_date": "3. 12. 2004",
+          "end_date": "21. 11. 2008",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Karl Erjavec",
+          "ministry": "",
+          "start_date": "3. 12. 2004",
+          "end_date": "21. 11. 2008",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Marjeta Cotman",
+          "ministry": "delo, družino in socialne zadeve",
+          "start_date": "",
+          "end_date": "21. 11. 2008",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Marija Lukačič",
+          "ministry": "kmetijstvo, gozdarstvo in prehrano - izvoljena 3. 12. 2004",
+          "start_date": "",
+          "end_date": "29. 1. 2007",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Iztok Jarc",
+          "ministry": "",
+          "start_date": "6. 3. 2007",
+          "end_date": "21. 11. 2008",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Mag. Radovan Žerjav",
+          "ministry": "",
+          "start_date": "11. 9. 2007",
+          "end_date": "21. 11. 2008",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Zofija Mazej Kukovič",
+          "ministry": "zdravje",
+          "start_date": "",
+          "end_date": "21. 11. 2008",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Mojca Kucler Dolinar",
+          "ministry": "visoko šolstvo, znanost in tehnologijo",
+          "start_date": "",
+          "end_date": "21. 11. 2008",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2004-12-03",
+      "end_date": "2008-11-21"
+    },
+    {
+      "number": 9,
+      "date_range": "21. 11. 2008 - 10. 2. 2012",
+      "pm": "Borut Pahor",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/9-vlada-republike-slovenije-od-21-novembra-2008-do-10-februarja-2012/",
+      "link_text": "9. Vlada Republike Slovenije",
+      "raw_text": "9. Vlada Republike Slovenije(21. 11. 2008 - 10. 2. 2012)predsednik vlade Borut Pahor",
+      "ministers": [
+        {
+          "name": "Borut Pahor",
+          "ministry": "",
+          "start_date": "7. 11. 2008",
+          "end_date": "10. 2. 2012",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Katarina Kresal",
+          "ministry": "notranje zadeve",
+          "start_date": "",
+          "end_date": "2. 9. 2011",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Aleš Zalar",
+          "ministry": "notranje zadeve",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Majda Širca Ravnikar",
+          "ministry": "kulturo",
+          "start_date": "",
+          "end_date": "11. 7. 2011",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Irma Pavlinič Krebs",
+          "ministry": "javno upravo",
+          "start_date": "",
+          "end_date": "11. 7. 2011",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Borut Pahor",
+          "ministry": "javno upravo",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Duša Trobec Bručan",
+          "ministry": "ministrica brez resorja, odgovorna za lokalno samoupravo in regionalni razvoj",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2008-11-21",
+      "end_date": "2012-02-10"
+    },
+    {
+      "number": 10,
+      "date_range": "10. 2. 2012 - 20. 3. 2013",
+      "pm": "Janez Janša",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/10-vlada-republike-slovenije-od-10-februarja-2012-do-20-marca-2013/",
+      "link_text": "10. Vlada Republike Slovenije",
+      "raw_text": "10. Vlada Republike Slovenije(10. 2. 2012 - 20. 3. 2013)predsednik vlade Janez Janša",
+      "ministers": [
+        {
+          "name": "Janez Janša",
+          "ministry": "",
+          "start_date": "4. 2. 2012",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Ljudmila Novak",
+          "ministry": "- ministrica brez resorja",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2012-02-10",
+      "end_date": "2013-03-20"
+    },
+    {
+      "number": 11,
+      "date_range": "20. 3. 2013 - 18. 9. 2014",
+      "pm": "",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/11-vlada-republike-slovenije-od-20-marca-2013-do-18-septembra-2014/",
+      "link_text": "11. Vlada Republike Slovenije",
+      "raw_text": "11. Vlada Republike Slovenije(20. 3. 2013 - 18. 9. 2014)predsednica vlade mag. Alenka Bratušek",
+      "ministers": [
+        {
+          "name": "Dr. Anja Kopač Mrak",
+          "ministry": "ministricaDejan Levanič",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Dr. Alenka Trop Skaza",
+          "ministry": "ministrica",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Gorazd Žmauc",
+          "ministry": "ministrica brez resorja",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Tina Komel",
+          "ministry": "ministrica brez resorja",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2013-03-20",
+      "end_date": "2014-09-18"
+    },
+    {
+      "number": 12,
+      "date_range": "18. 9. 2014 - 13. 9. 2018",
+      "pm": "dr. Miro Cerar",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/12-vlada-republike-slovenije-od-18-septembra-2014-do-13-septembra-2018/",
+      "link_text": "12. Vlada Republike Slovenije",
+      "raw_text": "12. Vlada Republike Slovenije(18. 9. 2014 - 13. 9. 2018)predsednik vlade dr. Miro Cerar",
+      "ministers": [
+        {
+          "name": "Andreja Katič",
+          "ministry": "obrambo do 13. 5. 2015",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Janko Veber",
+          "ministry": "obrambo do 13. 5. 2015",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Marija Milojka Kolar Celarc",
+          "ministry": "- ministricadr. Ana Medved - državna sekretarka - imenovana 3. 4. 2017Jožica Maučec Zakotnik - državna sekretarka - imenovana 8. 5. 2017Nina Pirnat - državna sekretarka - imenovana 19. 9. 2014 - razrešena 30. 4. 2017Sandra Tušar - državna sekretarka - imenovana 17. 8. 2015 - razrešena 2. 4. 2017",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Klavdija Markež",
+          "ministry": "izobraževanje, znanost in šport do 13. 5. 2015dr. Tomaž Boh - državni sekretar - imenovan 17. 7. 2015dr. Andreja Barle Lakota - državna sekretarka - imenovana 26. 9. 2014dr. Peter Maček - državni sekretar - imenovan 3. 10. 2014 - prenehanje funkcije 13. 3. 2015",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Anton Peršak",
+          "ministry": "kulturo do 20. 5. 2016Damjana Pečnik - državna sekretarka - imenovana 1. 6. 2016Anton Peršak - državni sekretar - imenovan 9. 10. 2014 - prenehanje funkcije 20. 5. 2016",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Gorazd Žmavc",
+          "ministry": "kulturo do 20. 5. 2016Damjana Pečnik - državna sekretarka - imenovana 1. 6. 2016Anton Peršak - državni sekretar - imenovan 9. 10. 2014 - prenehanje funkcije 20. 5. 2016",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Irena Majcen",
+          "ministry": "- ministricaLidija Stebernak - državna sekretarka - imenovana 10. 10. 2014Jure Leben - državni sekretar - imenovan 19. 9. 2014 - razrešen 2. 10. 2014mag. Tanja Bogataj - državna sekretarka - imenovana 10. 10. 2014 - razrešena 3. 3. 2016",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Alenka Smerkolj",
+          "ministry": "- ministrica - imenovana 19. 11. 2014mag. Violeta Bulc - ministrica - imenovana 18. 9. 2014 - prenehanje funkcije 29. 10. 2014Franc Matjaž Zupančič - državni sekretar - imenovan 20. 11. 2014Alenka Smerkolj - državna sekretarka - imenovana 15. 10. 2014 - prenehanje funkcije 19. 11. 2014",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Karl Viktor Erjavec",
+          "ministry": "notranje zadeve mag. Vesna Györkös Žnidar",
+          "source": "text_pattern"
+        },
+        {
+          "name": "Zdravko Počivalšek -",
+          "ministry": "pravosodje mag. Goran Klemenčič",
+          "source": "text_pattern"
+        },
+        {
+          "name": "Boris Koprivnikar -",
+          "ministry": "delo",
+          "source": "text_pattern"
+        },
+        {
+          "name": "Gorazd Žmavc -",
+          "ministry": "ministrica",
+          "source": "text_pattern"
+        },
+        {
+          "name": "Služba Vlade RS",
+          "ministry": "ministrica",
+          "source": "text_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2014-09-18",
+      "end_date": "2018-09-13"
+    },
+    {
+      "number": 13,
+      "date_range": "13. 9. 2018 - 13. 3. 2020",
+      "pm": "Marjan Šarec",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/13-vlada-republike-slovenije-od-13-septembra-2018-do-13-marca-2020/",
+      "link_text": "13. Vlada Republike Slovenije",
+      "raw_text": "13. Vlada Republike Slovenije(13. 9. 2018 - 13. 3. 2020)predsednik vlade Marjan Šarec",
+      "ministers": [
+        {
+          "name": "Andreja Katič",
+          "ministry": "- ministrica, imenovan 13. septembra 2018dr. Dominika Švarc Pipan - državna sekretarka, imenovana 24. septembra 2018Gregor Strojin - državni sekretar, imenovan 14. septembra 2018",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2018-09-13",
+      "end_date": "2020-03-13"
+    },
+    {
+      "number": 14,
+      "date_range": "13. 3. 2020 - 1. 6. 2022",
+      "pm": "Janez Janša",
+      "url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/14-vlada-republike-slovenije-od-13-marca-2020-do-1-junija-2022/",
+      "link_text": "14. Vlada Republike Slovenije",
+      "raw_text": "14. Vlada Republike Slovenije(13. 3. 2020 - 1. 6. 2022)predsednik vlade Janez Janša",
+      "ministers": [
+        {
+          "name": "Marjan Dikaučič",
+          "ministry": "- minister, imenovan 15. junij 2021Lilijana Kozlovič - ministrica, imenovana 13. marca 2020, prenehanje funkcije 27. maja 2021Matic Zupan",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Lilijana Kozlovič",
+          "ministry": "- ministrica, imenovana 13. marca 2020, prenehanje funkcije 27. maja 2021Matic Zupan",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        },
+        {
+          "name": "Aleksandra Pivec",
+          "ministry": "- ministrica, imenovana 13. marca 2020, prenehanje funkcije 15. oktobra 2020Damjan Stanonik",
+          "start_date": "",
+          "end_date": "",
+          "source": "bold_pattern"
+        }
+      ],
+      "ministries": {},
+      "start_date": "2020-03-13",
+      "end_date": "2022-06-01"
+    }
+  ],
+  "total_governments": 14
+}

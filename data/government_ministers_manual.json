@@ -1,0 +1,304 @@
+{
+  "metadata": {
+    "created_date": "2025-09-16",
+    "source": "Manual extraction from gov.si",
+    "extraction_method": "Manual review of government pages",
+    "note": "Test dataset with 1st and 14th governments to establish structure"
+  },
+  "governments": [
+    {
+      "number": 1,
+      "name": "Izvršni svet Skupščine Republike Slovenije",
+      "period": {
+        "start_date": "1990-05-16",
+        "end_date": "1992-05-14",
+        "duration_days": 728
+      },
+      "leadership": {
+        "prime_minister": {
+          "name": "Alojz Peterle",
+          "title": "President of the Executive Council",
+          "start_date": "1990-05-16",
+          "end_date": "1992-05-14"
+        },
+        "deputy_prime_ministers": [
+          {
+            "name": "Mitja Malešič",
+            "portfolio": "Social Affairs",
+            "start_date": "1990-05-16",
+            "end_date": "1992-05-14"
+          },
+          {
+            "name": "Dr. Jože Mencinger",
+            "portfolio": "Economy",
+            "start_date": "1990-05-16",
+            "end_date": "1991-05-08",
+            "termination_reason": "dismissed"
+          },
+          {
+            "name": "Dr. Andrej Ocvirk",
+            "portfolio": "Economy",
+            "start_date": "1991-05-08",
+            "end_date": "1992-05-14",
+            "predecessor": "Dr. Jože Mencinger"
+          },
+          {
+            "name": "Dr. Leopold Šešerko",
+            "portfolio": "Environmental Protection and Regional Development",
+            "start_date": "1990-05-16",
+            "end_date": "1992-05-14"
+          }
+        ]
+      },
+      "ministers": [
+        {
+          "name": "Igor Bavčar",
+          "ministry": "Internal Affairs",
+          "ministry_code": "MNZ",
+          "title": "Republican Secretary for Internal Affairs",
+          "start_date": "1990-05-16",
+          "end_date": "1992-05-14"
+        },
+        {
+          "name": "Janez Janša",
+          "ministry": "Defense",
+          "ministry_code": "MORS",
+          "title": "Republican Secretary for People's Defense",
+          "start_date": "1990-05-16",
+          "end_date": "1992-05-14"
+        },
+        {
+          "name": "Dr. Dimitrij Rupel",
+          "ministry": "Foreign Affairs",
+          "ministry_code": "MZZ",
+          "title": "Head of Republican Committee for International Cooperation",
+          "start_date": "1990-05-16",
+          "end_date": "1992-05-14"
+        },
+        {
+          "name": "Dr. Rajko Pirnat",
+          "ministry": "Justice and Administration",
+          "ministry_code": "MP",
+          "title": "Republican Secretary for Justice and Administration",
+          "start_date": "1990-05-16",
+          "end_date": "1992-05-14"
+        },
+        {
+          "name": "Dr. Marko Kranjec",
+          "ministry": "Finance",
+          "ministry_code": "MF",
+          "title": "Republican Secretary for Finance",
+          "start_date": "1990-05-16",
+          "end_date": "1991-05-08",
+          "termination_reason": "dismissed"
+        },
+        {
+          "name": "Dušan Šešok",
+          "ministry": "Finance",
+          "ministry_code": "MF",
+          "title": "Republican Secretary for Finance",
+          "start_date": "1991-05-09",
+          "end_date": "1992-05-14",
+          "predecessor": "Dr. Marko Kranjec"
+        },
+        {
+          "name": "Jelko Kacin",
+          "ministry": "Information",
+          "ministry_code": "MI",
+          "title": "Republican Secretary for Information",
+          "start_date": "1991-04-24",
+          "end_date": "1992-05-14"
+        }
+      ],
+      "government_transitions": [
+        {
+          "date": "1990-06-01",
+          "change": "Republican Committees initially abolished and replaced by Republican Secretariats"
+        },
+        {
+          "date": "1991-06-28",
+          "change": "Law established that existing Republican Secretaries would continue as Ministers"
+        }
+      ],
+      "political_composition": {
+        "coalition": "DEMOS",
+        "parties": ["SKD", "SDZS", "SDZ", "SLS", "ZS"],
+        "ideology": "center-right"
+      }
+    },
+    {
+      "number": 14,
+      "name": "14. vlada Republike Slovenije",
+      "period": {
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01",
+        "duration_days": 810
+      },
+      "leadership": {
+        "prime_minister": {
+          "name": "Janez Janša",
+          "title": "Prime Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        "deputy_prime_ministers": [
+          {
+            "name": "Zdravko Počivalšek",
+            "start_date": "2020-03-13",
+            "end_date": "2022-06-01"
+          },
+          {
+            "name": "Mag. Matej Tonin",
+            "start_date": "2020-03-13",
+            "end_date": "2022-06-01"
+          }
+        ]
+      },
+      "ministers": [
+        {
+          "name": "Dr. Anže Logar",
+          "ministry": "Foreign Affairs",
+          "ministry_code": "MZZ",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Aleš Hojs",
+          "ministry": "Interior",
+          "ministry_code": "MNZ",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Mag. Matej Tonin",
+          "ministry": "Defense",
+          "ministry_code": "MORS",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Mag. Andrej Šircelj",
+          "ministry": "Finance",
+          "ministry_code": "MF",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Zdravko Počivalšek",
+          "ministry": "Economic Development and Technology",
+          "ministry_code": "MGRT",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Lilijana Kozlovič",
+          "ministry": "Justice",
+          "ministry_code": "MP",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2021-05-27",
+          "termination_reason": "function ceased"
+        },
+        {
+          "name": "Marjan Dikaučič",
+          "ministry": "Justice",
+          "ministry_code": "MP",
+          "title": "Minister",
+          "start_date": "2021-06-15",
+          "end_date": "2022-06-01",
+          "predecessor": "Lilijana Kozlovič"
+        },
+        {
+          "name": "Boštjan Koritnik",
+          "ministry": "Public Administration",
+          "ministry_code": "MJU",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Janez Cigler Kralj",
+          "ministry": "Labor, Family, Social Affairs and Equal Opportunities",
+          "ministry_code": "MDDSZ",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Tomaž Gantar",
+          "ministry": "Health",
+          "ministry_code": "MZ",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2020-12-18",
+          "termination_reason": "resignation"
+        },
+        {
+          "name": "Janez Poklukar",
+          "ministry": "Health",
+          "ministry_code": "MZ",
+          "title": "Minister",
+          "start_date": "2021-02-23",
+          "end_date": "2022-06-01",
+          "predecessor": "Tomaž Gantar"
+        },
+        {
+          "name": "Dr. Simona Kustec",
+          "ministry": "Education, Science and Sport",
+          "ministry_code": "MIZS",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Jernej Vrtovec",
+          "ministry": "Infrastructure",
+          "ministry_code": "MzI",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Dr. Vasko Simoniti",
+          "ministry": "Culture",
+          "ministry_code": "MK",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2022-06-01"
+        },
+        {
+          "name": "Aleksandra Pivec",
+          "ministry": "Agriculture, Forestry and Food",
+          "ministry_code": "MKGP",
+          "title": "Minister",
+          "start_date": "2020-03-13",
+          "end_date": "2020-10-15",
+          "termination_reason": "function ceased"
+        },
+        {
+          "name": "Dr. Jože Podgoršek",
+          "ministry": "Agriculture, Forestry and Food",
+          "ministry_code": "MKGP",
+          "title": "Minister",
+          "start_date": "2020-10-15",
+          "end_date": "2022-06-01",
+          "predecessor": "Aleksandra Pivec"
+        }
+      ],
+      "political_composition": {
+        "coalition": "SDS coalition",
+        "parties": ["SDS", "SMC", "NSi", "DeSUS"],
+        "ideology": "center-right"
+      },
+      "government_context": {
+        "major_events": ["COVID-19 pandemic", "EU Recovery Fund negotiations"],
+        "formation_context": "Formed after resignation of Marjan Šarec government"
+      }
+    }
+  ]
+}

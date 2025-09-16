@@ -1,0 +1,161 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/14-vlada-republike-slovenije-od-13-marca-2020-do-1-junija-2022/",
+  "government": {
+    "number": 14,
+    "name": "14. vlada Republike Slovenije",
+    "period": {
+      "start_date": "2020-03-13",
+      "end_date": "2022-06-01",
+      "duration_days": 810
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Janez Janša",
+        "title": "Prime Minister",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Mag. Andrej Šircelj",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Aleš Hojs",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Anže Logar",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Matej Tonin",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Dr. Lilijana Kozlovič",
+        "ministry": "Justice",
+        "ministry_code": "MP",
+        "title": "Minister of Justice",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Boštjan Koritnik",
+        "ministry": "Public Administration",
+        "ministry_code": "MJU",
+        "title": "Minister of Public Administration",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Dr. Simona Kustec",
+        "ministry": "Education, Science and Sport",
+        "ministry_code": "MIZS",
+        "title": "Minister of Education, Science and Sport",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Zdravko Počivalšek",
+        "ministry": "Economic Development and Technology",
+        "ministry_code": "MGRT",
+        "title": "Minister of Economic Development and Technology",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Dr. Janusz Janko Poklukar",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health",
+        "start_date": "2020-03-13",
+        "end_date": "2021-02-12",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Dr. Janez Poklukar",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health",
+        "start_date": "2021-02-12",
+        "end_date": "2022-06-01",
+        "predecessor": "Dr. Janusz Janko Poklukar"
+      },
+      {
+        "name": "Janusz Janko Poklukar",
+        "ministry": "Labor, Family, Social Affairs and Equal Opportunities",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family, Social Affairs and Equal Opportunities",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Dr. Jože Podgoršek",
+        "ministry": "Agriculture, Forestry and Food",
+        "ministry_code": "MKGP",
+        "title": "Minister of Agriculture, Forestry and Food",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Vasko Simoniti",
+        "ministry": "Culture",
+        "ministry_code": "MK",
+        "title": "Minister of Culture",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Andrej Vizjak",
+        "ministry": "Environment and Spatial Planning",
+        "ministry_code": "MOP",
+        "title": "Minister of Environment and Spatial Planning",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Jernej Vrtovec",
+        "ministry": "Infrastructure",
+        "ministry_code": "MzI",
+        "title": "Minister of Infrastructure",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      },
+      {
+        "name": "Helena Jaklitsch",
+        "ministry": "Slovenes Abroad",
+        "ministry_code": "MSA",
+        "title": "Minister without Portfolio for Slovenes Abroad",
+        "start_date": "2020-03-13",
+        "end_date": "2022-06-01"
+      }
+    ],
+    "political_composition": {
+      "coalition": "Center-right coalition",
+      "parties": ["SDS", "SMC", "NSi", "DeSUS"],
+      "ideology": "center-right"
+    },
+    "government_context": {
+      "formation_context": "Third Janša government formed during COVID-19 pandemic",
+      "notable_features": "Governed during pandemic crisis, Health Minister change during crisis"
+    }
+  }
+}

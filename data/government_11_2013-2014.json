@@ -1,0 +1,188 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/11-vlada-republike-slovenije-od-20-marca-2013-do-18-septembra-2014/",
+  "government": {
+    "number": 11,
+    "name": "11. vlada Republike Slovenije",
+    "period": {
+      "start_date": "2013-03-20",
+      "end_date": "2014-09-18",
+      "duration_days": 547
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Mag. Alenka Bratušek",
+        "title": "Prime Minister",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Dr. Uroš Čufer",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      },
+      {
+        "name": "Dr. Gregor Virant",
+        "ministry": "Interior and Public Administration",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior and Public Administration",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      },
+      {
+        "name": "Karl Viktor Erjavec",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      },
+      {
+        "name": "Dr. Senko Pličanič",
+        "ministry": "Justice",
+        "ministry_code": "MP",
+        "title": "Minister of Justice",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      },
+      {
+        "name": "Roman Jakič",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      },
+      {
+        "name": "Dr. Anja Kopač Mrak",
+        "ministry": "Labor, Family, Social Affairs and Equal Opportunities",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family, Social Affairs and Equal Opportunities",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      },
+      {
+        "name": "Mag. Stanko Stepišnik",
+        "ministry": "Economic Development and Technology",
+        "ministry_code": "MGRT",
+        "title": "Minister of Economic Development and Technology",
+        "start_date": "2013-03-20",
+        "end_date": "2013-11-29",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Dr. Uroš Čufer",
+        "ministry": "Economic Development and Technology",
+        "ministry_code": "MGRT",
+        "title": "Minister of Economic Development and Technology (interim)",
+        "start_date": "2013-12-11",
+        "end_date": "2014-02-24",
+        "predecessor": "Mag. Stanko Stepišnik",
+        "note": "Served concurrently as Finance Minister"
+      },
+      {
+        "name": "Metod Dragonja",
+        "ministry": "Economic Development and Technology",
+        "ministry_code": "MGRT",
+        "title": "Minister of Economic Development and Technology",
+        "start_date": "2014-02-24",
+        "end_date": "2014-09-18",
+        "predecessor": "Dr. Uroš Čufer"
+      },
+      {
+        "name": "Mag. Dejan Židan",
+        "ministry": "Agriculture and Environment",
+        "ministry_code": "MKGP",
+        "title": "Minister of Agriculture and Environment",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      },
+      {
+        "name": "Igor Maher",
+        "ministry": "Infrastructure and Spatial Planning",
+        "ministry_code": "MzI",
+        "title": "Minister of Infrastructure and Spatial Planning",
+        "start_date": "2013-03-20",
+        "end_date": "2013-04-02",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Samo Omerzel",
+        "ministry": "Infrastructure and Spatial Planning",
+        "ministry_code": "MzI",
+        "title": "Minister of Infrastructure and Spatial Planning",
+        "start_date": "2013-04-02",
+        "end_date": "2014-09-18",
+        "predecessor": "Igor Maher"
+      },
+      {
+        "name": "Dr. Jernej Pikalo",
+        "ministry": "Education, Science and Sport",
+        "ministry_code": "MIZS",
+        "title": "Minister of Education, Science and Sport",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      },
+      {
+        "name": "Dr. Uroš Grilc",
+        "ministry": "Culture",
+        "ministry_code": "MK",
+        "title": "Minister of Culture",
+        "start_date": "2013-03-20",
+        "end_date": "2014-09-18"
+      },
+      {
+        "name": "Dr. Tomaž Gantar",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health",
+        "start_date": "2013-03-20",
+        "end_date": "2013-11-29",
+        "termination_reason": "replaced"
+      },
+      {
+        "name": "Karl Viktor Erjavec",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health (interim)",
+        "start_date": "2013-12-11",
+        "end_date": "2014-02-24",
+        "predecessor": "Dr. Tomaž Gantar",
+        "note": "Served concurrently as Foreign Affairs Minister"
+      },
+      {
+        "name": "Dr. Alenka Trop Skaza",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health",
+        "start_date": "2014-02-24",
+        "end_date": "2014-04-03",
+        "termination_reason": "replaced",
+        "predecessor": "Karl Viktor Erjavec"
+      },
+      {
+        "name": "Mag. Alenka Bratušek",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health (interim)",
+        "start_date": "2014-04-15",
+        "end_date": "2014-09-18",
+        "predecessor": "Dr. Alenka Trop Skaza",
+        "note": "PM also serving as Health Minister"
+      }
+    ],
+    "political_composition": {
+      "coalition": "PS coalition",
+      "parties": ["PS", "SD", "DeSUS", "DLGV"],
+      "ideology": "center-left"
+    },
+    "government_context": {
+      "formation_context": "First female PM in Slovenia's history",
+      "notable_features": "Multiple interim minister appointments due to instability"
+    }
+  }
+}

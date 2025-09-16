@@ -1,0 +1,139 @@
+{
+  "source_url": "https://www.gov.si/drzavni-organi/vlada/o-vladi/pretekle-vlade/6-vlada-republike-slovenije-od-30-novembra-2000-do-19-decembra-2002/",
+  "government": {
+    "number": 6,
+    "name": "6. vlada Republike Slovenije",
+    "period": {
+      "start_date": "2000-11-30",
+      "end_date": "2002-12-19",
+      "duration_days": 749
+    },
+    "leadership": {
+      "prime_minister": {
+        "name": "Dr. Janez Drnovšek",
+        "title": "Prime Minister",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      }
+    },
+    "ministers": [
+      {
+        "name": "Mag. Anton Rop",
+        "ministry": "Finance",
+        "ministry_code": "MF",
+        "title": "Minister of Finance",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Dr. Rado Bohinc",
+        "ministry": "Interior",
+        "ministry_code": "MNZ",
+        "title": "Minister of Interior",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Dr. Dimitrij Rupel",
+        "ministry": "Foreign Affairs",
+        "ministry_code": "MZZ",
+        "title": "Minister of Foreign Affairs",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Mag. Ivan Bizjak",
+        "ministry": "Justice",
+        "ministry_code": "MP",
+        "title": "Minister of Justice",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Dr. Anton Grizold",
+        "ministry": "Defense",
+        "ministry_code": "MORS",
+        "title": "Minister of Defense",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Dr. Vlado Dimovski",
+        "ministry": "Labor, Family and Social Affairs",
+        "ministry_code": "MDDSZ",
+        "title": "Minister of Labor, Family and Social Affairs",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Dr. Tea Petrin",
+        "ministry": "Economy",
+        "ministry_code": "MG",
+        "title": "Minister of Economy",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Mag. Franc But",
+        "ministry": "Agriculture, Forestry and Food",
+        "ministry_code": "MKGP",
+        "title": "Minister of Agriculture, Forestry and Food",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Andreja Rihter",
+        "ministry": "Culture",
+        "ministry_code": "MK",
+        "title": "Minister of Culture",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Mag. Janez Kopač",
+        "ministry": "Environment, Spatial Planning and Energy",
+        "ministry_code": "MOP",
+        "title": "Minister of Environment, Spatial Planning and Energy",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Jakob Presečnik",
+        "ministry": "Transport",
+        "ministry_code": "MzI",
+        "title": "Minister of Transport",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Dr. Lucija Čok",
+        "ministry": "Education, Science and Sport",
+        "ministry_code": "MIZS",
+        "title": "Minister of Education, Science and Sport",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Dr. Dušan Keber",
+        "ministry": "Health",
+        "ministry_code": "MZ",
+        "title": "Minister of Health",
+        "start_date": "2000-11-30",
+        "end_date": "2002-12-19"
+      },
+      {
+        "name": "Dr. Pavel Gantar",
+        "ministry": "Information Society",
+        "ministry_code": "MID",
+        "title": "Minister of Information Society",
+        "start_date": "2001-01-11",
+        "end_date": "2002-12-19"
+      }
+    ],
+    "political_composition": {
+      "coalition": "LDS coalition",
+      "parties": ["LDS", "ZLSD", "SLS", "DeSUS"],
+      "ideology": "center-left"
+    }
+  }
+}
