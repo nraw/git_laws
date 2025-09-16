@@ -548,13 +548,6 @@ export default function TimelineVisualization() {
     }
   }, [handleZoomInputSubmit]);
 
-  const handleWheel = (event: React.WheelEvent) => {
-    if (event.ctrlKey || event.metaKey) {
-      event.preventDefault();
-      const delta = event.deltaY > 0 ? -0.1 : 0.1;
-      handleZoom(delta);
-    }
-  };
 
   return (
     <Paper elevation={2} sx={{ m: 2, p: 2 }}>
@@ -565,8 +558,8 @@ export default function TimelineVisualization() {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {language === 'en'
-              ? 'Horizontal timeline showing ministers across different governments. Use Ctrl+scroll to zoom, or click on governments to filter.'
-              : 'Horizontalna časovnica, ki prikazuje ministre v različnih vladah. Uporabite Ctrl+scroll za povečavo ali kliknite na vlade za filtriranje.'
+              ? 'Horizontal timeline showing ministers across different governments. Click on governments to filter ministries.'
+              : 'Horizontalna časovnica, ki prikazuje ministre v različnih vladah. Kliknite na vlade za filtriranje ministrstev.'
             }
           </Typography>
           {selectedGovernment && (
@@ -666,7 +659,6 @@ export default function TimelineVisualization() {
 
       <TimelineContainer
         ref={scrollRef}
-        onWheel={handleWheel}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
