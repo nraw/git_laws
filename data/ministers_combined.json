@@ -74,7 +74,7 @@
         {
           "name": "Igor Bavčar",
           "ministry": {
-            "en": "Internal Affairs",
+            "en": "Interior",
             "sl": "Notranje zadeve"
           },
           "ministry_code": "MNZ",
@@ -529,7 +529,7 @@
         {
           "name": "Dr. Slavko Gaber",
           "ministry": {
-            "en": "Education and Sports",
+            "en": "Education and Sport",
             "sl": "Šolstvo in šport"
           },
           "ministry_code": "MIZS",
@@ -3657,7 +3657,7 @@
     {
       "name": "Igor Bavčar",
       "ministry": {
-        "en": "Internal Affairs",
+        "en": "Interior",
         "sl": "Notranje zadeve"
       },
       "ministry_code": "MNZ",
@@ -4192,7 +4192,7 @@
     {
       "name": "Dr. Slavko Gaber",
       "ministry": {
-        "en": "Education and Sports",
+        "en": "Education and Sport",
         "sl": "Šolstvo in šport"
       },
       "ministry_code": "MIZS",
