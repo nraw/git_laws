@@ -7,7 +7,7 @@ Simple interface for querying Slovenian government minister data.
 import json
 from datetime import datetime
 from typing import Dict, List, Optional
-from config import MINISTERS_COMBINED_FILE
+from .config import MINISTERS_COMBINED_FILE
 
 class MinisterLookup:
     """

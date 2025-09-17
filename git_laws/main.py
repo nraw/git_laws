@@ -10,6 +10,34 @@ from loguru import logger
 from tqdm import tqdm
 
 from .api_client import pisrs_client
+from .minister_lookup import find_minister
+
+
+def get_responsible_minister(law_date, preparing_ministry):
+    """
+    Find the minister responsible based on the preparing ministry and date.
+
+    Args:
+        law_date: Date when the law was accepted
+        preparing_ministry: The ministry that prepared the law (e.g., "Ministrstvo za finance")
+
+    Returns:
+        Minister information dict
+
+    Raises:
+        ValueError: If no appropriate minister is found
+    """
+    # Format date for minister lookup (YYYY-MM-DD)
+    date_str = law_date.strftime("%Y-%m-%d")
+
+    # Try to find minister using the full ministry name directly
+    # The minister lookup function handles both English and Slovenian matching
+    minister = find_minister(preparing_ministry, date_str)
+
+    if not minister:
+        raise ValueError(f"No minister found for ministry '{preparing_ministry}' on date {date_str}")
+
+    return minister
 
 
 def validate_api_access():
@@ -152,9 +180,34 @@ def main(law_id=None, output_dir=None):
             try:
                 output_file = Path(data_location + law_code + ".html")
                 output_file.write_text(prettyHTML, encoding='utf-8')
-                
+
+                # Get preparing ministry from the government metadata
+                preparing_ministry = None
+                if government_metadata and government_metadata.get('responsible_ministry'):
+                    preparing_ministry = government_metadata['responsible_ministry']
+
+                if not preparing_ministry:
+                    raise ValueError(f"No responsible ministry found for law {affected_law_id}")
+
+                # Get the responsible minister for this law's date
+                minister = get_responsible_minister(affected_law_date, preparing_ministry)
+
+                # Create commit with minister as committer
                 repo.git.add(all=True)
-                repo.git.commit(date=affected_law_date, m=commit_msg)
+
+                # Set environment variables for git commit
+                commit_env = {
+                    'GIT_COMMITTER_NAME': minister['name'],
+                    'GIT_COMMITTER_EMAIL': f"{minister['name'].replace(' ', '.').lower()}@gov.si",
+                    'GIT_COMMITTER_DATE': affected_law_date.strftime('%Y-%m-%d %H:%M:%S %z'),
+                    'GIT_AUTHOR_NAME': minister['name'],
+                    'GIT_AUTHOR_EMAIL': f"{minister['name'].replace(' ', '.').lower()}@gov.si",
+                    'GIT_AUTHOR_DATE': affected_law_date.strftime('%Y-%m-%d %H:%M:%S %z')
+                }
+
+                repo.git.commit(date=affected_law_date, m=commit_msg, env=commit_env)
+
+                logger.info(f"Committed {affected_law_id} as {minister['name']} ({minister.get('ministry', 'Government')})")
                 processed_count += 1
                 
             except Exception as e:
