@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "created_date": "2025-09-16",
+    "created_date": "2025-09-17",
     "description": "Combined Slovenian government ministers data (1990-2022)",
     "source": "Combined from individual government files"
   },
@@ -74,7 +74,7 @@
         {
           "name": "Igor Bavčar",
           "ministry": {
-            "en": "Internal Affairs",
+            "en": "Interior",
             "sl": "Notranje zadeve"
           },
           "ministry_code": "MNZ",
@@ -529,7 +529,7 @@
         {
           "name": "Dr. Slavko Gaber",
           "ministry": {
-            "en": "Education and Sports",
+            "en": "Education and Sport",
             "sl": "Šolstvo in šport"
           },
           "ministry_code": "MIZS",
@@ -3651,13 +3651,375 @@
           "sl": "Oblikovana po odstopu vlade Marjana Šarca"
         }
       }
+    },
+    {
+      "number": 15,
+      "name": {
+        "en": "15th Government of the Republic of Slovenia",
+        "sl": "15. vlada Republike Slovenije"
+      },
+      "period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      },
+      "leadership": {
+        "prime_minister": {
+          "name": "Dr. Robert Golob",
+          "title": {
+            "en": "Prime Minister",
+            "sl": "Predsednik Vlade"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        "deputy_prime_ministers": [
+          {
+            "name": "Tanja Fajon",
+            "start_date": "2022-06-01",
+            "end_date": "2026-06-01"
+          },
+          {
+            "name": "Luka Mesec",
+            "start_date": "2022-06-01",
+            "end_date": "2026-06-01"
+          },
+          {
+            "name": "Klemen Boštjančič",
+            "start_date": "2022-06-01",
+            "end_date": "2026-06-01"
+          },
+          {
+            "name": "Matej Arčon",
+            "start_date": "2022-06-01",
+            "end_date": "2026-06-01"
+          }
+        ]
+      },
+      "ministers": [
+        {
+          "name": "Tanja Fajon",
+          "ministry": {
+            "en": "Foreign Affairs",
+            "sl": "Zunanje zadeve"
+          },
+          "ministry_code": "MZZ",
+          "title": {
+            "en": "Deputy Prime Minister and Minister of Foreign Affairs",
+            "sl": "Podpredsednica Vlade in ministrica za zunanje zadeve"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Boštjan Poklukar",
+          "ministry": {
+            "en": "Interior",
+            "sl": "Notranje zadeve"
+          },
+          "ministry_code": "MNZ",
+          "title": {
+            "en": "Minister of Interior",
+            "sl": "Minister za notranje zadeve"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Borut Sajovic",
+          "ministry": {
+            "en": "Defense",
+            "sl": "Obramba"
+          },
+          "ministry_code": "MORS",
+          "title": {
+            "en": "Minister of Defense",
+            "sl": "Minister za obrambo"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Klemen Boštjančič",
+          "ministry": {
+            "en": "Finance",
+            "sl": "Finance"
+          },
+          "ministry_code": "MF",
+          "title": {
+            "en": "Deputy Prime Minister and Minister of Finance",
+            "sl": "Podpredsednik Vlade in minister za finance"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Andreja Katič",
+          "ministry": {
+            "en": "Justice",
+            "sl": "Pravosodje"
+          },
+          "ministry_code": "MP",
+          "title": {
+            "en": "Minister of Justice",
+            "sl": "Ministrica za pravosodje"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Franc Props",
+          "ministry": {
+            "en": "Public Administration",
+            "sl": "Javna uprava"
+          },
+          "ministry_code": "MJU",
+          "title": {
+            "en": "Minister of Public Administration",
+            "sl": "Minister za javno upravo"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Luka Mesec",
+          "ministry": {
+            "en": "Labor, Family, Social Affairs and Equal Opportunities",
+            "sl": "Delo, družina, socialne zadeve in enake možnosti"
+          },
+          "ministry_code": "MDDSZ",
+          "title": {
+            "en": "Deputy Prime Minister and Minister of Labor, Family, Social Affairs and Equal Opportunities",
+            "sl": "Podpredsednik Vlade in minister za delo, družino, socialne zadeve in enake možnosti"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Valentina Prevolnik Rupel",
+          "ministry": {
+            "en": "Health",
+            "sl": "Zdravje"
+          },
+          "ministry_code": "MZ",
+          "title": {
+            "en": "Minister of Health",
+            "sl": "Ministrica za zdravje"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Vinko Logaj",
+          "ministry": {
+            "en": "Education",
+            "sl": "Izobraževanje"
+          },
+          "ministry_code": "MI",
+          "title": {
+            "en": "Minister of Education",
+            "sl": "Minister za izobraževanje"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Igor Papič",
+          "ministry": {
+            "en": "Higher Education, Science and Innovation",
+            "sl": "Visoko šolstvo, znanost in inovacije"
+          },
+          "ministry_code": "MVZI",
+          "title": {
+            "en": "Minister of Higher Education, Science and Innovation",
+            "sl": "Minister za visoko šolstvo, znanost in inovacije"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Matjaž Han",
+          "ministry": {
+            "en": "Economy, Tourism and Sport",
+            "sl": "Gospodarstvo, turizem in šport"
+          },
+          "ministry_code": "MGTS",
+          "title": {
+            "en": "Minister of Economy, Tourism and Sport",
+            "sl": "Minister za gospodarstvo, turizem in šport"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Alenka Bratušek",
+          "ministry": {
+            "en": "Infrastructure",
+            "sl": "Infrastruktura"
+          },
+          "ministry_code": "MzI",
+          "title": {
+            "en": "Minister of Infrastructure",
+            "sl": "Ministrica za infrastrukturo"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Asta Vrečko",
+          "ministry": {
+            "en": "Culture",
+            "sl": "Kultura"
+          },
+          "ministry_code": "MK",
+          "title": {
+            "en": "Minister of Culture",
+            "sl": "Ministrica za kulturo"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Mateja Čalušić",
+          "ministry": {
+            "en": "Agriculture, Forestry and Food",
+            "sl": "Kmetijstvo, gozdarstvo in prehrana"
+          },
+          "ministry_code": "MKGP",
+          "title": {
+            "en": "Minister of Agriculture, Forestry and Food",
+            "sl": "Ministrica za kmetijstvo, gozdarstvo in prehrano"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Bojan Kumer",
+          "ministry": {
+            "en": "Environment, Climate and Energy",
+            "sl": "Okolje, podnebje in energija"
+          },
+          "ministry_code": "MOPE",
+          "title": {
+            "en": "Minister of Environment, Climate and Energy",
+            "sl": "Minister za okolje, podnebje in energijo"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Jože Novak",
+          "ministry": {
+            "en": "Natural Resources and Space",
+            "sl": "Naravni viri in prostor"
+          },
+          "ministry_code": "MNVP",
+          "title": {
+            "en": "Minister of Natural Resources and Space",
+            "sl": "Minister za naravne vire in prostor"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Aleksander Jevšek",
+          "ministry": {
+            "en": "Cohesion and Regional Development",
+            "sl": "Kohezija in regionalni razvoj"
+          },
+          "ministry_code": "MKRR",
+          "title": {
+            "en": "Minister of Cohesion and Regional Development",
+            "sl": "Minister za kohezijo in regionalni razvoj"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Matej Arčon",
+          "ministry": {
+            "en": "Relations with Slovenian National Communities",
+            "sl": "Slovence v zamejstvu in po svetu"
+          },
+          "ministry_code": "MSZS",
+          "title": {
+            "en": "Deputy Prime Minister and Minister for Relations with Slovenian National Communities",
+            "sl": "Podpredsednik Vlade in minister za Slovence v zamejstvu in po svetu"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Ksenija Klampfer",
+          "ministry": {
+            "en": "Digital Transformation",
+            "sl": "Digitalna preobrazba"
+          },
+          "ministry_code": "MDP",
+          "title": {
+            "en": "Minister of Digital Transformation",
+            "sl": "Ministrica za digitalno preobrazbo"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        },
+        {
+          "name": "Simon Maljevac",
+          "ministry": {
+            "en": "Solidarity Future",
+            "sl": "Solidarno prihodnost"
+          },
+          "ministry_code": "MSP",
+          "title": {
+            "en": "Minister for Solidarity Future",
+            "sl": "Minister za solidarno prihodnost"
+          },
+          "start_date": "2022-06-01",
+          "end_date": "2026-06-01"
+        }
+      ],
+      "political_composition": {
+        "coalition": {
+          "en": "Svoboda coalition",
+          "sl": "koalicija Gibanje Svoboda"
+        },
+        "parties": [
+          "GS",
+          "SD",
+          "Levica"
+        ],
+        "ideology": {
+          "en": "center-left",
+          "sl": "levo-sredinska"
+        }
+      },
+      "government_context": {
+        "major_events": [
+          {
+            "en": "Green transition policies",
+            "sl": "politike zelenega prehoda"
+          },
+          {
+            "en": "Post-COVID recovery",
+            "sl": "okrevanje po COVID-19"
+          },
+          {
+            "en": "Ukraine war impact",
+            "sl": "vpliv vojne v Ukrajini"
+          }
+        ],
+        "formation_context": {
+          "en": "Formed after victory of Gibanje Svoboda in 2022 elections",
+          "sl": "Oblikovana po zmagi Gibanja Svoboda na volitvah 2022"
+        }
+      }
     }
   ],
   "ministers": [
     {
       "name": "Igor Bavčar",
       "ministry": {
-        "en": "Internal Affairs",
+        "en": "Interior",
         "sl": "Notranje zadeve"
       },
       "ministry_code": "MNZ",
@@ -4192,7 +4554,7 @@
     {
       "name": "Dr. Slavko Gaber",
       "ministry": {
-        "en": "Education and Sports",
+        "en": "Education and Sport",
         "sl": "Šolstvo in šport"
       },
       "ministry_code": "MIZS",
@@ -7817,6 +8179,406 @@
         "start_date": "2020-03-13",
         "end_date": "2022-06-01",
         "duration_days": 810
+      }
+    },
+    {
+      "name": "Tanja Fajon",
+      "ministry": {
+        "en": "Foreign Affairs",
+        "sl": "Zunanje zadeve"
+      },
+      "ministry_code": "MZZ",
+      "title": {
+        "en": "Deputy Prime Minister and Minister of Foreign Affairs",
+        "sl": "Podpredsednica Vlade in ministrica za zunanje zadeve"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Boštjan Poklukar",
+      "ministry": {
+        "en": "Interior",
+        "sl": "Notranje zadeve"
+      },
+      "ministry_code": "MNZ",
+      "title": {
+        "en": "Minister of Interior",
+        "sl": "Minister za notranje zadeve"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Borut Sajovic",
+      "ministry": {
+        "en": "Defense",
+        "sl": "Obramba"
+      },
+      "ministry_code": "MORS",
+      "title": {
+        "en": "Minister of Defense",
+        "sl": "Minister za obrambo"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Klemen Boštjančič",
+      "ministry": {
+        "en": "Finance",
+        "sl": "Finance"
+      },
+      "ministry_code": "MF",
+      "title": {
+        "en": "Deputy Prime Minister and Minister of Finance",
+        "sl": "Podpredsednik Vlade in minister za finance"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Andreja Katič",
+      "ministry": {
+        "en": "Justice",
+        "sl": "Pravosodje"
+      },
+      "ministry_code": "MP",
+      "title": {
+        "en": "Minister of Justice",
+        "sl": "Ministrica za pravosodje"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Franc Props",
+      "ministry": {
+        "en": "Public Administration",
+        "sl": "Javna uprava"
+      },
+      "ministry_code": "MJU",
+      "title": {
+        "en": "Minister of Public Administration",
+        "sl": "Minister za javno upravo"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Luka Mesec",
+      "ministry": {
+        "en": "Labor, Family, Social Affairs and Equal Opportunities",
+        "sl": "Delo, družina, socialne zadeve in enake možnosti"
+      },
+      "ministry_code": "MDDSZ",
+      "title": {
+        "en": "Deputy Prime Minister and Minister of Labor, Family, Social Affairs and Equal Opportunities",
+        "sl": "Podpredsednik Vlade in minister za delo, družino, socialne zadeve in enake možnosti"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Valentina Prevolnik Rupel",
+      "ministry": {
+        "en": "Health",
+        "sl": "Zdravje"
+      },
+      "ministry_code": "MZ",
+      "title": {
+        "en": "Minister of Health",
+        "sl": "Ministrica za zdravje"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Vinko Logaj",
+      "ministry": {
+        "en": "Education",
+        "sl": "Izobraževanje"
+      },
+      "ministry_code": "MI",
+      "title": {
+        "en": "Minister of Education",
+        "sl": "Minister za izobraževanje"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Igor Papič",
+      "ministry": {
+        "en": "Higher Education, Science and Innovation",
+        "sl": "Visoko šolstvo, znanost in inovacije"
+      },
+      "ministry_code": "MVZI",
+      "title": {
+        "en": "Minister of Higher Education, Science and Innovation",
+        "sl": "Minister za visoko šolstvo, znanost in inovacije"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Matjaž Han",
+      "ministry": {
+        "en": "Economy, Tourism and Sport",
+        "sl": "Gospodarstvo, turizem in šport"
+      },
+      "ministry_code": "MGTS",
+      "title": {
+        "en": "Minister of Economy, Tourism and Sport",
+        "sl": "Minister za gospodarstvo, turizem in šport"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Alenka Bratušek",
+      "ministry": {
+        "en": "Infrastructure",
+        "sl": "Infrastruktura"
+      },
+      "ministry_code": "MzI",
+      "title": {
+        "en": "Minister of Infrastructure",
+        "sl": "Ministrica za infrastrukturo"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Asta Vrečko",
+      "ministry": {
+        "en": "Culture",
+        "sl": "Kultura"
+      },
+      "ministry_code": "MK",
+      "title": {
+        "en": "Minister of Culture",
+        "sl": "Ministrica za kulturo"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Mateja Čalušić",
+      "ministry": {
+        "en": "Agriculture, Forestry and Food",
+        "sl": "Kmetijstvo, gozdarstvo in prehrana"
+      },
+      "ministry_code": "MKGP",
+      "title": {
+        "en": "Minister of Agriculture, Forestry and Food",
+        "sl": "Ministrica za kmetijstvo, gozdarstvo in prehrano"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Bojan Kumer",
+      "ministry": {
+        "en": "Environment, Climate and Energy",
+        "sl": "Okolje, podnebje in energija"
+      },
+      "ministry_code": "MOPE",
+      "title": {
+        "en": "Minister of Environment, Climate and Energy",
+        "sl": "Minister za okolje, podnebje in energijo"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Jože Novak",
+      "ministry": {
+        "en": "Natural Resources and Space",
+        "sl": "Naravni viri in prostor"
+      },
+      "ministry_code": "MNVP",
+      "title": {
+        "en": "Minister of Natural Resources and Space",
+        "sl": "Minister za naravne vire in prostor"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Aleksander Jevšek",
+      "ministry": {
+        "en": "Cohesion and Regional Development",
+        "sl": "Kohezija in regionalni razvoj"
+      },
+      "ministry_code": "MKRR",
+      "title": {
+        "en": "Minister of Cohesion and Regional Development",
+        "sl": "Minister za kohezijo in regionalni razvoj"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Matej Arčon",
+      "ministry": {
+        "en": "Relations with Slovenian National Communities",
+        "sl": "Slovence v zamejstvu in po svetu"
+      },
+      "ministry_code": "MSZS",
+      "title": {
+        "en": "Deputy Prime Minister and Minister for Relations with Slovenian National Communities",
+        "sl": "Podpredsednik Vlade in minister za Slovence v zamejstvu in po svetu"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Ksenija Klampfer",
+      "ministry": {
+        "en": "Digital Transformation",
+        "sl": "Digitalna preobrazba"
+      },
+      "ministry_code": "MDP",
+      "title": {
+        "en": "Minister of Digital Transformation",
+        "sl": "Ministrica za digitalno preobrazbo"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
+      }
+    },
+    {
+      "name": "Simon Maljevac",
+      "ministry": {
+        "en": "Solidarity Future",
+        "sl": "Solidarno prihodnost"
+      },
+      "ministry_code": "MSP",
+      "title": {
+        "en": "Minister for Solidarity Future",
+        "sl": "Minister za solidarno prihodnost"
+      },
+      "start_date": "2022-06-01",
+      "end_date": "2026-06-01",
+      "government_number": 15,
+      "government_period": {
+        "start_date": "2022-06-01",
+        "end_date": "2026-06-01",
+        "duration_days": 1461
       }
     }
   ]

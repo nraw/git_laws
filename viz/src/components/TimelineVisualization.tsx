@@ -658,7 +658,7 @@ export default function TimelineVisualization() {
       <Box display="flex" justifyContent="space-between" alignItems="flex-start" mb={2}>
         <Box flex={1}>
           <Typography variant="h4" gutterBottom>
-            {language === 'en' ? 'Slovenia Government Timeline (1990-2022)' : 'Časovnica slovenskih vlad (1990-2022)'}
+            {language === 'en' ? 'Slovenia Government Timeline (1990-2026)' : 'Časovnica slovenskih vlad (1990-2026)'}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {language === 'en'
